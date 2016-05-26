@@ -7,7 +7,7 @@ namespace NetDevPLWeb
     {
         public HelloModule()
         {
-            Get["/"] = parameters => "Hello World!";
+            Get["/"] = parameters => "Hello .NET Developers Poland!";
         }
     }
 }
