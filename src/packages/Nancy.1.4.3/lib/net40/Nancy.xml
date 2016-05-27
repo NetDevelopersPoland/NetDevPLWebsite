@@ -13222,6 +13222,13 @@
             <param name="inspectedLocations">The locations that were inspected for the view.</param>
             <param name="rootPathProvider">An <see cref="T:Nancy.IRootPathProvider"/> instance.</param>
         </member>
+        <member name="M:Nancy.ViewEngines.ViewNotFoundException.#ctor(System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Nancy.ViewEngines.ViewNotFoundException"/>.
+            </summary>
+            <param name="viewName">The name of the view that was being located.</param>
+            <param name="availableViewEngineExtensions">List of available view extensions that can be rendered by the available view engines.</param>
+        </member>
         <member name="M:Nancy.ViewEngines.ViewNotFoundException.#ctor(System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:Nancy.ViewEngines.ViewNotFoundException"/>
