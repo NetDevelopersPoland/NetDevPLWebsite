@@ -10,17 +10,16 @@ Jak każdy ewoluujący system także ten projekt nie ma ściśle określonych ce
 1. Nazewnictwo i komentarze w kodzie programu muszą być po angielsku.
 2. Przechodzące testy.
 3. Automatyzacja wszystkiego jest jak najbardziej porządana.
-4. Programujemy funkcjonalność w duchu quazi-DDD. Np. funkcjonalność "Blogs" nie powinna być rozbita na osobne biblioteki Web/Services/(etc)/Domain a raczej być w jednej, np. NetDevPL.Blogs. Pomijam tutaj Eventy i inne AggregareRooty :)
+4. Programujemy funkcjonalność w duchu quazi-DDD. Np. funkcjonalność "Blogs" nie powinna być rozbita na osobne biblioteki Web/Services/(etc)/Domain a raczej być w jednej, np. NetDevPL.Blogs. Pomijam tutaj Eventy i inne AggregateRooty :)
 
-## Parcytypowanie w projekcie
-1. Każdy kto chce może uczestniczyć w rozwoju projektu. Wystarczy zrobić forka, a później pull requesta.
+## Uczestnictwo w projekcie
+1. Każdy kto chce może uczestniczyć w rozwoju projektu. Wystarczy zrobić forka, a później pull requesta ze swoim kodem.
 2. Jeżeli chcesz dodać swojego bloga do listy, etc. patrz pkt 1.
+3. W początkowej fazie projektu sugeruję jakąś komunikacje, żeby skoordynować kodowanie.
 
 ## Strona techniczna
-* Mono
-* [NancyFX](https://github.com/NancyFx/Nancy/wiki/Documentation)
+* Strona działa na Linuxie pod Mono + nginx
+* Framework [NancyFX](https://github.com/NancyFx/Nancy/wiki/Documentation)
 * AppVeyor (auto deployment)
 * Środowisko developerskie: Visual Studio 2015
-
-
 
