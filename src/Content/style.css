@@ -6,6 +6,15 @@
     padding: 0;
 }
 
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #888;
+    transition: .1s color;
+}
+
 nav ul {
     list-style: none;
     background-color: #444;
@@ -39,4 +48,8 @@ nav a {
         background-color: #fff;
         color: #1453B8;
         cursor: default;
+    }
+
+    .container {
+        margin: 0 50px;
     }
