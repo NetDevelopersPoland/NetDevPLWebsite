@@ -1,13 +1,12 @@
-﻿
-using Nancy;
+﻿using Nancy;
 
-namespace NetDevPLWeb
+namespace NetDevPLWeb.Features.Home
 {
     public class HomeModule : NancyModule
     {
         public HomeModule()
         {
-            Get["/"] = parameters => View["index"];// "Hello .NET Developers Poland!";
+            Get["/"] = parameters => View["index"];
         }
     }
 }
