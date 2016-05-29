@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+This file contains app sensitive configuration.
+Keys, passwords etc.
+-->
+<appSettings>
+    <add key="FacebookAccessToken" value="HERE PASTE YOUR ACCESS TOKEN" />
+</appSettings>
+

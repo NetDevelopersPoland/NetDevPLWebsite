@@ -56,6 +56,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
@@ -71,6 +72,12 @@
   <ItemGroup>
     <Compile Include="CustomConventionsBootstrapper.cs" />
     <Compile Include="Features\Blogs\BlogsModule.cs" />
+    <Compile Include="Features\Facebook\Domain\FacebookFromTo.cs" />
+    <Compile Include="Features\Facebook\Domain\FacebookLikes.cs" />
+    <Compile Include="Features\Facebook\Domain\FacebookModule.cs" />
+    <Compile Include="Features\Facebook\Domain\FacebookNews.cs" />
+    <Compile Include="Features\Facebook\Domain\FacebookNewsContainer.cs" />
+    <Compile Include="Features\Facebook\FacebookSummary.cs" />
     <Compile Include="Features\Home\HomeModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +115,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Nancy.Viewengines.Razor.1.4.3\build\Nancy.ViewEngines.Razor.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nancy.Viewengines.Razor.1.4.3\build\Nancy.ViewEngines.Razor.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>copy /Y $(ProjectDir)\sensitive-data.config $(TargetDir)</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
