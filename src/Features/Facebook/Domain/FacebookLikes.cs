@@ -1,4 +1,4 @@
-﻿namespace NetDevPLWeb.Features.Facebook
+﻿namespace NetDevPLWeb.Features.Facebook.Domain
 {
     public class FacebookLikes
     {

@@ -74,10 +74,10 @@
     <Compile Include="Features\Blogs\BlogsModule.cs" />
     <Compile Include="Features\Facebook\Domain\FacebookFromTo.cs" />
     <Compile Include="Features\Facebook\Domain\FacebookLikes.cs" />
-    <Compile Include="Features\Facebook\Domain\FacebookModule.cs" />
+    <Compile Include="Features\Facebook\FacebookModule.cs" />
     <Compile Include="Features\Facebook\Domain\FacebookNews.cs" />
     <Compile Include="Features\Facebook\Domain\FacebookNewsContainer.cs" />
-    <Compile Include="Features\Facebook\FacebookSummary.cs" />
+    <Compile Include="Features\Facebook\Domain\FacebookSummary.cs" />
     <Compile Include="Features\Home\HomeModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
