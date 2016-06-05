@@ -1,4 +1,5 @@
-using System;
+using NetDevPLWeb.Features.Facebook;
+using NetDevPLWeb.Features.Facebook.DataProvider;
 using Quartz;
 
 namespace NetDevPLBackgoundJobs.Jobs
@@ -7,7 +8,13 @@ namespace NetDevPLBackgoundJobs.Jobs
     {
         public void Execute(IJobExecutionContext context)
         {
-            Console.WriteLine("Job work....");
+            FacebookDataProvider provider = new FacebookDataProvider();
+            Repository repo = new Repository();
+
+            foreach (var post in provider.FetchDataFromFacebook())
+            {
+                repo.AddOrUpdate(post);
+            }
         }
     }
 }

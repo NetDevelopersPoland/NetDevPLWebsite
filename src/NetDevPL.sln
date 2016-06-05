@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPLBackgoundJobs", "Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPLWeb", "NetDevPLWeb\NetDevPLWeb.csproj", "{D5046E5A-35D1-46B4-8DF4-44764ACDA3EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Facebook", "Features\Facebook\NetDevPL.Features.Facebook.csproj", "{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Infrastructure.MongoDB", "Infrastructure\NetDevPL.Infrastructure.MongoDB\NetDevPL.Infrastructure.MongoDB.csproj", "{441595F1-ECF3-4C73-984C-59EEF42A3E88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D5046E5A-35D1-46B4-8DF4-44764ACDA3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5046E5A-35D1-46B4-8DF4-44764ACDA3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5046E5A-35D1-46B4-8DF4-44764ACDA3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{441595F1-ECF3-4C73-984C-59EEF42A3E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{441595F1-ECF3-4C73-984C-59EEF42A3E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{441595F1-ECF3-4C73-984C-59EEF42A3E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{441595F1-ECF3-4C73-984C-59EEF42A3E88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

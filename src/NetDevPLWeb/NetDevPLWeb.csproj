@@ -72,12 +72,7 @@
   <ItemGroup>
     <Compile Include="CustomConventionsBootstrapper.cs" />
     <Compile Include="Features\Blogs\BlogsModule.cs" />
-    <Compile Include="Features\Facebook\Domain\FacebookFromTo.cs" />
-    <Compile Include="Features\Facebook\Domain\FacebookLikes.cs" />
     <Compile Include="Features\Facebook\FacebookModule.cs" />
-    <Compile Include="Features\Facebook\Domain\FacebookNews.cs" />
-    <Compile Include="Features\Facebook\Domain\FacebookNewsContainer.cs" />
-    <Compile Include="Features\Facebook\Domain\FacebookSummary.cs" />
     <Compile Include="Features\Home\HomeModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,7 +87,12 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Features\Facebook\NetDevPL.Features.Facebook.csproj">
+      <Project>{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}</Project>
+      <Name>NetDevPLWeb.Features.Facebook</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\style.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

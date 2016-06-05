@@ -1,4 +1,3 @@
 .vs
-
-src/sensitive-data.config
+sensitive-data.config
 

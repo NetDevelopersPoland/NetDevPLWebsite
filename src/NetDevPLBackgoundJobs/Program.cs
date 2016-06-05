@@ -30,11 +30,12 @@ namespace NetDevPLBackgoundJobs
                 Console.WriteLine(se);
             }
         }
+
         public static void AddJob(IScheduler scheduler)
         {
             IJob job = new FacebookJob();
             JobDetailImpl jobDetail = new JobDetailImpl(job.GetType().FullName, job.GetType().FullName + "Group", job.GetType());
-            CronTriggerImpl trigger = new CronTriggerImpl(job.GetType().FullName + "Trigger", job.GetType().FullName + "Group", "* 0 * * * ?");
+            CronTriggerImpl trigger = new CronTriggerImpl(job.GetType().FullName + "Trigger", job.GetType().FullName + "Group", "10 0 * * * ?");
             scheduler.ScheduleJob(jobDetail, trigger);
             DateTimeOffset? nextFireTime = trigger.GetNextFireTimeUtc();
             Console.WriteLine("Next run time: " + nextFireTime.Value);
