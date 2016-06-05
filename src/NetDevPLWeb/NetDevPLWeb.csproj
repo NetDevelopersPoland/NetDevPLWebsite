@@ -124,7 +124,7 @@
     <Error Condition="!Exists('..\packages\Nancy.Viewengines.Razor.1.4.3\build\Nancy.ViewEngines.Razor.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nancy.Viewengines.Razor.1.4.3\build\Nancy.ViewEngines.Razor.targets'))" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>copy /Y $(ProjectDir)\sensitive-data.config $(TargetDir)</PreBuildEvent>
+    <PreBuildEvent>IF EXIST "$(ProjectDir)\sensitive-data.config" (copy /Y $(ProjectDir)\sensitive-data.config $(TargetDir)) ELSE (copy /Y $(ProjectDir)\sensitive-data.config.sample $(TargetDir)\sensitive-data.config )</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
