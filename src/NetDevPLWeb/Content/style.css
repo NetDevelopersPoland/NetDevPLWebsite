@@ -10,10 +10,10 @@ a {
     color: #fff;
 }
 
-a:hover {
-    color: #888;
-    transition: .1s color;
-}
+    a:hover {
+        color: #888;
+        transition: .1s color;
+    }
 
 nav ul {
     list-style: none;
@@ -50,6 +50,30 @@ nav a {
         cursor: default;
     }
 
-    .container {
-        margin: 0 50px;
+.container {
+    margin: 0 50px;
+}
+
+.fb-posts {
+    border-spacing: 0;
+    border-collapse: separate;
+}
+
+    .fb-posts tr:not(:last-child) td {
+        border-bottom: 2px solid #1453B8;
     }
+
+.fb-item-date {
+    text-align: center;
+    width: 200px;
+}
+
+.fb-item-content {
+    line-height: 24px;
+}
+
+.fb-item-likes {
+    text-align: center;
+    width: 100px;
+    font-size: 24px;
+}

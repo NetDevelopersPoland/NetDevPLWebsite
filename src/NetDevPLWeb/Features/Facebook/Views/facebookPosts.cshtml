@@ -1,0 +1,23 @@
+﻿@using System
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Facebook.FacebookPostsViewModel>
+
+<h1>Posty</h1>
+
+<table class="fb-posts" ce>
+    @foreach (var post in Model.Posts)
+    {
+        <tr>
+            <td class="fb-item-date">@post.CreateDate.ToString("yyyy-MM-dd HH:mm")</td>
+            <td class="fb-item-content">
+                @foreach (var line in post.Content.Split(new[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    @line
+                    <br />
+                }
+            </td>
+            <td class="fb-item-likes">
+                @post.Likes
+            </td>
+        </tr>
+    }
+</table>

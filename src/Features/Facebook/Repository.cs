@@ -1,10 +1,4 @@
-﻿// -------------------------------------------------------------------------------------------------------------------
-// <copyright company="Gemotial" file="Repository.cs" project="NetDevPLWeb.Features.Facebook" date="2016-06-03 17:24">
-// 
-// </copyright>
-// -------------------------------------------------------------------------------------------------------------------
-
-using System.Collections.Generic;
+﻿using Gmtl.HandyLib;
 using MongoDB.Driver;
 using NetDevPL.Infrastructure.MongoDB;
 
@@ -12,11 +6,13 @@ namespace NetDevPLWeb.Features.Facebook
 {
     public class Repository
     {
-        MongoDBProvider<FacebookPost> provider = new MongoDBProvider<FacebookPost>("netdevpl", "facebookPosts");
+        readonly MongoDBProvider<FacebookPost> provider = new MongoDBProvider<FacebookPost>("netdevpl", "facebookPosts");
 
-        public List<FacebookPost> GetList()
+        public HLListPage<FacebookPost> GetList()
         {
-            return new List<FacebookPost>();
+            var posts = provider.Collection.Find(d => true).ToList();
+
+            return new HLListPage<FacebookPost>(posts, posts.Count, 1, posts.Count);
         }
 
         public void AddOrUpdate(FacebookPost post)
@@ -30,7 +26,6 @@ namespace NetDevPLWeb.Features.Facebook
             {
                 provider.Collection.InsertOne(post);
             }
-
         }
     }
 }

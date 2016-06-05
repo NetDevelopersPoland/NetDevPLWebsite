@@ -22,7 +22,11 @@ namespace NetDevPL.Infrastructure.MongoDB
 
         static MongoDBProvider()
         {
-            BsonClassMap.RegisterClassMap<T>(cm => { cm.AutoMap(); });
+            BsonClassMap.RegisterClassMap<T>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetIgnoreExtraElements(true);
+            });
         }
 
         public IMongoCollection<T> Collection
