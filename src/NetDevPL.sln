@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Facebook"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Infrastructure.MongoDB", "Infrastructure\NetDevPL.Infrastructure.MongoDB\NetDevPL.Infrastructure.MongoDB.csproj", "{441595F1-ECF3-4C73-984C-59EEF42A3E88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPLWeb.SharedKernel", "NetDevPLWeb.SharedKernel\NetDevPLWeb.SharedKernel.csproj", "{513D6AF3-3CEF-45F7-A246-F111CDC40B76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{441595F1-ECF3-4C73-984C-59EEF42A3E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{441595F1-ECF3-4C73-984C-59EEF42A3E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{441595F1-ECF3-4C73-984C-59EEF42A3E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513D6AF3-3CEF-45F7-A246-F111CDC40B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513D6AF3-3CEF-45F7-A246-F111CDC40B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513D6AF3-3CEF-45F7-A246-F111CDC40B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513D6AF3-3CEF-45F7-A246-F111CDC40B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
