@@ -10,7 +10,8 @@ namespace NetDevPLWeb.Features.Facebook
 
         public HLListPage<FacebookPost> GetList()
         {
-            var posts = provider.Collection.Find(d => true).ToList();
+
+            var posts = provider.Collection.Find(d => true).Sort(Builders<FacebookPost>.Sort.Descending(p => p.CreateDate)).ToList();
 
             return new HLListPage<FacebookPost>(posts, posts.Count, 1, posts.Count);
         }
