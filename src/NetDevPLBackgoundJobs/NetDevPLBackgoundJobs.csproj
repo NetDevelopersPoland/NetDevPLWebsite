@@ -71,6 +71,10 @@
       <Project>{8fb3e6b7-b43e-4e28-988c-6ba87cdba333}</Project>
       <Name>NetDevPL.Features.Facebook</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NetDevPLWeb.SharedKernel\NetDevPLWeb.SharedKernel.csproj">
+      <Project>{513d6af3-3cef-45f7-a246-f111cdc40b76}</Project>
+      <Name>NetDevPLWeb.SharedKernel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

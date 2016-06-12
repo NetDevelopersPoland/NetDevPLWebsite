@@ -10,6 +10,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
+using NetDevPLWeb.SharedKernel;
 using Newtonsoft.Json;
 
 namespace NetDevPLWeb.Features.Facebook.DataProvider
@@ -45,8 +46,8 @@ namespace NetDevPLWeb.Features.Facebook.DataProvider
             }
             catch (Exception ex)
             {
-                //TODO log
-                Console.WriteLine(ex.Message);
+                Logger.Fatal(ex);
+
                 return new List<FacebookPost>();
             }
 

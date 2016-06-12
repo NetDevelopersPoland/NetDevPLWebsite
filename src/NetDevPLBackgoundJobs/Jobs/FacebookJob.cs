@@ -1,5 +1,6 @@
 using NetDevPLWeb.Features.Facebook;
 using NetDevPLWeb.Features.Facebook.DataProvider;
+using NetDevPLWeb.SharedKernel;
 using Quartz;
 
 namespace NetDevPLBackgoundJobs.Jobs
@@ -13,6 +14,7 @@ namespace NetDevPLBackgoundJobs.Jobs
 
             foreach (var post in provider.FetchDataFromFacebook())
             {
+                Logger.Info("Facebook postId added/updated: " + post.ExternalKey);
                 repo.AddOrUpdate(post);
             }
         }
