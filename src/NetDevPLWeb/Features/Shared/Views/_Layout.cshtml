@@ -6,17 +6,21 @@
     <link rel="stylesheet" href="/Content/style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">.NET Dev PL</a></li>
-            <li><a href="/facebook">Facebook</a></li>
-            <li><a href="/blogs">Blogi</a></li>
-            <li><a href="/learnOnline">Learn Online</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        @this.RenderBody()
-    </div>
-    <footer></footer>
+<nav>
+    <ul>
+        <li><a href="/">.NET Dev PL</a></li>
+        <li><a href="/facebook">Facebook</a></li>
+        <li><a href="/blogs">Blogi</a></li>
+        <li><a href="/learnOnline">Learn Online</a></li>
+    </ul>
+</nav>
+<div id="oss-announce">
+    Chcesz ulepszyć tę stronę? Cały kod dostępny jest <a href="https://github.com/NetDevelopersPoland/NetDevPLWebsite" target="_blank">tutaj</a>. 
+    Wystarczy, że sklonujesz sobie repozytorium i później zrobisz pull-requesta (how to: <a href="https://www.youtube.com/watch?v=YTbRzhQju4c" target="_blank">https://www.youtube.com/watch?v=YTbRzhQju4c</a>).
+</div>
+<div class="container">
+    @this.RenderBody()
+</div>
+<footer></footer>
 </body>
 </html>

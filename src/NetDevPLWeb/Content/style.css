@@ -77,3 +77,11 @@ nav a {
     width: 100px;
     font-size: 24px;
 }
+
+#oss-announce {
+    color: #085208;
+    background-color: #07b907;
+    border: 2px solid #018201;
+    padding: 20px;
+    font-weight: bold;
+}
