@@ -1,0 +1,17 @@
+﻿[
+    {
+        "Title": "ReShortcuts",
+        "Description": "Probably the best way to learn ReSharper shortcuts!",
+        "Url": "https://reshortcuts.github.io/"
+    },
+    {
+        "Title": "tryGit",
+        "Description": "Learn Git interactively",
+        "Url": "https://try.github.io"
+    },
+    {
+        "Title": "Learn Git Branching",
+        "Description": "'Learn Git Branching' is the most visual and interactive way to learn Git on the web; you'll be challenged with exciting levels, given step-by-step demonstrations of powerful features, and maybe even have a bit of fun along the way",
+        "Url": "http://learngitbranching.js.org/"
+    }
+]

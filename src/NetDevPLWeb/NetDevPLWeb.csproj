@@ -78,6 +78,7 @@
     <Compile Include="Features\Blogs\BlogsModule.cs" />
     <Compile Include="Features\Facebook\FacebookModule.cs" />
     <Compile Include="Features\Home\HomeModule.cs" />
+    <Compile Include="Features\LearnOnline\LearnOnlineModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RazorConfiguration.cs" />
@@ -93,6 +94,12 @@
     <Content Include="Features\Facebook\Views\facebookPosts.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Features\LearnOnline\Views\learnOnlineList.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Features\LearnOnline\toolsMastering.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
