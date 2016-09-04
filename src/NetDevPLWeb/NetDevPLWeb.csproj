@@ -97,6 +97,9 @@
     <Content Include="Features\LearnOnline\Views\learnOnlineList.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Features\LearnOnline\programmingChallenges.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Features\LearnOnline\toolsMastering.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -14,25 +14,33 @@ namespace NetDevPLWeb.Features.LearnOnline
         {
             Get["/learnOnline"] = parameters =>
             {
-                var blogs = source.GetBlogs();
-                return View["learnOnlineList", new LearOnlineListViewModel(blogs)];
+                var toolsMastering = source.GetMasteringTools();
+                var programmingChallenges = source.GetProgrammingChallenges();
+                return View["learnOnlineList", new LearOnlineListViewModel(toolsMastering, programmingChallenges)];
             };
         }
     }
 
     public class LearnOnlineSource
     {
-        public List<ToolMastering> GetBlogs()
+        public List<WebsiteRecordWithTitleAndDesc> GetMasteringTools()
         {
             string json = File.ReadAllText("Features/LearnOnline/toolsMastering.json");
-            var toolMasterings = JsonConvert.DeserializeObject<List<ToolMastering>>(json);
-
-            //Randomize order to not favorize any
+            var toolMasterings = JsonConvert.DeserializeObject<List<WebsiteRecordWithTitleAndDesc>>(json);
+            
             return toolMasterings.ToList();
+        }
+
+        public List<WebsiteRecordWithTitleAndDesc> GetProgrammingChallenges()
+        {
+            string json = File.ReadAllText("Features/LearnOnline/programmingChallenges.json");
+            var challenges = JsonConvert.DeserializeObject<List<WebsiteRecordWithTitleAndDesc>>(json);
+            
+            return challenges.ToList();
         }
     }
 
-    public class ToolMastering
+    public class WebsiteRecordWithTitleAndDesc
     {
         public string Url { get; set; }
         public string Description { get; set; }
@@ -41,11 +49,14 @@ namespace NetDevPLWeb.Features.LearnOnline
 
     public class LearOnlineListViewModel
     {
-        public LearOnlineListViewModel(List<ToolMastering> toolMastering)
+        public LearOnlineListViewModel(List<WebsiteRecordWithTitleAndDesc> toolMastering, List<WebsiteRecordWithTitleAndDesc> programmingChallenges
+            )
         {
             ToolMastering = toolMastering;
+            ProgrammingChallenges = programmingChallenges;
         }
 
-        public List<ToolMastering> ToolMastering { get; set; }
+        public List<WebsiteRecordWithTitleAndDesc> ToolMastering { get; private set; }
+        public List<WebsiteRecordWithTitleAndDesc> ProgrammingChallenges{ get; private set; }
     }
 }
