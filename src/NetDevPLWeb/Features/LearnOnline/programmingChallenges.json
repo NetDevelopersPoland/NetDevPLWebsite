@@ -3,5 +3,10 @@
         "Title": "Codewars",
         "Description": "Train with Programming Challenges/Kata",
         "Url": "https://www.codewars.com"
+    },
+    {
+        "Title": "Codingame",
+        "Description": "Play with Programming",
+        "Url": "https://www.codingame.com/home"
     }
 ]
