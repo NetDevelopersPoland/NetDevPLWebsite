@@ -3,5 +3,10 @@
         "Url": "http://blog.klimczyk.pl",
         "Rss": "http://blog.klimczyk.pl/feed/",
         "Title": "Paweł Klimczyk WebLog"
-    }
+    },
+	{
+		"Url": "http://blog.octal.pl",
+		"Rss": "http://blog.octal.pl/feed",
+		"Title": ".net blog - octal.pl"
+	}
 ]
