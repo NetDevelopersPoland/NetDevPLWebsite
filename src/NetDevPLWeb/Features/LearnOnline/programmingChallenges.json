@@ -24,5 +24,15 @@ Stockfighter is organized into tech trees, which are a series of levels which bu
         "Title": "Enki (Android)",
         "Description": "Enki helps professional developers level up their programming skills every day through a fun, daily workout on their mobile.",
         "Url": "https://play.google.com/store/apps/details?id=com.enki.insights"
-    }
+    },
+	{
+		"Title": "return true to win",
+		"Description": "javascript challenges - return true to advance to the next level",
+		"Url": "https://alf.nu/ReturnTrue"
+	},
+	{
+		"Title": "Regex crossword",
+		"Description": "regular expressions crosswords to solve",
+		"Url": "https://regexcrossword.com"
+	}
 ]
