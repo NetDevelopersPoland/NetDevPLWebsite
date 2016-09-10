@@ -29,5 +29,10 @@ Stockfighter is organized into tech trees, which are a series of levels which bu
 		"Title": "return true to win",
 		"Description": "javascript challenges - return true to advance to the next level",
 		"Url": "https://alf.nu/ReturnTrue"
+	},
+	{
+		"Title": "Regex crossword",
+		"Description": "regular expressions crosswords to solve",
+		"Url": "https://regexcrossword.com"
 	}
 ]
