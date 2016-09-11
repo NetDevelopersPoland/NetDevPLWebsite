@@ -8,5 +8,10 @@
 		"Url": "http://blog.octal.pl",
 		"Rss": "http://blog.octal.pl/feed",
 		"Title": ".net blog - octal.pl"
+	},
+	{
+		"Url": "http://www.pyrzyk.net",
+		"Rss": "http://www.pyrzyk.net/feed/",
+		"Title": "Łukasz Pyrzyk - Blog programistyczny"
 	}
 ]
