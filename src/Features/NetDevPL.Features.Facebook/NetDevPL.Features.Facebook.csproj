@@ -79,7 +79,7 @@
       <Project>{441595F1-ECF3-4C73-984C-59EEF42A3E88}</Project>
       <Name>NetDevPL.Infrastructure.MongoDB</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\NetDevPLWeb.SharedKernel\NetDevPLWeb.SharedKernel.csproj">
+    <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.SharedKernel\NetDevPL.Infrastructure.SharedKernel.csproj">
       <Project>{513d6af3-3cef-45f7-a246-f111cdc40b76}</Project>
       <Name>NetDevPLWeb.SharedKernel</Name>
     </ProjectReference>
