@@ -8,7 +8,7 @@ namespace NetDevPLWeb.Features.Resources
 {
     public class ResourcesModule : NancyModule
     {
-        ResourcesSource source = new ResourcesSource();
+        readonly ResourcesSource source = new ResourcesSource();
 
         public ResourcesModule()
         {

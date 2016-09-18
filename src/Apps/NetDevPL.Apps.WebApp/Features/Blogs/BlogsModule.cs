@@ -9,7 +9,7 @@ namespace NetDevPLWeb.Features.Blogs
 {
     public class BlogsModule : NancyModule
     {
-        BlogSource source = new BlogSource();
+        readonly BlogSource source = new BlogSource();
 
         public BlogsModule()
         {
