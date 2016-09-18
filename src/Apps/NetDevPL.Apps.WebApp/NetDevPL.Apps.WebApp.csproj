@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomConventionsBootstrapper.cs" />
+    <Compile Include="Features\Contributors\ContributorsModule.cs" />
     <Compile Include="Features\Conferences\ConferencesModule.cs" />
     <Compile Include="Features\Blogs\BlogsModule.cs" />
     <Compile Include="Features\Facebook\FacebookModule.cs" />
@@ -89,6 +90,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <Content Include="Features\Blogs\Views\blogList.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Features\Contributors\Views\contributorsList.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Features\Conferences\conferences.json">
