@@ -1,0 +1,16 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Contributors.ContributorsListViewModel>
+
+<div class="jumbotron clearfix">
+    <h2>Lista twórców</h2>
+
+    @foreach (var contributor in Model.Contributors)
+    {
+        <div class="thumbnail pull-left" style="width: 250px; height: 370px; margin: 15px;">
+            <img src="@contributor.AvatarUrl" alt="@contributor.Name avatar">
+            <div class="caption">
+                <h3><a href="@contributor.GithubUrl" target="_blank">@contributor.Name</a></h3>
+                <p>Liczba commitów: <span class="badge">@contributor.Contributions</span></p>
+            </div>
+        </div>
+    }
+</div>
