@@ -1,7 +1,8 @@
 ﻿@using System
 @inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Facebook.FacebookPostsViewModel>
 
-<h1>Posty</h1>
+<div class="jumbotron">
+    <h2>Posty</h2>
 
     @foreach (var post in Model.Posts)
     {
@@ -18,4 +19,5 @@
                 <span class="pull-right">Liczba polubień: <span class="label label-default">@post.Likes</span></span>
             </div>
         </div>
-    }
+    } 
+</div>
