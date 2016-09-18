@@ -7,7 +7,7 @@ namespace NetDevPLWeb.Features.Conferences
 {
     public class ConferencesModule : NancyModule
     {
-        ConferencesSource source = new ConferencesSource();
+        readonly ConferencesSource source = new ConferencesSource();
 
         public ConferencesModule()
         {

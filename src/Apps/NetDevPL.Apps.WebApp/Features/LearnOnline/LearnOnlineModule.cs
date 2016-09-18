@@ -8,7 +8,7 @@ namespace NetDevPLWeb.Features.LearnOnline
 {
     public class LearnOnlineModule : NancyModule
     {
-        LearnOnlineSource source = new LearnOnlineSource();
+        readonly LearnOnlineSource source = new LearnOnlineSource();
 
         public LearnOnlineModule()
         {
