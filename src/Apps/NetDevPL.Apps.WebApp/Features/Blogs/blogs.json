@@ -18,5 +18,10 @@
     "Url": "https://plotzwi.com",
     "Rss": "https://plotzwi.com/feed",
     "Title": "Patryk Lotzwi - Blog programistyczny"
+  },
+  {
+    "Url": "https://mjedrzejewski.wordpress.com",
+    "Rss": "https://mjedrzejewski.wordpress.com/feed/",
+    "Title": "Maciej Jędrzejewski - Praktyczna strona programowania"
   }
 ]
