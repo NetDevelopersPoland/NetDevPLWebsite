@@ -1,15 +1,21 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Conferences.ConferencesListViewModel>
 
 <div class="jumbotron">
-    <h2>Lista zbliżających się konferencji, na których warto być</h2>
-    <div class="list-group">
+    <h2>Lista zbliżających się konferencji, na których warto być:</h2>
+    
+    <ul>
         @foreach (var conference in Model.Conferences)
         {
-            <a href="@conference.Url" class="list-group-item" target="_blank">
-                <h4 class="list-group-item-heading">@conference.Title</h4>
-                <p class="list-group-item-text">Kiedy? <strong>@conference.When</strong></p>
-                <p class="list-group-item-text">Gdzie? <strong>@conference.Location</strong></p>
-            </a>
+            <li>
+                <blockquote>
+                    <p>
+                        <a href="@conference.Url" target="_blank">
+                            <h4>@conference.Title</h4>
+                        </a>
+                    </p>
+                    <small>@conference.When, <cite title="Source Title">@conference.Location</cite></small>
+                </blockquote>
+            </li>
         }
-    </div>
+    </ul>
 </div>
