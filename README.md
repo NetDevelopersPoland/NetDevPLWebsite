@@ -15,7 +15,7 @@ Jak każdy ewoluujący system także ten projekt nie ma ściśle określonych ce
 ## Uczestnictwo w projekcie
 1. Każdy kto chce może uczestniczyć w rozwoju projektu. Wystarczy zrobić forka, a później pull requesta ze swoim kodem.
 2. Jeżeli chcesz dodać swojego bloga do listy, etc. patrz pkt 1.
-3. W początkowej fazie projektu sugeruję jakąś komunikacje, żeby skoordynować kodowanie.
+3. W początkowej fazie projektu sugeruję ~~jakąś komunikacje~~ komunikację na slacku [devspl.slack.com](http://devspl.slack.com) (kanał **#netdeveloperswebsite**) żeby skoordynować kodowanie.
 
 ## Strona techniczna
 * Strona działa na Linuxie pod Mono + nginx

@@ -29,13 +29,7 @@ namespace NetDevPL.Infrastructure.MongoDB
             });
         }
 
-        public IMongoCollection<T> Collection
-        {
-            get
-            {
-                return database.GetCollection<T>(collectionName);
-            }
-        }
+        public IMongoCollection<T> Collection => database.GetCollection<T>(collectionName);
 
         private void InitDB()
         {
@@ -44,11 +38,10 @@ namespace NetDevPL.Infrastructure.MongoDB
 
             database = client.GetDatabase(databaseName);
 
-            if (!CollectionExists(database, collectionName))
-            {
-                CreateCollectionOptions options = new CreateCollectionOptions { AutoIndexId = true };
-                database.CreateCollection(collectionName, options);
-            }
+            if (CollectionExists(database, collectionName)) return;
+
+            CreateCollectionOptions options = new CreateCollectionOptions { AutoIndexId = true };
+            database.CreateCollection(collectionName, options);
         }
 
         private bool CollectionExists(IMongoDatabase db, string collName)

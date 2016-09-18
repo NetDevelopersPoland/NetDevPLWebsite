@@ -1,0 +1,17 @@
+﻿[
+    {
+        "Title": "Threading in C# - Joseph Albahari",
+        "Description": "Great book about threading concept in C#",
+        "Url": "http://www.albahari.com/threading/"
+    },
+    {
+        "Title": "How to be a Programmer: Community Version - Robert L. Read",
+        "Description": "How to be great software engineer guidelines",
+        "Url": "https://braydie.gitbooks.io/how-to-be-a-programmer/content/en/"
+    },
+    {
+        "Title": "dotnetomaniak.pl",
+        "Description": "Agregator treści .NET",
+        "Url": "http://dotnetomaniak.pl"
+    }
+]

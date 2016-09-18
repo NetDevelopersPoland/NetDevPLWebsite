@@ -1,0 +1,21 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.LearnOnline.LearOnlineListViewModel>
+
+<div class="jumbotron">
+    <h2>Lista stron z zadaniami/lekcjami dzięki którym zaczniejsz wydajniej używać swoje narzędzia rzemieślnicze.</h2>
+
+    <ul>
+        @foreach (var toolResource in Model.ToolMastering)
+        {
+            <li><a href="@toolResource.Url" target="_blank">@toolResource.Title</a> - @toolResource.Description</li>
+        }
+    </ul>
+</div>
+<div class="jumbotron">
+    <h2>Lista stron z łamigłówkami programistycznymi.</h2>
+    <ul>
+        @foreach (var challenge in Model.ProgrammingChallenges)
+        {
+            <li><a href="@challenge.Url" target="_blank">@challenge.Title</a> - @challenge.Description</li>
+        }
+    </ul>
+</div>
