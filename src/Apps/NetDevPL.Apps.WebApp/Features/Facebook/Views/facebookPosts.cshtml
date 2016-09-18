@@ -3,21 +3,19 @@
 
 <h1>Posty</h1>
 
-<table class="fb-posts" ce>
     @foreach (var post in Model.Posts)
     {
-        <tr>
-            <td class="fb-item-date">@post.CreateDate.ToString("yyyy-MM-dd HH:mm")</td>
-            <td class="fb-item-content">
+        <div class="panel panel-default">
+            <div class="panel-body">
                 @foreach (var line in post.Content.Split(new[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     @line
                     <br />
                 }
-            </td>
-            <td class="fb-item-likes">
-                @post.Likes
-            </td>
-        </tr>
+            </div>
+            <div class="panel-footer clearfix">
+                <span class="pull-left">@post.CreateDate.ToString("yyyy-MM-dd HH:mm")</span>
+                <span class="pull-right">Liczba polubień: <span class="label label-default">@post.Likes</span></span>
+            </div>
+        </div>
     }
-</table>
