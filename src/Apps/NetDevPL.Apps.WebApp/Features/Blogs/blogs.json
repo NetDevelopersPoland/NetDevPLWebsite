@@ -23,5 +23,10 @@
     "Url": "https://mjedrzejewski.wordpress.com",
     "Rss": "https://mjedrzejewski.wordpress.com/feed/",
     "Title": "Maciej Jędrzejewski - Praktyczna strona programowania"
+  },
+  {
+    "Url": "http://tymoteuszkestowicz.com/",
+    "Rss": "http://tymoteuszkestowicz.com//feed/",
+    "Title": "Tymoteusz Kęstowicz - .NET developer blog"
   }
 ]
