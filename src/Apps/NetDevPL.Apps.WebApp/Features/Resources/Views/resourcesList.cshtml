@@ -1,11 +1,12 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Resources.ResourcesViewModel>
 
-<h1>Lista stron z książkami/artykułami/itp do nauki.</h1>
+<div class="jumbotron">
+    <h2>Lista stron z książkami/artykułami/itp do nauki.</h2>
 
-<ul>
-    @foreach (var resource in Model.ResourcesList)
-    {
-        <li><a href="@resource.Url" target="_blank">@resource.Title</a> - @resource.Description</li>
-    }
-</ul>
-
+    <ul>
+        @foreach (var resource in Model.ResourcesList)
+        {
+            <li><a href="@resource.Url" target="_blank">@resource.Title</a> - @resource.Description</li>
+        }
+    </ul>
+</div>
