@@ -1,0 +1,12 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.WebCasts.WebcastsViewModel>
+
+<div class="jumbotron">
+    <h2>Lista z ciekawymi webcastami</h2>
+
+    <ul>
+        @foreach (var webcast in Model.WebcastsList)
+        {
+            <li><a href="@webcast.Url" target="_blank">@webcast.Title</a> - @webcast.Description</li>
+        }
+    </ul>
+</div>

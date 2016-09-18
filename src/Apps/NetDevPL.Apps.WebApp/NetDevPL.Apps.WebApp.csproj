@@ -81,6 +81,7 @@
     <Compile Include="Features\Home\HomeModule.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineModule.cs" />
     <Compile Include="Features\Resources\ResourcesModule.cs" />
+    <Compile Include="Features\WebCasts\WebcastsModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RazorConfiguration.cs" />
@@ -117,6 +118,12 @@
     <Content Include="Features\Resources\Views\resourcesList.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Features\WebCasts\Views\webcastsList.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Features\WebCasts\webcastsList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
