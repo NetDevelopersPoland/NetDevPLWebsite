@@ -2,19 +2,15 @@
 
 <div class="jumbotron clearfix">
     <h2>Lista zbliżających się konferencji, na których warto być:</h2>
-    
+
     <ul>
         @foreach (var conference in Model.Conferences)
         {
             <li>
-                <blockquote>
-                    <p>
-                        <a href="@conference.Url" target="_blank">
-                            <h4>@conference.Title</h4>
-                        </a>
-                    </p>
-                    <small>@conference.When, <cite title="Source Title">@conference.Location</cite></small>
-                </blockquote>
+                <a href="@conference.Url" target="_blank">
+                    <h4>@conference.Title</h4>
+                </a>
+                <small>@conference.StartDate.ToString("dd-MM-yyyy") - @conference.EndDate.ToString("dd-MM-yyyy"), <cite>@conference.Location</cite></small>
             </li>
         }
     </ul>

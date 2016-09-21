@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Infrastructure.Sha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Facebook", "Features\NetDevPL.Features.Facebook\NetDevPL.Features.Facebook.csproj", "{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{5C13B668-44DA-42C6-8740-1DD9633DB15B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{457EF626-17F8-45DB-8FD7-101265927FEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{486C2A3E-E8D0-43CC-A443-866C13482577}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +48,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B65243DF-06F7-4D47-A37B-4107BE289F00} = {5C13B668-44DA-42C6-8740-1DD9633DB15B}
+		{D5046E5A-35D1-46B4-8DF4-44764ACDA3EE} = {5C13B668-44DA-42C6-8740-1DD9633DB15B}
+		{441595F1-ECF3-4C73-984C-59EEF42A3E88} = {486C2A3E-E8D0-43CC-A443-866C13482577}
+		{513D6AF3-3CEF-45F7-A246-F111CDC40B76} = {486C2A3E-E8D0-43CC-A443-866C13482577}
+		{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333} = {457EF626-17F8-45DB-8FD7-101265927FEB}
 	EndGlobalSection
 EndGlobal

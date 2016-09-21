@@ -81,7 +81,7 @@
     </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.SharedKernel\NetDevPL.Infrastructure.SharedKernel.csproj">
       <Project>{513d6af3-3cef-45f7-a246-f111cdc40b76}</Project>
-      <Name>NetDevPLWeb.SharedKernel</Name>
+      <Name>NetDevPL.Infrastructure.SharedKernel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,8 +1,9 @@
 ﻿[
-  {
-    "Url": "http://net.developerdays.pl",
-    "Title": ".NET DEVELOPERDAYS - Premium conference for all developers using Microsoft development stack.",
-    "When": "20-21 październik 2016",
-    "Location": "Warszawa"
-  }
+    {
+        "Url": "http://net.developerdays.pl",
+        "Title": ".NET DEVELOPERDAYS - Premium conference for all developers using Microsoft development stack.",
+        "StartDate": "20.10.2016",
+        "EndDate": "21.10.2016",
+        "Location": "Warszawa"
+    }
 ]

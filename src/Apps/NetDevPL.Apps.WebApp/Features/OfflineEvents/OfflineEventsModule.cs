@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Nancy;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace NetDevPLWeb.Features.Conferences
 {
@@ -23,10 +26,11 @@ namespace NetDevPLWeb.Features.Conferences
     {
         public List<Conference> GetConferences()
         {
+            var tomorrow = DateTime.Today.AddDays(1);
             string json = File.ReadAllText("Features/OfflineEvents/conferences.json");
-            var conferences = JsonConvert.DeserializeObject<List<Conference>>(json);
-            
-            return conferences;
+            var conferences = JsonConvert.DeserializeObject<List<Conference>>(json, new IsoDateTimeConverter { DateTimeFormat = "dd.MM.yyyy" });
+
+            return conferences.Where(c => c.EndDate > tomorrow).ToList();
         }
     }
 
@@ -34,7 +38,8 @@ namespace NetDevPLWeb.Features.Conferences
     {
         public string Url { get; set; }
         public string Title { get; set; }
-        public string When { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string Location { get; set; }
     }
 
