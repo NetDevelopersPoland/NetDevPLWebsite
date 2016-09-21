@@ -5,16 +5,16 @@ using Newtonsoft.Json;
 
 namespace NetDevPLWeb.Features.Conferences
 {
-    public class ConferencesModule : NancyModule
+    public class OfflineEventsModule : NancyModule
     {
         readonly ConferencesSource source = new ConferencesSource();
 
-        public ConferencesModule()
+        public OfflineEventsModule()
         {
-            Get["/conferences"] = parameters =>
+            Get["/offlineEvents"] = parameters =>
             {
                 var conferences = source.GetConferences();
-                return View["conferencesList", new ConferencesListViewModel(conferences)];
+                return View["offlineEventsList", new ConferencesListViewModel(conferences)];
             };
         }
     }
@@ -23,7 +23,7 @@ namespace NetDevPLWeb.Features.Conferences
     {
         public List<Conference> GetConferences()
         {
-            string json = File.ReadAllText("Features/Conferences/conferences.json");
+            string json = File.ReadAllText("Features/OfflineEvents/conferences.json");
             var conferences = JsonConvert.DeserializeObject<List<Conference>>(json);
             
             return conferences;
