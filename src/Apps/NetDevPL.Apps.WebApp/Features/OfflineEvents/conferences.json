@@ -5,5 +5,12 @@
         "StartDate": "20.10.2016",
         "EndDate": "21.10.2016",
         "Location": "Warszawa"
+    },
+    {
+        "Url": "http://www.buildstuff.lt/",
+        "Title": "BUILD STUFF is a Software Development Conference for people who actually build stuff.",
+        "StartDate": "16.11.2016",
+        "EndDate": "18.11.2016",
+        "Location": "Wilno"
     }
 ]
