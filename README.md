@@ -2,6 +2,11 @@
 
 Strona dostępna jest pod adresem [http://netdevelopers.pl](http://netdevelopers.pl)
 
+## Status
+
+[![Build status](https://ci.appveyor.com/api/projects/status/eyu2c3t7k0cj1orc?svg=true)](https://ci.appveyor.com/project/pawelklimczyk/netdevplwebsite)
+
+
 ## Idea
 Projekt ten jest eksperymentem mającym na celu próbę stworzenia przez programistów portalu informacyjnego dla polskich programistów .NET.
 Jak każdy ewoluujący system także ten projekt nie ma ściśle określonych celów. Wraz z rozwojem projektu jedne funkcje będą dodawane, inne refaktoryzowane, a jeszcze inne usuwane.
