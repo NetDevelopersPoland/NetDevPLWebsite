@@ -1,0 +1,10 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Groups.GroupsViewModel>
+
+<div class="jumbotron clearfix">
+    <ul>
+        @foreach (var group in Model.GroupsList)
+        {
+            <li><a href="@group.Url" target="_blank">@group.Title</a></li>
+        }
+    </ul>
+</div>
