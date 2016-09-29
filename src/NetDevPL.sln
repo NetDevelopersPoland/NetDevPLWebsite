@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Apps.BackgoundJobs", "Apps\NetDevPL.Apps.BackgoundJobs\NetDevPL.Apps.BackgoundJobs.csproj", "{B65243DF-06F7-4D47-A37B-4107BE289F00}"
 EndProject
@@ -18,6 +18,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{457EF626-17F8-45DB-8FD7-101265927FEB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{486C2A3E-E8D0-43CC-A443-866C13482577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Meetup", "Features\NetDevPL.Features.Meetup\NetDevPL.Features.Meetup.csproj", "{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FB83D4CF-6BB8-4C3F-8890-A324AE1F8CE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Meetup.IntegrationTests", "Tests\Integration\NetDevPL.Features.Meetup.IntegrationTests\NetDevPL.Features.Meetup.IntegrationTests.csproj", "{32E543B2-8075-4F9B-BC7A-12D648D83AB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,14 @@ Global
 		{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +69,7 @@ Global
 		{441595F1-ECF3-4C73-984C-59EEF42A3E88} = {486C2A3E-E8D0-43CC-A443-866C13482577}
 		{513D6AF3-3CEF-45F7-A246-F111CDC40B76} = {486C2A3E-E8D0-43CC-A443-866C13482577}
 		{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333} = {457EF626-17F8-45DB-8FD7-101265927FEB}
+		{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD} = {457EF626-17F8-45DB-8FD7-101265927FEB}
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3} = {FB83D4CF-6BB8-4C3F-8890-A324AE1F8CE0}
 	EndGlobalSection
 EndGlobal
