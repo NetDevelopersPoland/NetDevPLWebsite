@@ -1,18 +1,17 @@
-﻿using System;
-using Gmtl.HandyLib;
+﻿using Gmtl.HandyLib;
 using Nancy;
 
 namespace NetDevPLWeb.Features.Facebook
 {
     public class FacebookModule : NancyModule
     {
-        Repository facebookDataRepository = new Repository();
+        readonly Repository _facebookDataRepository = new Repository();
 
         public FacebookModule()
         {
             Get["/facebook"] = parameters =>
             {
-                var posts = facebookDataRepository.GetList();
+                var posts = _facebookDataRepository.GetList();
 
                 return View["facebookPosts", new FacebookPostsViewModel(posts)];
             };

@@ -9,13 +9,13 @@ namespace NetDevPLWeb.Features.Blogs
 {
     public class BlogsModule : NancyModule
     {
-        readonly BlogSource source = new BlogSource();
+        readonly BlogSource _source = new BlogSource();
 
         public BlogsModule()
         {
             Get["/blogs"] = parameters =>
             {
-                var blogs = source.GetBlogs();
+                var blogs = _source.GetBlogs();
                 return View["blogList", new BlogListViewModel(blogs)];
             };
         }
