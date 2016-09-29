@@ -9,13 +9,13 @@ namespace NetDevPLWeb.Features.Contributors
 {
     public class ContributorsModule : NancyModule
     {
-        readonly ContributorsModuleDataSource source = new ContributorsModuleDataSource();
+        private readonly ContributorsModuleDataSource _source = new ContributorsModuleDataSource();
 
         public ContributorsModule()
         {
             Get["/contributors"] = parameters =>
             {
-                var contributors = source.GetContributors();
+                var contributors = _source.GetContributors();
                 return View["contributorsList", new ContributorsListViewModel(contributors)];
             };
         }
