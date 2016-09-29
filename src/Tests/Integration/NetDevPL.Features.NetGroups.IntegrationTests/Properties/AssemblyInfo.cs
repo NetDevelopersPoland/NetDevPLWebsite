@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NetDevPL.Features.Meetup")]
+[assembly: AssemblyTitle("NetDevPL.Features.NetGroups.IntegrationTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NetDevPL.Features.Meetup")]
+[assembly: AssemblyProduct("NetDevPL.Features.NetGroups.IntegrationTests")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("79f5ebe8-ec54-457c-981f-f4fd5254d25c")]
+[assembly: Guid("13fd8684-d3d2-4b6d-b27e-e92f2016c55d")]
 
 // Version information for an assembly consists of the following four values:
 //

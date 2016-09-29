@@ -9,8 +9,8 @@
     <ProjectGuid>{32E543B2-8075-4F9B-BC7A-12D648D83AB3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetDevPL.Features.Meetup.IntegrationTests</RootNamespace>
-    <AssemblyName>NetDevPL.Features.Meetup.IntegrationTests</AssemblyName>
+    <RootNamespace>NetDevPL.Features.NetGroups.IntegrationTests</RootNamespace>
+    <AssemblyName>NetDevPL.Features.NetGroups.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -68,9 +68,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Features\NetDevPL.Features.Meetup\NetDevPL.Features.Meetup.csproj">
+    <ProjectReference Include="..\..\..\Features\NetDevPL.Features.NetGroups\NetDevPL.Features.NetGroups.csproj">
       <Project>{d817cf1b-7e0a-419a-aa50-446f8de8accd}</Project>
-      <Name>NetDevPL.Features.Meetup</Name>
+      <Name>NetDevPL.Features.NetGroups</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

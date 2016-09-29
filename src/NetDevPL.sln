@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Apps.BackgoundJobs", "Apps\NetDevPL.Apps.BackgoundJobs\NetDevPL.Apps.BackgoundJobs.csproj", "{B65243DF-06F7-4D47-A37B-4107BE289F00}"
 EndProject
@@ -19,11 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{45
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{486C2A3E-E8D0-43CC-A443-866C13482577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Meetup", "Features\NetDevPL.Features.Meetup\NetDevPL.Features.Meetup.csproj", "{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.NetGroups", "Features\NetDevPL.Features.NetGroups\NetDevPL.Features.NetGroups.csproj", "{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FB83D4CF-6BB8-4C3F-8890-A324AE1F8CE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Meetup.IntegrationTests", "Tests\Integration\NetDevPL.Features.Meetup.IntegrationTests\NetDevPL.Features.Meetup.IntegrationTests.csproj", "{32E543B2-8075-4F9B-BC7A-12D648D83AB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.NetGroups.IntegrationTests", "Tests\Integration\NetDevPL.Features.NetGroups.IntegrationTests\NetDevPL.Features.NetGroups.IntegrationTests.csproj", "{32E543B2-8075-4F9B-BC7A-12D648D83AB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

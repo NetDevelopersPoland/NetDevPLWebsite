@@ -7,8 +7,8 @@
     <ProjectGuid>{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetDevPL.Features.Meetup</RootNamespace>
-    <AssemblyName>NetDevPL.Features.Meetup</AssemblyName>
+    <RootNamespace>NetDevPL.Features.NetGroups</RootNamespace>
+    <AssemblyName>NetDevPL.Features.NetGroups</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -1,5 +1,5 @@
 ﻿// -------------------------------------------------------------------------------------------------------------------
-// <copyright company="Gemotial" file="MeetupDataProvider.cs" project="NetDevPL.Features.Meetup" date="2016-09-29 07:46">
+// <copyright company="Gemotial" file="MeetupDataProvider.cs" project="NetDevPL.Features.NetGroups" date="2016-09-29 07:46">
 // 
 // </copyright>
 // -------------------------------------------------------------------------------------------------------------------
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Net;
 using RestSharp;
 
-namespace NetDevPL.Features.Meetup
+namespace NetDevPL.Features.NetGroups
 {
     public class MeetupDataProvider
     {

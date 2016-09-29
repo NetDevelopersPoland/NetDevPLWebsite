@@ -1,7 +1,7 @@
 ﻿using System.Configuration;
 using Xunit;
 
-namespace NetDevPL.Features.Meetup.IntegrationTests
+namespace NetDevPL.Features.NetGroups.IntegrationTests
 {
     public class MeetupDataProviderTests
     {
