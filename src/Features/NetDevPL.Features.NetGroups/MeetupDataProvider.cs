@@ -4,7 +4,6 @@
 // </copyright>
 // -------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -15,7 +14,7 @@ namespace NetDevPL.Features.NetGroups
 {
     public class MeetupDataProvider
     {
-        private static Dictionary<string, string> meetupPagesToCheck = new Dictionary<string, string>()
+        private static Dictionary<string, string> meetupPagesToCheck = new Dictionary<string, string>
         {
             {"wrocnet","Wrocław"},
             {"rg-dev","Rzeszów"},
@@ -25,10 +24,10 @@ namespace NetDevPL.Features.NetGroups
             {"DEV-ZG","Zielona Góra"}
         };
 
-        public List<MeetupData> GetDataFromMeetupPage()
+        public List<NetGroupMeeting> GetDataFromMeetupPage()
         {
             string meetupApiKey = ConfigurationManager.AppSettings["MeetupApiKey"];
-            var meetupData = new List<MeetupData>();
+            var meetupData = new List<NetGroupMeeting>();
             var client = new RestClient("https://api.meetup.com");
 
             foreach (var pair in meetupPagesToCheck)
@@ -47,11 +46,10 @@ namespace NetDevPL.Features.NetGroups
 
                     if (data != null)
                     {
-                        MeetupData record = new MeetupData
+                        NetGroupMeeting record = new NetGroupMeeting
                         {
-                            City = pair.Value,
                             Title = data.name,
-                            Link= data.event_url,
+                            Link = data.event_url,
                             Description = data.description,
                             Date = Gmtl.HandyLib.HLDateTime.FromUnixTimestamp((data.utc_offset + data.time) / 1000),
                             Limit = data.yes_rsvp_count + "/" + ((data.rsvp_limit > 0) ? data.rsvp_limit : 999)
@@ -66,6 +64,7 @@ namespace NetDevPL.Features.NetGroups
         }
     }
 
+    #region meetup ison objects
     public class Venue
     {
         public string country { get; set; }
@@ -136,14 +135,6 @@ namespace NetDevPL.Features.NetGroups
         public List<Result> results { get; set; }
         public Meta meta { get; set; }
     }
+    #endregion
 
-    public class MeetupData
-    {
-        public string Description { get; set; }
-        public string City { get; set; }
-        public string Title { get; set; }
-        public string Limit { get; set; }
-        public string Link { get; set; }
-        public DateTime Date { get; set; }
-    }
 }
