@@ -52,11 +52,6 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
-*_i.c
-*_p.c
-*_i.h
-*.ilk
-*.meta
 *.obj
 *.pch
 *.pdb
@@ -79,17 +74,6 @@ artifacts/
 
 # Chutzpah Test files
 _Chutzpah*
-
-# Visual C++ cache files
-ipch/
-*.aps
-*.ncb
-*.opendb
-*.opensdf
-*.sdf
-*.cachefile
-*.VC.db
-*.VC.VC.opendb
 
 # Visual Studio profiler
 *.psess
@@ -259,5 +243,3 @@ paket-files/
 __pycache__/
 *.pyc
 
-### VisualStudio Patch ###
-build/
