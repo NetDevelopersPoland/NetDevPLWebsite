@@ -8,13 +8,13 @@ namespace NetDevPLWeb.Features.Resources
 {
     public class ResourcesModule : NancyModule
     {
-        readonly ResourcesSource source = new ResourcesSource();
+        readonly ResourcesSource _source = new ResourcesSource();
 
         public ResourcesModule()
         {
             Get["/resources"] = parameters =>
             {
-                var toolsMastering = source.GetMasteringTools();
+                var toolsMastering = _source.GetMasteringTools();
 
                 return View["resourcesList", new ResourcesViewModel(toolsMastering)];
             };

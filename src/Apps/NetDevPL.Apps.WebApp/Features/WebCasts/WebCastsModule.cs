@@ -8,13 +8,13 @@ namespace NetDevPLWeb.Features.WebCasts
 {
     public class WebcastsModule : NancyModule
     {
-        private readonly WebcastsSource source = new WebcastsSource();
+        private readonly WebcastsSource _source = new WebcastsSource();
 
         public WebcastsModule()
         {
             Get["/webcasts"] = parameters =>
             {
-                var toolsMastering = source.GetMasteringTools();
+                var toolsMastering = _source.GetMasteringTools();
 
                 return View["webcastsList", new WebcastsViewModel(toolsMastering)];
             };

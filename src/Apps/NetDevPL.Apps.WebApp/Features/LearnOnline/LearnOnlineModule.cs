@@ -8,14 +8,14 @@ namespace NetDevPLWeb.Features.LearnOnline
 {
     public class LearnOnlineModule : NancyModule
     {
-        readonly LearnOnlineSource source = new LearnOnlineSource();
+        readonly LearnOnlineSource _source = new LearnOnlineSource();
 
         public LearnOnlineModule()
         {
             Get["/learnOnline"] = parameters =>
             {
-                var toolsMastering = source.GetMasteringTools();
-                var programmingChallenges = source.GetProgrammingChallenges();
+                var toolsMastering = _source.GetMasteringTools();
+                var programmingChallenges = _source.GetProgrammingChallenges();
 
                 return View["learnOnlineList", new LearOnlineListViewModel(toolsMastering, programmingChallenges)];
             };

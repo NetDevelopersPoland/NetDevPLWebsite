@@ -6,17 +6,17 @@ using Nancy;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace NetDevPLWeb.Features.Conferences
+namespace NetDevPLWeb.Features.OfflineEvents
 {
     public class OfflineEventsModule : NancyModule
     {
-        readonly ConferencesSource source = new ConferencesSource();
+        private readonly ConferencesSource _source = new ConferencesSource();
 
         public OfflineEventsModule()
         {
             Get["/offlineEvents"] = parameters =>
             {
-                var conferences = source.GetConferences();
+                var conferences = _source.GetConferences();
                 return View["offlineEventsList", new ConferencesListViewModel(conferences)];
             };
         }
