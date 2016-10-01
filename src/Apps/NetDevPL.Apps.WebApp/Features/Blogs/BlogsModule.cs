@@ -9,16 +9,22 @@ namespace NetDevPLWeb.Features.Blogs
 {
     public class BlogsModule : NancyModule
     {
-        readonly BlogSource _source = new BlogSource();
+        private readonly BlogComponent _blogComponent;
+        private readonly BlogSource _source;
 
-        public BlogsModule()
+        public BlogsModule(BlogComponent blogComponent, BlogSource source)
         {
+            _blogComponent = blogComponent;
+            _source = source;
+
             Get["/blogs"] = parameters =>
             {
                 var blogs = _source.GetBlogs();
-                return View["blogList", new BlogListViewModel(blogs)];
+                var blogListViewModel = _blogComponent.CreateBlogViewModelList(blogs);
+
+                return View["blogList", blogListViewModel];
             };
-        }
+        }      
     }
 
     public class BlogSource
@@ -38,15 +44,5 @@ namespace NetDevPLWeb.Features.Blogs
         public string Url { get; set; }
         public string Rss { get; set; }
         public string Title { get; set; }
-    }
-
-    public class BlogListViewModel
-    {
-        public BlogListViewModel(List<Blog> blogs)
-        {
-            Blogs = blogs;
-        }
-
-        public List<Blog> Blogs { get; set; }
     }
 }
