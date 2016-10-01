@@ -1,12 +1,22 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Blogs.BlogListViewModel>
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<System.Collections.Generic.IEnumerable<NetDevPLWeb.Features.Blogs.ViewModels.BlogViewModel>>
 
-<div class="jumbotron clearfix">
-    <h2>Lista blogów</h2>
-
-    <ul>
-        @foreach (var blog in Model.Blogs)
-        {
-            <li><a href="@blog.Url" target="_blank">@blog.Title</a></li>
-        }
-    </ul>
+<div class="row">
+    @foreach (var blog in Model)
+         {
+             <div class="col-sm-6 col-md-3">
+                 <div class="thumbnail">
+                     <div class="caption">
+                         <p><h4>@blog.Title</h4></p>
+                         @foreach (var blogPost in blog.BlogPosts)
+                         {
+                             <p>
+                                 <a href="@blogPost.Link" target="_blank">
+                                    @blogPost.Title
+                                 </a>
+                             </p>
+                         }                        
+                     </div>
+                 </div>
+             </div>
+         }
 </div>

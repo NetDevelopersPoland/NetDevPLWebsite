@@ -36,3 +36,10 @@
 .alert {
     border-radius: 0;
 }
+
+.row .thumbnail {
+    border:0;
+    border-radius:0;
+    opacity: 0.9;
+    height: 300px;
+}
