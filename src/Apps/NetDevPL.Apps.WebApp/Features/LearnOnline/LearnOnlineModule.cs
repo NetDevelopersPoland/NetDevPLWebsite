@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using Nancy;
+using NetDevPL.Infrastructure.Helpers;
 using Newtonsoft.Json;
 
 namespace NetDevPLWeb.Features.LearnOnline
@@ -24,21 +25,9 @@ namespace NetDevPLWeb.Features.LearnOnline
 
     public class LearnOnlineSource
     {
-        public List<WebsiteRecordWithTitleAndDesc> GetMasteringTools()
-        {
-            string json = File.ReadAllText("Features/LearnOnline/toolsMastering.json");
-            var toolMasterings = JsonConvert.DeserializeObject<List<WebsiteRecordWithTitleAndDesc>>(json);
-            
-            return toolMasterings.ToList();
-        }
+        public List<WebsiteRecordWithTitleAndDesc> GetMasteringTools() => JsonReaderHelper.ReadObjectListFromJson<WebsiteRecordWithTitleAndDesc>("Features/LearnOnline/toolsMastering.json");
 
-        public List<WebsiteRecordWithTitleAndDesc> GetProgrammingChallenges()
-        {
-            string json = File.ReadAllText("Features/LearnOnline/programmingChallenges.json");
-            var challenges = JsonConvert.DeserializeObject<List<WebsiteRecordWithTitleAndDesc>>(json);
-            
-            return challenges.ToList();
-        }
+        public List<WebsiteRecordWithTitleAndDesc> GetProgrammingChallenges() => JsonReaderHelper.ReadObjectListFromJson<WebsiteRecordWithTitleAndDesc>("Features/LearnOnline/programmingChallenges.json");
     }
 
     public class WebsiteRecordWithTitleAndDesc
