@@ -16,7 +16,8 @@ namespace NetDevPLBackgoundJobs
                 IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
 
                 scheduler.Start();
-                AddJob(scheduler);
+                AddJob(scheduler, new FacebookJob(), "10 0 * * * ?");
+                AddJob(scheduler, new NetGroupsUpdateJob(), "20 0 */8 * * ?");
 
                 while (true)
                 {
@@ -31,11 +32,10 @@ namespace NetDevPLBackgoundJobs
             }
         }
 
-        public static void AddJob(IScheduler scheduler)
+        public static void AddJob(IScheduler scheduler, IJob job, string cronTime)
         {
-            IJob job = new FacebookJob();
             JobDetailImpl jobDetail = new JobDetailImpl(job.GetType().FullName, job.GetType().FullName + "Group", job.GetType());
-            CronTriggerImpl trigger = new CronTriggerImpl(job.GetType().FullName + "Trigger", job.GetType().FullName + "Group", "10 0 * * * ?");
+            CronTriggerImpl trigger = new CronTriggerImpl(job.GetType().FullName + "Trigger", job.GetType().FullName + "Group", cronTime);
             scheduler.ScheduleJob(jobDetail, trigger);
             DateTimeOffset? nextFireTime = trigger.GetNextFireTimeUtc();
             Console.WriteLine("Next run time: " + nextFireTime.Value);

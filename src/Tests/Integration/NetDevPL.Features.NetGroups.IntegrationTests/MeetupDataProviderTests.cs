@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System.Collections.Generic;
+using System.Configuration;
 using Xunit;
 
 namespace NetDevPL.Features.NetGroups.IntegrationTests
@@ -6,7 +7,7 @@ namespace NetDevPL.Features.NetGroups.IntegrationTests
     public class MeetupDataProviderTests
     {
         private MeetupDataProvider sut;
-        
+
         public MeetupDataProviderTests()
         {
             //In order to run those tests configuration MeetupApiKey value must be set
@@ -18,7 +19,8 @@ namespace NetDevPL.Features.NetGroups.IntegrationTests
         [Fact(Skip = "Personal meetup key needs to be provided")]
         public void ShouldFetchDataFromMeetup()
         {
-            var data = sut.GetDataFromMeetupPage();
+            NetGroup group = new NetGroup { MeetupName = "wrocnet", City = "Wrocław" };
+            var data = sut.GetDataFromMeetupPage(new List<NetGroup> { group });
 
             Assert.NotEmpty(data);
         }

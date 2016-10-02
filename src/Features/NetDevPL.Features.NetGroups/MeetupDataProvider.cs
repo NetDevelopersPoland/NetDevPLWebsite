@@ -4,6 +4,7 @@
 // </copyright>
 // -------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -14,26 +15,16 @@ namespace NetDevPL.Features.NetGroups
 {
     public class MeetupDataProvider
     {
-        private static Dictionary<string, string> meetupPagesToCheck = new Dictionary<string, string>
-        {
-            {"wrocnet","Wrocław"},
-            {"rg-dev","Rzeszów"},
-            {"KGD-NET","Kraków"},
-            {"WG-NET","Warszawa"},
-            {"Lodz-NET-IT-Pro-User-Group","Łódź"},
-            {"DEV-ZG","Zielona Góra"}
-        };
-
-        public List<NetGroupMeeting> GetDataFromMeetupPage()
+        public List<NetGroupMeeting> GetDataFromMeetupPage(List<NetGroup> groupsToCheck)
         {
             string meetupApiKey = ConfigurationManager.AppSettings["MeetupApiKey"];
             var meetupData = new List<NetGroupMeeting>();
             var client = new RestClient("https://api.meetup.com");
 
-            foreach (var pair in meetupPagesToCheck)
+            foreach (var group in groupsToCheck.Where(g => !String.IsNullOrWhiteSpace(g.MeetupName)))
             {
                 var request = new RestRequest("/2/events", Method.GET);
-                request.AddQueryParameter("group_urlname", pair.Key);
+                request.AddQueryParameter("group_urlname", group.MeetupName);
 
                 request.AddQueryParameter("key", meetupApiKey);
                 request.AddQueryParameter("sign", "true");
@@ -42,12 +33,11 @@ namespace NetDevPL.Features.NetGroups
 
                 if (result.StatusCode == HttpStatusCode.OK)
                 {
-                    var data = result.Data.results.FirstOrDefault(r => r.status == "upcoming");
-
-                    if (data != null)
+                    foreach (var data in result.Data.results.Where(r => r.status == "upcoming"))
                     {
                         NetGroupMeeting record = new NetGroupMeeting
                         {
+                            GroupKey = data.group.urlname,
                             Title = data.name,
                             Link = data.event_url,
                             Description = data.description,
@@ -136,5 +126,4 @@ namespace NetDevPL.Features.NetGroups
         public Meta meta { get; set; }
     }
     #endregion
-
 }

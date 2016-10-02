@@ -2,6 +2,8 @@
 using System.IO;
 using System.Linq;
 using Nancy;
+using NetDevPL.Infrastructure.Helpers;
+using NetDevPLWeb.Features.Resources;
 using Newtonsoft.Json;
 
 namespace NetDevPLWeb.Features.WebCasts
@@ -14,7 +16,7 @@ namespace NetDevPLWeb.Features.WebCasts
         {
             Get["/webcasts"] = parameters =>
             {
-                var toolsMastering = _source.GetMasteringTools();
+                var toolsMastering = _source.GetWebcastList();
 
                 return View["webcastsList", new WebcastsViewModel(toolsMastering)];
             };
@@ -23,13 +25,7 @@ namespace NetDevPLWeb.Features.WebCasts
 
     public class WebcastsSource
     {
-        public List<Webcast> GetMasteringTools()
-        {
-            var json = File.ReadAllText("Features/Webcasts/webcastsList.json");
-            var webcasts = JsonConvert.DeserializeObject<List<Webcast>>(json);
-            
-            return webcasts.ToList();
-        }
+        public List<Webcast> GetWebcastList() => JsonReaderHelper.ReadObjectListFromJson<Webcast>("Features/Webcasts/webcastsList.json");
     }
 
     public class Webcast

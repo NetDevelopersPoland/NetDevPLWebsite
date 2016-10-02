@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Nancy;
+using NetDevPL.Infrastructure.Helpers;
 using Newtonsoft.Json;
 
 namespace NetDevPLWeb.Features.Blogs
@@ -31,9 +32,8 @@ namespace NetDevPLWeb.Features.Blogs
     {
         public List<Blog> GetBlogs()
         {
-            string json = File.ReadAllText("Features/Blogs/blogs.json");
-            var blogs = JsonConvert.DeserializeObject<List<Blog>>(json);
-
+            var blogs = JsonReaderHelper.ReadObjectListFromJson<Blog>("Features/Blogs/blogs.json");
+            
             //Randomize order to not favorize any
             return blogs.OrderBy(a => Guid.NewGuid()).ToList();
         }

@@ -56,20 +56,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Jobs\FacebookJob.cs" />
+    <Compile Include="Jobs\NetGroupsUpdateJob.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="netGroupsConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Features\NetDevPL.Features.Facebook\NetDevPL.Features.Facebook.csproj">
       <Project>{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}</Project>
       <Name>NetDevPL.Features.Facebook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Features\NetDevPL.Features.NetGroups\NetDevPL.Features.NetGroups.csproj">
+      <Project>{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}</Project>
+      <Name>NetDevPL.Features.NetGroups</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
+      <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>
+      <Name>NetDevPL.Infrastructure.Helpers</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.SharedKernel\NetDevPL.Infrastructure.SharedKernel.csproj">
       <Project>{513D6AF3-3CEF-45F7-A246-F111CDC40B76}</Project>

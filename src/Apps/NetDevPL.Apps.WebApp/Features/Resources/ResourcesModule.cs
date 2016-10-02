@@ -2,6 +2,8 @@
 using System.IO;
 using System.Linq;
 using Nancy;
+using NetDevPL.Infrastructure.Helpers;
+using NetDevPLWeb.Features.Blogs;
 using Newtonsoft.Json;
 
 namespace NetDevPLWeb.Features.Resources
@@ -14,7 +16,7 @@ namespace NetDevPLWeb.Features.Resources
         {
             Get["/resources"] = parameters =>
             {
-                var toolsMastering = _source.GetMasteringTools();
+                var toolsMastering = _source.GetResources();
 
                 return View["resourcesList", new ResourcesViewModel(toolsMastering)];
             };
@@ -23,13 +25,7 @@ namespace NetDevPLWeb.Features.Resources
 
     public class ResourcesSource
     {
-        public List<Resource> GetMasteringTools()
-        {
-            string json = File.ReadAllText("Features/Resources/resources.json");
-            var resources = JsonConvert.DeserializeObject<List<Resource>>(json);
-            
-            return resources.ToList();
-        }
+        public List<Resource> GetResources() =>JsonReaderHelper.ReadObjectListFromJson<Resource>("Features/Resources/resources.json");
     }
 
     public class Resource
