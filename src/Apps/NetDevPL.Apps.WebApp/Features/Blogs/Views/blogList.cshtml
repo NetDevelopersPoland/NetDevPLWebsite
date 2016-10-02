@@ -1,22 +1,22 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<System.Collections.Generic.IEnumerable<NetDevPLWeb.Features.Blogs.ViewModels.BlogViewModel>>
 
-<div class="row">
+<div class="row equalize-row">
     @foreach (var blog in Model)
-         {
-             <div class="col-sm-6 col-md-3">
-                 <div class="thumbnail">
-                     <div class="caption">
-                         <p><h4>@blog.Title</h4></p>
-                         @foreach (var blogPost in blog.BlogPosts)
-                         {
-                             <p>
-                                 <a href="@blogPost.Link" target="_blank">
-                                    @blogPost.Title
-                                 </a>
-                             </p>
-                         }                        
-                     </div>
-                 </div>
-             </div>
-         }
+    {
+        <div class="col-sm-6 col-md-3 equalize">
+            <div class="thumbnail">
+                <div class="caption">
+                    <p><h4>@blog.Title</h4></p>
+                    @foreach (var blogPost in blog.BlogPosts)
+                    {
+                        <p>
+                            <a href="@blogPost.Link" target="_blank">
+                                @blogPost.Title
+                            </a>
+                        </p>
+                    }                        
+                </div>
+            </div>
+        </div>
+    }
 </div>
