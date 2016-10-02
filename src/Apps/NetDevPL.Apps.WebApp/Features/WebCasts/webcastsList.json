@@ -1,12 +1,12 @@
 ﻿[
-    {
-        "Title": "The Future of C#",
-        "Description": "The early features of C# 7",
-        "Url": "https://www.youtube.com/watch?v=59uy7nm8QOw"
-    },
-    {
-        "Title": "Introducing ASP.NET Core 1.0",
-        "Description": "A great introduction to ASP.NET Core 1.0",
-        "Url": "https://www.youtube.com/watch?v=bbQ853tgTrM"
-    }
+  {
+    "Title": "The Future of C#",
+    "Description": "The early features of C# 7",
+    "Url": "https://www.youtube.com/embed/59uy7nm8QOw"
+  },
+  {
+    "Title": "Introducing ASP.NET Core 1.0",
+    "Description": "A great introduction to ASP.NET Core 1.0",
+    "Url": "https://www.youtube.com/embed/bbQ853tgTrM"
+  }
 ]
