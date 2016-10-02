@@ -1,10 +1,46 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Groups.GroupsViewModel>
+﻿@using System.Linq
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Groups.GroupsViewModel>
+
+@{
+    int index = 1;
+}
 
 <div class="jumbotron clearfix">
-    <ul>
-        @foreach (var group in Model.GroupsList)
+
+    <div class="list-group">
+
+        @foreach (var group in Model.GroupsList.OrderBy(g => g.City))
         {
-            <li><a href="@group.Url" target="_blank">@group.Title</a></li>
-        }
-    </ul>
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading"><a href="@group.WebSite" target="_blank">@group.Name (@group.City)</a></h4>
+
+                @if (group.UpcomingMeetings.Count > 0)
+                {
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                Lista nadchodzących spotkań
+                            </h4>
+                        </div>
+                        <ul class="list-group">
+                            @foreach (var meeting in group.UpcomingMeetings)
+                            {
+                                <li class="list-group-item">
+                                    <a data-toggle="collapse" href="@Html.Raw("#collapse" + @index)">@meeting.Date.ToString("yyyy-MM-dd HH:MM") @meeting.Title</a>
+                                    <div class="collapse" id="@Html.Raw("collapse" + @index)">
+                                        @Html.Raw(@meeting.Description)
+                                    </div>
+                                </li>
+                                @{index++;}
+                            }
+                        </ul>
+                    </div>
+                            }
+                            else
+                            {
+                                <p>Brak informacji o nadchodzących spotkaniach</p>
+                            }
+            </div>
+                            }
+    </div>
 </div>

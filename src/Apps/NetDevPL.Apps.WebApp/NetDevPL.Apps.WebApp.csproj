@@ -166,6 +166,10 @@
       <Project>{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}</Project>
       <Name>NetDevPL.Features.Facebook</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Features\NetDevPL.Features.NetGroups\NetDevPL.Features.NetGroups.csproj">
+      <Project>{d817cf1b-7e0a-419a-aa50-446f8de8accd}</Project>
+      <Name>NetDevPL.Features.NetGroups</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
       <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>
       <Name>NetDevPL.Infrastructure.Helpers</Name>

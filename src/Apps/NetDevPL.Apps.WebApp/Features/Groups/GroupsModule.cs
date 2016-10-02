@@ -1,50 +1,34 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using Nancy;
-using Newtonsoft.Json;
+using NetDevPL.Features.NetGroups;
 
 namespace NetDevPLWeb.Features.Groups
 {
     public class GroupsModule : NancyModule
     {
-        private readonly GroupsSource _source = new GroupsSource();
-
         public GroupsModule()
         {
             Get["/groups"] = parameters =>
             {
-                var toolsMastering = _source.GetMasteringTools();
+                Repository repository = new Repository();
 
-                return View["groupsList", new GroupsViewModel(toolsMastering)];
+                var groupsData = repository.GetGroups();
+
+                return View["groupsList", new GroupsViewModel(groupsData)];
             };
         }
     }
-
-    public class GroupsSource
-    {
-        public List<Group> GetMasteringTools()
-        {
-            var json = File.ReadAllText("Features/Groups/groupsList.json");
-            var groups = JsonConvert.DeserializeObject<List<Group>>(json);
-            
-            return groups.ToList();
-        }
-    }
-
-    public class Group
-    {
-        public string Url { get; set; }
-        public string Title { get; set; }
-    }
-
+    
     public class GroupsViewModel
     {
-        public GroupsViewModel(List<Group> groups)
+        public GroupsViewModel(NetGroupDataSnapshot snapshot)
         {
-            GroupsList = groups;
+            GroupsList = snapshot.Groups;
+            LastUpdate = snapshot.SnapshotDate;
         }
 
-        public List<Group> GroupsList { get; private set; }
+        public List<NetGroup> GroupsList { get; private set; }
+        public DateTime LastUpdate { get; set; }
     }
 }

@@ -1,0 +1,44 @@
+﻿[
+    {
+        "Name": "WrocNET",
+        "MeetupName": "wrocnet",
+        "WebSite": "http://wrocnet.github.io",
+        "City": "Wrocław"
+    },
+    {
+        "Name": "WG-NET",
+        "MeetupName": "WG-NET",
+        "WebSite": "",
+        "City": "Warszawa"
+    },
+    {
+        "Name": "rg-dev",
+        "MeetupName": "rg-dev",
+        "WebSite": "",
+        "City": "Rzeszów"
+    },
+    {
+        "Name": "KGD-NET",
+        "MeetupName": "KGD-NET",
+        "WebSite": "",
+        "City": "Kraków"
+    },
+    {
+        "Name": "Łódzka grupa .NET",
+        "MeetupName": "Lodz-NET-IT-Pro-User-Group",
+        "WebSite": "",
+        "City": "Łódź"
+    },
+    {
+        "Name": "DEV-ZG",
+        "MeetupName": "DEV-ZG",
+        "WebSite": "",
+        "City": "Zielona Góra"
+    },
+    {
+        "Name": "Białostocka Grupa .NET",
+        "MeetupName": "",
+        "WebSite": "https://www.facebook.com/groups/bstoknet/",
+        "City": "Białystok"
+    }
+]

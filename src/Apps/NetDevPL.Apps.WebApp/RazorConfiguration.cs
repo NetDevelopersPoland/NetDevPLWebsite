@@ -9,12 +9,14 @@ namespace NetDevPLWeb
         {
             yield return "Gmtl.HandyLib";
             yield return "NetDevPLWeb.Features.Facebook";
+            yield return "NetDevPL.Features.NetGroups";
         }
 
         public IEnumerable<string> GetDefaultNamespaces()
         {
             yield return "Gmtl.HandyLib";
             yield return "NetDevPLWeb.Features.Facebook";
+            yield return "NetDevPLWeb.Features.Groups";
         }
 
         public bool AutoIncludeModelNamespace => true;
