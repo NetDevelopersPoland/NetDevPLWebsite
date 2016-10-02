@@ -170,13 +170,13 @@
       <Project>{d817cf1b-7e0a-419a-aa50-446f8de8accd}</Project>
       <Name>NetDevPL.Features.NetGroups</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Features\NetDevPL.Features.Rss\NetDevPL.Features.Rss.csproj">
+      <Project>{3AE17152-62B5-4900-A186-C4D48BFDAEC4}</Project>
+      <Name>NetDevPL.Features.Rss</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
       <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>
       <Name>NetDevPL.Infrastructure.Helpers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\NetDevPL.Features.Rss\NetDevPL.Features.Rss.csproj">
-      <Project>{3AE17152-62B5-4900-A186-C4D48BFDAEC4}</Project>
-      <Name>NetDevPL.Features.Rss</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
