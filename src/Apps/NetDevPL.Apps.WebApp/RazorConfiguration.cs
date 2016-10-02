@@ -8,7 +8,7 @@ namespace NetDevPLWeb
         public IEnumerable<string> GetAssemblyNames()
         {
             yield return "Gmtl.HandyLib";
-            yield return "NetDevPLWeb.Features.Facebook";
+            yield return "NetDevPL.Features.Facebook";
             yield return "NetDevPL.Features.NetGroups";
         }
 

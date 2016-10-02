@@ -7,8 +7,8 @@
     <ProjectGuid>{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetDevPLWeb.Features.Facebook</RootNamespace>
-    <AssemblyName>NetDevPLWeb.Features.Facebook</AssemblyName>
+    <RootNamespace>NetDevPL.Features.Facebook</RootNamespace>
+    <AssemblyName>NetDevPL.Features.Facebook</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
