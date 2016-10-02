@@ -24,7 +24,7 @@ namespace NetDevPLWeb.Features.Groups
     {
         public GroupsViewModel(NetGroupDataSnapshot snapshot)
         {
-            GroupsList = snapshot.Groups;
+            GroupsList = snapshot.Groups?? new List<NetGroup>();
             LastUpdate = snapshot.SnapshotDate;
         }
 
