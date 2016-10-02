@@ -41,5 +41,22 @@
     border:0;
     border-radius:0;
     opacity: 0.9;
-    height: 300px;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.equalize-row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+ 
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.equalize {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }

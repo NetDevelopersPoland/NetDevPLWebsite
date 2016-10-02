@@ -95,7 +95,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <Content Include="Content\css\custom.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\images\cup-of-coffee-1280537_1920.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
