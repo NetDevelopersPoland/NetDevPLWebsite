@@ -1,48 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Nancy;
-using NetDevPL.Infrastructure.Helpers;
-using Newtonsoft.Json;
+using NetDevPL.Features.Blogs;
+using Repository = NetDevPL.Features.Blogs.Repository;
 
 namespace NetDevPLWeb.Features.Blogs
 {
     public class BlogsModule : NancyModule
     {
-        private readonly BlogComponent _blogComponent;
-        private readonly BlogSource _source;
+        private readonly Repository _repository;
 
-        public BlogsModule(BlogComponent blogComponent, BlogSource source)
+        public BlogsModule(Repository repository)
         {
-            _blogComponent = blogComponent;
-            _source = source;
-
+            _repository = repository;
+            
             Get["/blogs"] = parameters =>
             {
-                var blogs = _source.GetBlogs();
-                var blogListViewModel = _blogComponent.CreateBlogViewModelList(blogs);
+                var blogs = _repository.GetBlogs();
 
-                return View["blogList", blogListViewModel];
+                return View["blogList", new BlogsViewModel(blogs)];
             };
         }      
     }
 
-    public class BlogSource
+    public class BlogsViewModel
     {
-        public List<Blog> GetBlogs()
+        public BlogsViewModel(BlogDataSnapshot snapshot)
         {
-            var blogs = JsonReaderHelper.ReadObjectListFromJson<Blog>("Features/Blogs/blogs.json");
-            
-            //Randomize order to not favorize any
-            return blogs.OrderBy(a => Guid.NewGuid()).ToList();
+            BlogsList = snapshot.Blogs ?? Enumerable.Empty<Blog>();
+            LastUpdate = snapshot.SnapshotDate;
         }
-    }
 
-    public class Blog
-    {
-        public string Url { get; set; }
-        public string Rss { get; set; }
-        public string Title { get; set; }
+        public IEnumerable<Blog> BlogsList { get; private set; }
+        public DateTime LastUpdate { get; set; }
     }
 }

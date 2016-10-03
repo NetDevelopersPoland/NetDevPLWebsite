@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Jobs\FacebookJob.cs" />
+    <Compile Include="Jobs\BlogsUpdateJob.cs" />
     <Compile Include="Jobs\NetGroupsUpdateJob.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +65,9 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="blogsConfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
@@ -80,6 +85,10 @@
     <ProjectReference Include="..\..\Features\NetDevPL.Features.NetGroups\NetDevPL.Features.NetGroups.csproj">
       <Project>{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}</Project>
       <Name>NetDevPL.Features.NetGroups</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Features\NetDevPL.Features.Rss\NetDevPL.Features.Blogs.csproj">
+      <Project>{3AE17152-62B5-4900-A186-C4D48BFDAEC4}</Project>
+      <Name>NetDevPL.Features.Blogs</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
       <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>

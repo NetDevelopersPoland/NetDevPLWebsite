@@ -3,25 +3,24 @@ using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Xml;
 
-namespace NetDevPL.Features.Rss
+namespace NetDevPL.Infrastructure.Helpers
 {
-    public class RssProvider
+    public static class RssProvider
     {
-        public IEnumerable<SyndicationItem> GetItemsFromRss(string rss)
+        public static IEnumerable<SyndicationItem> GetItemsFromRss(string rssUrl)
         {
             try
             {
-                XmlReader reader = XmlReader.Create(rss);
+                XmlReader reader = XmlReader.Create(rssUrl);
                 SyndicationFeed feed = SyndicationFeed.Load(reader);
                 reader.Close();
 
                 return feed?.Items ?? Enumerable.Empty<SyndicationItem>();
             }
             catch
-            {              
+            {
                 return Enumerable.Empty<SyndicationItem>();
-            }
-            
+            }            
         }
     }
 }
