@@ -46,6 +46,20 @@ namespace NetDevPL.Features.NetGroups
         public string Title { get; set; }
         public string Limit { get; set; }
         public string Link { get; set; }
-        public DateTime Date { get; set; }
+
+        private DateTime _date;
+        public DateTime Date
+        {
+            get { return _date; }
+            set
+            {
+                if( value.Kind == DateTimeKind.Utc )
+                {
+                    value = value.ToLocalTime(); // Assuming it was collected on the same server should be ok - W.M.
+                }
+
+                _date = value;
+            }
+        }
     }
 }

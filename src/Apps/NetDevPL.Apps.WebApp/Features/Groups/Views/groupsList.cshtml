@@ -26,7 +26,7 @@
                             @foreach (var meeting in group.UpcomingMeetings)
                             {
                                 <li class="list-group-item">
-                                    <a data-toggle="collapse" href="@Html.Raw("#collapse" + @index)">@meeting.Date.ToString("yyyy-MM-dd HH:MM") @meeting.Title</a>
+                                    <a data-toggle="collapse" href="@Html.Raw("#collapse" + @index)">@meeting.Date.ToString("yyyy-MM-dd HH:mm") @meeting.Title</a>
                                     <div class="collapse" id="@Html.Raw("collapse" + @index)">
                                         <p>Link do spotkania: <a href="@meeting.Link" target="_blank">@meeting.Link</a></p>
 
