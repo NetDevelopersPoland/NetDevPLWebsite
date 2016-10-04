@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.NetGroups
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Infrastructure.Helpers", "Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj", "{94FB1895-3F7E-4049-AD5E-49618AA12FF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Rss", "Features\NetDevPL.Features.Rss\NetDevPL.Features.Rss.csproj", "{3AE17152-62B5-4900-A186-C4D48BFDAEC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Blogs", "Features\NetDevPL.Features.Blogs\NetDevPL.Features.Blogs.csproj", "{3AE17152-62B5-4900-A186-C4D48BFDAEC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
