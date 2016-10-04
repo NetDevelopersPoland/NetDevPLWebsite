@@ -1,4 +1,10 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Blogs.BlogsViewModel>
+﻿@using System.Collections
+@using System.Linq
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Blogs.BlogsViewModel>
+
+@{
+    int numberOfBlogItemsToTake = 3;
+}
 
 <div class="row equalize-row">
     @foreach (var blog in Model.BlogsList)
@@ -6,8 +12,9 @@
         <div class="col-xs-6 col-md-3 equalize">
             <div class="thumbnail">
                 <div class="caption">
-                    <p><h4>@blog.Title</h4></p>
-                    @foreach (var blogPost in blog.BlogPosts)
+                    <p><h4>@blog.Title</h4>
+                    </p>
+                    @foreach (var blogPost in blog.BlogPosts.Take(numberOfBlogItemsToTake))
                     {
                         <p>
                             <a href="@blogPost.Url" target="_blank">
