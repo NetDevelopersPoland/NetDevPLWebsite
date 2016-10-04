@@ -26,6 +26,8 @@ namespace NetDevPLWeb.Features.Blogs
 
     public class BlogsViewModel
     {
+        private const int NumberOfBlogItemsToTake = 3;
+
         public BlogsViewModel(BlogDataSnapshot snapshot)
         {
             BlogsList = snapshot.Blogs ?? Enumerable.Empty<Blog>();

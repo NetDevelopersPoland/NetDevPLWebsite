@@ -6,15 +6,12 @@ namespace NetDevPL.Features.Blogs
 {
     public class BlogDataProvider
     {
-        public List<Blog> GetDataFromRss(List<Blog> blogs)
+        public IEnumerable<Blog> GetDataFromRss(IEnumerable<Blog> blogs)
         {     
             foreach (var blog in blogs)
             {
                 var rssData = RssProvider.GetItemsFromRss(blog.Rss);
-                var blogPosts = rssData.Select(item => new BlogPost
-                {
-                    Title = item.Title.Text, Url = item.Id
-                }).ToList();
+                var blogPosts = rssData.Select(item => new BlogPost { Title = item.Title.Text, Url = item.Id });
 
                 blog.BlogPosts = blogPosts;
             }
