@@ -13,5 +13,10 @@
         "Title": "Learn Git Branching",
         "Description": "'Learn Git Branching' is the most visual and interactive way to learn Git on the web; you'll be challenged with exciting levels, given step-by-step demonstrations of powerful features, and maybe even have a bit of fun along the way",
         "Url": "http://learngitbranching.js.org/"
-    }
+    },
+    {
+        "Title": "VIM Adventures",
+        "Description": "Learn vim by playing online game",
+        "Url": "http://vim-adventures.com/"
+    } 
 ]
