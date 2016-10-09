@@ -15,6 +15,8 @@ namespace NetDevPL.Features.NetGroups
 {
     public class MeetupDataProvider
     {
+        private static int MaxUpcomingEventsToShow = 3;
+
         public List<NetGroupMeeting> GetDataFromMeetupPage(List<NetGroup> groupsToCheck)
         {
             string meetupApiKey = ConfigurationManager.AppSettings["MeetupApiKey"];
@@ -33,20 +35,14 @@ namespace NetDevPL.Features.NetGroups
 
                 if (result.StatusCode == HttpStatusCode.OK)
                 {
-                    foreach (var data in result.Data.results.Where(r => r.status == "upcoming"))
+                    meetupData.AddRange(result.Data.results.Where(r => r.status == "upcoming").OrderBy(d => d.time).Take(MaxUpcomingEventsToShow).Select(data => new NetGroupMeeting
                     {
-                        NetGroupMeeting record = new NetGroupMeeting
-                        {
-                            GroupKey = data.group.urlname,
-                            Title = data.name,
-                            Link = data.event_url,
-                            Description = data.description,
-                            Date = Gmtl.HandyLib.HLDateTime.FromUnixTimestamp((data.utc_offset + data.time) / 1000),
-                            Limit = data.yes_rsvp_count + "/" + ((data.rsvp_limit > 0) ? data.rsvp_limit : 999)
-                        };
-
-                        meetupData.Add(record);
-                    }
+                        GroupKey = data.group.urlname,
+                        Title = data.name, Link = data.event_url,
+                        Description = data.description,
+                        Date = Gmtl.HandyLib.HLDateTime.FromUnixTimestamp((data.utc_offset + data.time)/1000),
+                        Limit = data.yes_rsvp_count + "/" + (data.rsvp_limit > 0 ? data.rsvp_limit : 999)
+                    }));
                 }
             }
 
