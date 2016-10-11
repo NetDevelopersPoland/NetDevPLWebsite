@@ -13,23 +13,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Infrastructure.Sha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Facebook", "src\Features\NetDevPL.Features.Facebook\NetDevPL.Features.Facebook.csproj", "{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "src\Apps", "{5C13B668-44DA-42C6-8740-1DD9633DB15B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{5C13B668-44DA-42C6-8740-1DD9633DB15B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "src\Features", "{457EF626-17F8-45DB-8FD7-101265927FEB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{457EF626-17F8-45DB-8FD7-101265927FEB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "src\Infrastructure", "{486C2A3E-E8D0-43CC-A443-866C13482577}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{486C2A3E-E8D0-43CC-A443-866C13482577}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.NetGroups", "src\Features\NetDevPL.Features.NetGroups\NetDevPL.Features.NetGroups.csproj", "{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "src\Tests", "{FB83D4CF-6BB8-4C3F-8890-A324AE1F8CE0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.NetGroups.IntegrationTests", "src\Tests\Integration\NetDevPL.Features.NetGroups.IntegrationTests\NetDevPL.Features.NetGroups.IntegrationTests.csproj", "{32E543B2-8075-4F9B-BC7A-12D648D83AB3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Infrastructure.Helpers", "src\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj", "{94FB1895-3F7E-4049-AD5E-49618AA12FF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Blogs", "src\Features\NetDevPL.Features.Blogs\NetDevPL.Features.Blogs.csproj", "{3AE17152-62B5-4900-A186-C4D48BFDAEC4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D6DE85AA-9610-499E-B033-73410F5CBA76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FAD3515B-B10C-4380-81D7-43E437AB13CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.NetGroups.IntegrationTests", "tests\Integration\NetDevPL.Features.NetGroups.IntegrationTests\NetDevPL.Features.NetGroups.IntegrationTests.csproj", "{32E543B2-8075-4F9B-BC7A-12D648D83AB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +61,6 @@ Global
 		{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94FB1895-3F7E-4049-AD5E-49618AA12FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{94FB1895-3F7E-4049-AD5E-49618AA12FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94FB1895-3F7E-4049-AD5E-49618AA12FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -73,6 +69,10 @@ Global
 		{3AE17152-62B5-4900-A186-C4D48BFDAEC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AE17152-62B5-4900-A186-C4D48BFDAEC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AE17152-62B5-4900-A186-C4D48BFDAEC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,8 +87,8 @@ Global
 		{457EF626-17F8-45DB-8FD7-101265927FEB} = {D6DE85AA-9610-499E-B033-73410F5CBA76}
 		{486C2A3E-E8D0-43CC-A443-866C13482577} = {D6DE85AA-9610-499E-B033-73410F5CBA76}
 		{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD} = {457EF626-17F8-45DB-8FD7-101265927FEB}
-		{32E543B2-8075-4F9B-BC7A-12D648D83AB3} = {FB83D4CF-6BB8-4C3F-8890-A324AE1F8CE0}
 		{94FB1895-3F7E-4049-AD5E-49618AA12FF2} = {486C2A3E-E8D0-43CC-A443-866C13482577}
 		{3AE17152-62B5-4900-A186-C4D48BFDAEC4} = {457EF626-17F8-45DB-8FD7-101265927FEB}
+		{32E543B2-8075-4F9B-BC7A-12D648D83AB3} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
 	EndGlobalSection
 EndGlobal
