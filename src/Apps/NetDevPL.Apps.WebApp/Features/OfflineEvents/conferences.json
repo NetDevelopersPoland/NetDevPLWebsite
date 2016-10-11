@@ -12,5 +12,12 @@
         "StartDate": "16.11.2016",
         "EndDate": "18.11.2016",
         "Location": "Wilno"
+    },
+    {
+        "Url": "http://dotnetconf.pl",
+        "Title": "Wirtualna konferencja dla programistów i programistek!",
+        "StartDate": "5.11.2016",
+        "EndDate": "5.11.2016",
+        "Location": "Internety"
     }
 ]
