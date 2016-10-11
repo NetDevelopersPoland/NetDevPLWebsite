@@ -31,6 +31,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FAD3515B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.NetGroups.IntegrationTests", "tests\Integration\NetDevPL.Features.NetGroups.IntegrationTests\NetDevPL.Features.NetGroups.IntegrationTests.csproj", "{32E543B2-8075-4F9B-BC7A-12D648D83AB3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{ACA5BB2C-5797-4ABF-8C38-E6DE311CEDD3}"
+	ProjectSection(SolutionItems) = preProject
+		docs\solution_layout.md = docs\solution_layout.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
