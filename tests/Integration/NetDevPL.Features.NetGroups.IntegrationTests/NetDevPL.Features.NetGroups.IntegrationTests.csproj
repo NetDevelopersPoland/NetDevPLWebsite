@@ -69,7 +69,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Features\NetDevPL.Features.NetGroups\NetDevPL.Features.NetGroups.csproj">
+    <ProjectReference Include="..\..\..\src\Features\NetDevPL.Features.NetGroups\NetDevPL.Features.NetGroups.csproj">
       <Project>{d817cf1b-7e0a-419a-aa50-446f8de8accd}</Project>
       <Name>NetDevPL.Features.NetGroups</Name>
     </ProjectReference>
