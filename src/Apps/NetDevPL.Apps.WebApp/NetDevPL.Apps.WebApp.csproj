@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gmtl.HandyLib, Version=1.0.16.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Gmtl.HandyLib.1.0.16\lib\net45\Gmtl.HandyLib.dll</HintPath>
+    <Reference Include="Gmtl.HandyLib, Version=1.0.20.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Gmtl.HandyLib.1.0.20\lib\net45\Gmtl.HandyLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Mono.Posix, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
