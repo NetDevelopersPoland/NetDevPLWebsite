@@ -13,5 +13,10 @@
         "Title": "dotnetomaniak.pl",
         "Description": "Agregator treści .NET",
         "Url": "http://dotnetomaniak.pl"
+    },
+    {
+        "Title": "Enterprise Integration Patterns",
+        "Description": "Patterns and Best Practices for Enterprise Integration",
+        "Url": "http://www.enterpriseintegrationpatterns.com/"
     }
 ]
