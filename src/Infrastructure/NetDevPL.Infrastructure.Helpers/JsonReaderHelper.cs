@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using Newtonsoft.Json;
 
 namespace NetDevPL.Infrastructure.Helpers
@@ -10,9 +9,7 @@ namespace NetDevPL.Infrastructure.Helpers
         public static List<T> ReadObjectListFromJson<T>(string jsonPath)
         {
             string json = File.ReadAllText(jsonPath);
-            var objects = JsonConvert.DeserializeObject<List<T>>(json);
-
-            return objects.ToList();
+            return JsonConvert.DeserializeObject<List<T>>(json);
         }
     }
 }
