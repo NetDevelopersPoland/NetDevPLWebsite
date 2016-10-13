@@ -31,7 +31,7 @@ namespace NetDevPL.Features.NetGroups.IntegrationTests
         public void DummyTest()
         {
             NetGroup group = new NetGroup { MeetupName = "wrocnet", City = "Wrocław" };
-            Assert.Same(group.City,"Wrocław");
+            Assert.Same(group.City, "Wrocław");
         }
     }
 }
