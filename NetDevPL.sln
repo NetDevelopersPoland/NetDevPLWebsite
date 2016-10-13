@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Apps.BackgoundJobs", "src\Apps\NetDevPL.Apps.BackgoundJobs\NetDevPL.Apps.BackgoundJobs.csproj", "{B65243DF-06F7-4D47-A37B-4107BE289F00}"
 EndProject
@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{ACA5BB2C-5
 	ProjectSection(SolutionItems) = preProject
 		docs\solution_layout.md = docs\solution_layout.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.TestHelpers", "tests\NetDevPL.TestHelpers\NetDevPL.TestHelpers.csproj", "{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +80,10 @@ Global
 		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32E543B2-8075-4F9B-BC7A-12D648D83AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,5 +101,6 @@ Global
 		{94FB1895-3F7E-4049-AD5E-49618AA12FF2} = {486C2A3E-E8D0-43CC-A443-866C13482577}
 		{3AE17152-62B5-4900-A186-C4D48BFDAEC4} = {457EF626-17F8-45DB-8FD7-101265927FEB}
 		{32E543B2-8075-4F9B-BC7A-12D648D83AB3} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
+		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
 	EndGlobalSection
 EndGlobal
