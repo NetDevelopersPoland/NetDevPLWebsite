@@ -11,16 +11,16 @@ namespace NetDevPL.Infrastructure.Helpers
         {
             try
             {
-                XmlReader reader = XmlReader.Create(rssUrl);
-                SyndicationFeed feed = SyndicationFeed.Load(reader);
-                reader.Close();
-
-                return feed?.Items ?? Enumerable.Empty<SyndicationItem>();
+                using (var reader = XmlReader.Create(rssUrl))
+                {
+                    var feed = SyndicationFeed.Load(reader);
+                    return feed?.Items ?? Enumerable.Empty<SyndicationItem>();
+                }
             }
             catch
             {
                 return Enumerable.Empty<SyndicationItem>();
-            }            
+            }
         }
     }
 }

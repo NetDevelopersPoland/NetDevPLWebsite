@@ -15,7 +15,7 @@ $projects = @(
 )
 
 function RunCodeCoverage($testProject, $filter) {
-        & $openCover -register:Path32 "`"-target:$xUnit`"" "`"-targetargs:$testProject -noshadow -appveyor`""  "-filter:$filter" -output:"$coverageFile" -hideskipped:All -mergeoutput -oldStyle -returntargetcode
+        & $openCover -register:user "`"-target:$xUnit`"" "`"-targetargs:$testProject -noshadow -appveyor`""  "-filter:$filter" -output:"$coverageFile" -hideskipped:All -mergeoutput -oldStyle -returntargetcode
 }
 
 # run unit tests and calculate code coverage for each test project
