@@ -2,6 +2,7 @@
 #$xUnit = Get-ChildItem -Path "C:\Users\$([Environment]::UserName)\.nuget\packages\" -Filter "xunit.console.exe" -Recurse | % { $_.FullName }
 
 $openCover = "packages\OpenCover.4.6.519\tools\OpenCover.Console.exe"
+$openCoverProfiler = "packages\OpenCover.4.6.519\tools\x86\OpenCover.Profiler.dll"
 $xUnit = "packages\xunit.runner.console.2.1.0\tools\xunit.console.exe"
 
 # entry folder
@@ -14,7 +15,7 @@ $projects = @(
 )
 
 function RunCodeCoverage($testProject, $filter) {
-        & $openCover "-register:user" "`"-target:$xUnit`"" "`"-targetargs:$testProject -noshadow -appveyor`""  "-filter:$filter" -output:"$coverageFile" -hideskipped:All -mergeoutput -oldStyle -returntargetcode
+        & $openCover -register:Path32 "`"-target:$xUnit`"" "`"-targetargs:$testProject -noshadow -appveyor`""  "-filter:$filter" -output:"$coverageFile" -hideskipped:All -mergeoutput -oldStyle -returntargetcode
 }
 
 # run unit tests and calculate code coverage for each test project
