@@ -1,0 +1,8 @@
+build:
+  project: NetDevPL.sln
+  verbosity: normal
+test_script: 
+  - ps: .\scripts\runTests.ps1 -verbose
+  - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
+  - pip install codecov
+  - codecov -f "artifacts\\NetDevPL_coverage.xml"
