@@ -1,3 +1,5 @@
+environment:
+  EnableNuGetPackageRestore: true
 build:
   project: NetDevPL.sln
   verbosity: normal
