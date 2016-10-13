@@ -6,7 +6,35 @@ build:
   project: NetDevPL.sln
   verbosity: normal
 test_script: 
-  - ps: .\scripts\runTests.ps1 -verbose
+- ps: >-
+    $openCover = "packages\OpenCover.4.6.519\tools\OpenCover.Console.exe"
+    $openCoverProfiler = "packages\OpenCover.4.6.519\tools\x86\OpenCover.Profiler.dll"
+    $xUnit = "packages\xunit.runner.console.2.1.0\tools\xunit.console.exe"
+
+    # entry folder
+    $root = "artifacts\"
+    $coverageFile = $root + "NetDevPL_coverage.xml"
+    
+    # test projects to run with OpenCover
+    $projects = @(
+        @{Path="NetDevPL.Features.NetGroups.IntegrationTests.dll"; Filter="+[NetDevPL*]*"}
+    )
+
+    # run unit tests and calculate code coverage for each test project
+    foreach ($project in $projects) {
+        & $openCover -register:Path32 "`"-target:$xUnit`"" "`"-targetargs:$testProject -noshadow -appveyor`""  "-filter:$filter" -output:"$coverageFile" -hideskipped:All -mergeoutput -oldStyle -returntargetcode
+    }
+
+    # try to find error
+    if($LastExitCode -ne 0)
+    {
+    # mark build as failed
+    #$host.SetShouldExit($LastExitCode)
+   
+        Write-Host $LastExitCode
+    }
+
+after_test:
   - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
   - pip install codecov
   - codecov -f "artifacts\\NetDevPL_coverage.xml"
