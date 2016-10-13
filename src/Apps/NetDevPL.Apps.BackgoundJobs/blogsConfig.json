@@ -28,5 +28,10 @@
     "Url": "http://tymoteuszkestowicz.com/",
     "Rss": "http://tymoteuszkestowicz.com//feed/",
     "Title": "Tymoteusz Kęstowicz - .NET developer blog"
+  },
+  {
+    "Url": "https://blog.soltysiak.it/",
+    "Rss": "https://blog.soltysiak.it/feed/",
+    "Title": "Paweł Sołtysiak - Programowanie i inne tematy"
   }
 ]
