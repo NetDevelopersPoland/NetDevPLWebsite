@@ -30,6 +30,11 @@
         "Title": "Tymoteusz Kęstowicz - .NET developer blog"
     },
     {
+        "Url": "https://blog.soltysiak.it/",
+        "Rss": "https://blog.soltysiak.it/feed/",
+        "Title": "Paweł Sołtysiak - Programowanie i inne tematy"
+    },
+    {
         "Url": "http://blog.softio.pl/",
         "Rss": "http://blog.softio.pl/rss.xml",
         "Title": "Dariusz Lenartowicz - blog prywatno-zawodowy"
