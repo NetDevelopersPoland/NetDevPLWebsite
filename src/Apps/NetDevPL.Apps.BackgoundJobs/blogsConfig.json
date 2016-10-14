@@ -1,37 +1,37 @@
 ﻿[
-    {
-        "Url": "http://blog.klimczyk.pl",
-        "Rss": "http://blog.klimczyk.pl/feed/",
-        "Title": "Paweł Klimczyk WebLog"
-    },
-    {
-        "Url": "http://blog.octal.pl",
-        "Rss": "http://blog.octal.pl/feed",
-        "Title": ".net blog - octal.pl"
-    },
-    {
-        "Url": "http://www.pyrzyk.net",
-        "Rss": "http://www.pyrzyk.net/feed/",
-        "Title": "Łukasz Pyrzyk - Blog programistyczny"
-    },
-    {
-        "Url": "https://plotzwi.com",
-        "Rss": "https://plotzwi.com/feed",
-        "Title": "Patryk Lotzwi - Blog programistyczny"
-    },
-    {
-        "Url": "https://mjedrzejewski.wordpress.com",
-        "Rss": "https://mjedrzejewski.wordpress.com/feed/",
-        "Title": "Maciej Jędrzejewski - Praktyczna strona programowania"
-    },
-    {
-        "Url": "http://tymoteuszkestowicz.com/",
-        "Rss": "http://tymoteuszkestowicz.com//feed/",
-        "Title": "Tymoteusz Kęstowicz - .NET developer blog"
-    },
-    {
-        "Url": "http://blog.softio.pl/",
-        "Rss": "http://blog.softio.pl/rss.xml",
-        "Title": "Dariusz Lenartowicz - blog prywatno-zawodowy"
-    }
+  {
+      "Url": "http://blog.klimczyk.pl",
+      "Rss": "http://blog.klimczyk.pl/feed/",
+      "Title": "Paweł Klimczyk WebLog"
+  },
+  {
+      "Url": "http://blog.octal.pl",
+      "Rss": "http://blog.octal.pl/feed",
+      "Title": ".net blog - octal.pl"
+  },
+  {
+      "Url": "http://www.pyrzyk.net",
+      "Rss": "http://www.pyrzyk.net/feed/",
+      "Title": "Łukasz Pyrzyk - Blog programistyczny"
+  },
+  {
+      "Url": "https://plotzwi.com",
+      "Rss": "https://plotzwi.com/feed",
+      "Title": "Patryk Lotzwi - Blog programistyczny"
+  },
+  {
+      "Url": "https://mjedrzejewski.wordpress.com",
+      "Rss": "https://mjedrzejewski.wordpress.com/feed/",
+      "Title": "Maciej Jędrzejewski - Praktyczna strona programowania"
+  },
+  {
+      "Url": "http://tymoteuszkestowicz.com/",
+      "Rss": "http://tymoteuszkestowicz.com//feed/",
+      "Title": "Tymoteusz Kęstowicz - .NET developer blog"
+  },
+  {
+      "Url": "http://blog.softio.pl/",
+      "Rss": "http://blog.softio.pl/rss.xml",
+      "Title": "Dariusz Lenartowicz - blog prywatno-zawodowy"
+  }
 ]
