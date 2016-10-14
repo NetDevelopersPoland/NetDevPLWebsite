@@ -35,6 +35,11 @@
         "Title": "Paweł Sołtysiak - Programowanie i inne tematy"
     },
     {
+        "Url": "http://www.diwebsity.com/",
+        "Rss": "http://www.diwebsity.com/feed/",
+        "Title": "Adrian Sroka - Diwebsity - Web diversity in few simple words"
+    },
+    {
         "Url": "http://blog.softio.pl/",
         "Rss": "http://blog.softio.pl/rss.xml",
         "Title": "Dariusz Lenartowicz - blog prywatno-zawodowy"
