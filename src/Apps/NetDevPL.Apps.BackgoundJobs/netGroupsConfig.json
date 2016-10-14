@@ -40,5 +40,11 @@
         "MeetupName": "",
         "WebSite": "https://www.facebook.com/groups/bstoknet/",
         "City": "Białystok"
+    },
+    {
+        "Name": "Trójmiejska Zawodowa Grupa .NET",
+        "MeetupName": "TG-NET",
+        "WebSite": "https://www.meetup.com/TG-NET/",
+        "City": "Gdańsk"
     }
 ]
