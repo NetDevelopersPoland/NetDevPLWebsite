@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetDevPLWeb.SharedKernel
+namespace NetDevPL.Infrastructure.SharedKernel
 {
     public static class Logger
     {

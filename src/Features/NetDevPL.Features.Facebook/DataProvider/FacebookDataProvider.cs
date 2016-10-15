@@ -10,10 +10,10 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
-using NetDevPLWeb.SharedKernel;
+using NetDevPL.Infrastructure.SharedKernel;
 using Newtonsoft.Json;
 
-namespace NetDevPLWeb.Features.Facebook.DataProvider
+namespace NetDevPL.Features.Facebook.DataProvider
 {
     public class FacebookDataProvider
     {

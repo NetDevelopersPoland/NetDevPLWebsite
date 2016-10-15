@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace NetDevPLWeb.Features.Facebook.DataProvider
+namespace NetDevPL.Features.Facebook.DataProvider
 {
     public class FacebookSummary
     {

@@ -6,7 +6,7 @@
 
 using System;
 
-namespace NetDevPLWeb.Features.Facebook
+namespace NetDevPL.Features.Facebook
 {
     public class FacebookPost
     {

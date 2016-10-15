@@ -1,4 +1,4 @@
-﻿namespace NetDevPLWeb.Features.Facebook.DataProvider
+﻿namespace NetDevPL.Features.Facebook.DataProvider
 {
     public class FacebookFromTo
     {

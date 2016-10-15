@@ -7,8 +7,8 @@
     <ProjectGuid>{513D6AF3-3CEF-45F7-A246-F111CDC40B76}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetDevPLWeb.SharedKernel</RootNamespace>
-    <AssemblyName>NetDevPLWeb.SharedKernel</AssemblyName>
+    <RootNamespace>NetDevPL.Infrastructure.SharedKernel</RootNamespace>
+    <AssemblyName>NetDevPL.Infrastructure.SharedKernel</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

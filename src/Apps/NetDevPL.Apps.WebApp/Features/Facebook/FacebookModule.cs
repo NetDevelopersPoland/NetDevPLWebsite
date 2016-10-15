@@ -1,5 +1,6 @@
 ﻿using Gmtl.HandyLib;
 using Nancy;
+using NetDevPL.Features.Facebook;
 
 namespace NetDevPLWeb.Features.Facebook
 {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NetDevPLWeb.Features.Facebook.DataProvider
+namespace NetDevPL.Features.Facebook.DataProvider
 {
     public class FacebookNewsContainer
     {

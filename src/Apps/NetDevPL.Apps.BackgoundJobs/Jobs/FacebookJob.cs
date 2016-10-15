@@ -1,6 +1,6 @@
-using NetDevPLWeb.Features.Facebook;
-using NetDevPLWeb.Features.Facebook.DataProvider;
-using NetDevPLWeb.SharedKernel;
+using NetDevPL.Features.Facebook;
+using NetDevPL.Features.Facebook.DataProvider;
+using NetDevPL.Infrastructure.SharedKernel;
 using Quartz;
 
 namespace NetDevPLBackgoundJobs.Jobs
