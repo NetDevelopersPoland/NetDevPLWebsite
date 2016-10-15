@@ -3,7 +3,7 @@ using Nancy.ViewEngines.Razor;
 
 namespace NetDevPLWeb
 {
-    public class RazorConfiguration: IRazorConfiguration
+    public class RazorConfiguration : IRazorConfiguration
     {
         public IEnumerable<string> GetAssemblyNames()
         {

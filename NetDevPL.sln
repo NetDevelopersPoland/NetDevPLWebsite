@@ -38,6 +38,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{ACA5BB2C-5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.TestHelpers", "tests\NetDevPL.TestHelpers\NetDevPL.TestHelpers.csproj", "{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.CodeQualityTests", "tests\NetDevPL.CodeQualityTests\NetDevPL.CodeQualityTests.csproj", "{8598D6CF-09D6-434B-B10B-07A427B8C4ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +86,10 @@ Global
 		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8598D6CF-09D6-434B-B10B-07A427B8C4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8598D6CF-09D6-434B-B10B-07A427B8C4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8598D6CF-09D6-434B-B10B-07A427B8C4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8598D6CF-09D6-434B-B10B-07A427B8C4ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,5 +108,6 @@ Global
 		{3AE17152-62B5-4900-A186-C4D48BFDAEC4} = {457EF626-17F8-45DB-8FD7-101265927FEB}
 		{32E543B2-8075-4F9B-BC7A-12D648D83AB3} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
 		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
+		{8598D6CF-09D6-434B-B10B-07A427B8C4ED} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
 	EndGlobalSection
 EndGlobal

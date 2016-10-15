@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8598D6CF-09D6-434B-B10B-07A427B8C4ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetDevPL.CodeQualityTests</RootNamespace>
+    <AssemblyName>NetDevPL.CodeQualityTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gmtl.CodeWatch, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Gmtl.CodeWatch.1.0.4\lib\net45\Gmtl.CodeWatch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeQualityTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Apps\NetDevPL.Apps.BackgoundJobs\NetDevPL.Apps.BackgoundJobs.csproj">
+      <Project>{b65243df-06f7-4d47-a37b-4107be289f00}</Project>
+      <Name>NetDevPL.Apps.BackgoundJobs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Apps\NetDevPL.Apps.WebApp\NetDevPL.Apps.WebApp.csproj">
+      <Project>{d5046e5a-35d1-46b4-8df4-44764acda3ee}</Project>
+      <Name>NetDevPL.Apps.WebApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Features\NetDevPL.Features.Blogs\NetDevPL.Features.Blogs.csproj">
+      <Project>{3ae17152-62b5-4900-a186-c4d48bfdaec4}</Project>
+      <Name>NetDevPL.Features.Blogs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Features\NetDevPL.Features.Facebook\NetDevPL.Features.Facebook.csproj">
+      <Project>{8fb3e6b7-b43e-4e28-988c-6ba87cdba333}</Project>
+      <Name>NetDevPL.Features.Facebook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Features\NetDevPL.Features.NetGroups\NetDevPL.Features.NetGroups.csproj">
+      <Project>{d817cf1b-7e0a-419a-aa50-446f8de8accd}</Project>
+      <Name>NetDevPL.Features.NetGroups</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
+      <Project>{94fb1895-3f7e-4049-ad5e-49618aa12ff2}</Project>
+      <Name>NetDevPL.Infrastructure.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Infrastructure\NetDevPL.Infrastructure.MongoDB\NetDevPL.Infrastructure.MongoDB.csproj">
+      <Project>{441595f1-ecf3-4c73-984c-59eef42a3e88}</Project>
+      <Name>NetDevPL.Infrastructure.MongoDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Infrastructure\NetDevPL.Infrastructure.SharedKernel\NetDevPL.Infrastructure.SharedKernel.csproj">
+      <Project>{513d6af3-3cef-45f7-a246-f111cdc40b76}</Project>
+      <Name>NetDevPL.Infrastructure.SharedKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Integration\NetDevPL.Features.NetGroups.IntegrationTests\NetDevPL.Features.NetGroups.IntegrationTests.csproj">
+      <Project>{32e543b2-8075-4f9b-bc7a-12d648d83ab3}</Project>
+      <Name>NetDevPL.Features.NetGroups.IntegrationTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetDevPL.TestHelpers\NetDevPL.TestHelpers.csproj">
+      <Project>{5aba53d4-ef59-4d96-9535-7e9fcedb245c}</Project>
+      <Name>NetDevPL.TestHelpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
