@@ -1,13 +1,44 @@
+version: 1.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+branches:
+  only:
+  - master
+configuration: Debug
+platform: Any CPU
+clone_depth: 1
+clone_folder: C:\projects\netdevplwebsite
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
 environment:
   EnableNuGetPackageRestore: true
 before_build:
-  - nuget restore
+- cmd: nuget restore
 build:
   project: NetDevPL.sln
   verbosity: normal
-test_script: 
-  - ps: .\scripts\runTests.ps1 -verbose
 after_test:
-  - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
-  - pip install codecov
-  - codecov -f "artifacts\\NetDevPL_coverage.xml"
+- cmd: >-
+    powershell -File .\scripts\runCoverage.ps1 -verbose
+
+    SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%
+
+    pip install codecov
+
+    codecov -f "artifacts\\NetDevPL_coverage.xml"
+artifacts:
+- path: bin
+  name: website
+deploy:
+- provider: FTP
+  host: netdevelopers.pl:20202
+  protocol: sftp
+  username: appveyor
+  password:
+    secure: tqQOg1HU9dToPwytSMBvbg==
+  folder: '\deployment'
+  artifact: website
