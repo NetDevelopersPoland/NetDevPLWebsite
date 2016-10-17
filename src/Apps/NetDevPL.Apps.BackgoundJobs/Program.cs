@@ -42,7 +42,7 @@ namespace NetDevPLBackgoundJobs
             scheduler.ScheduleJob(jobDetail, trigger);
             DateTimeOffset? nextFireTime = trigger.GetNextFireTimeUtc();
 
-            Logger.Info($"{jobName} - next run time: {nextFireTime.Value}");
+            Logger.Info(String.Format("{0} - next run time: {1}", jobName, nextFireTime.Value));
         }
     }
 }

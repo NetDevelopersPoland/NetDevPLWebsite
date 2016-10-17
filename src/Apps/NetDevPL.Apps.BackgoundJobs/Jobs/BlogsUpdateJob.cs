@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using NetDevPL.Features.Blogs;
 using NetDevPL.Infrastructure.Helpers;
@@ -23,7 +24,7 @@ namespace NetDevPLBackgoundJobs.Jobs
             Repository repository = new Repository();
             repository.Add(snapshot);
 
-            Logger.Info($"Added/updated: {blogs.SelectMany(b => b.BlogPosts).Count()} blog posts");
+            Logger.Info(String.Format("Added/updated: {0} blog posts", blogs.SelectMany(b => b.BlogPosts).Count()));
         }
     }
 }

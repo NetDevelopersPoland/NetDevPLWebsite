@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using NetDevPL.Features.NetGroups;
@@ -25,7 +26,7 @@ namespace NetDevPLBackgoundJobs.Jobs
             Repository repository = new Repository();
             repository.Add(snapshot);
 
-            Logger.Info($"Found {snapshot.Groups.Count} groups with {snapshot.Groups.SelectMany(g => g.UpcomingMeetings).Count()} upcoming meetups");
+            Logger.Info(String.Format("Found {0} groups with {1} upcoming meetups", snapshot.Groups.Count, snapshot.Groups.SelectMany(g => g.UpcomingMeetings).Count()));
         }
 
         private void AddMeetingsToGroups(List<NetGroup> groups, List<NetGroupMeeting> meetings)
