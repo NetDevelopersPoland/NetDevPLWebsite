@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using NetDevPL.Infrastructure.SharedKernel;
 using NetDevPLBackgoundJobs.Jobs;
 using Quartz;
 using Quartz.Impl;
@@ -35,11 +36,13 @@ namespace NetDevPLBackgoundJobs
 
         public static void AddJob(IScheduler scheduler, IJob job, string cronTime)
         {
-            JobDetailImpl jobDetail = new JobDetailImpl(job.GetType().FullName, job.GetType().FullName + "Group", job.GetType());
-            CronTriggerImpl trigger = new CronTriggerImpl(job.GetType().FullName + "Trigger", job.GetType().FullName + "Group", cronTime);
+            string jobName = job.GetType().FullName;
+            JobDetailImpl jobDetail = new JobDetailImpl(jobName, jobName + "Group", job.GetType());
+            CronTriggerImpl trigger = new CronTriggerImpl(jobName + "Trigger", job.GetType().FullName + "Group", cronTime);
             scheduler.ScheduleJob(jobDetail, trigger);
             DateTimeOffset? nextFireTime = trigger.GetNextFireTimeUtc();
-            Console.WriteLine("Next run time: " + nextFireTime.Value);
+
+            Logger.Info($"{jobName} - next run time: {nextFireTime.Value}");
         }
     }
 }

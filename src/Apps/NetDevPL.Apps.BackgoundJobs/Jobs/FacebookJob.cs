@@ -14,7 +14,7 @@ namespace NetDevPLBackgoundJobs.Jobs
 
             foreach (var post in provider.FetchDataFromFacebook())
             {
-                Logger.Info("Facebook postId added/updated: " + post.ExternalKey);
+                Logger.Info($"Facebook postId added/updated: {post.ExternalKey}");
                 repo.AddOrUpdate(post);
             }
         }

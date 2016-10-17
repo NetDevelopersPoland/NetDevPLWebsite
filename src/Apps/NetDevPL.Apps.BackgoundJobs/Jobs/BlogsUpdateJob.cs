@@ -1,5 +1,7 @@
+using System.Linq;
 using NetDevPL.Features.Blogs;
 using NetDevPL.Infrastructure.Helpers;
+using NetDevPL.Infrastructure.SharedKernel;
 using Quartz;
 using Repository = NetDevPL.Features.Blogs.Repository;
 
@@ -20,6 +22,8 @@ namespace NetDevPLBackgoundJobs.Jobs
 
             Repository repository = new Repository();
             repository.Add(snapshot);
+
+            Logger.Info($"Added/updated: {blogs.SelectMany(b => b.BlogPosts).Count()} blog posts");
         }
     }
 }

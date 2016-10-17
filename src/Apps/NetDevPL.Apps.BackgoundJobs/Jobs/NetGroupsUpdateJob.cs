@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NetDevPL.Features.NetGroups;
 using NetDevPL.Infrastructure.Helpers;
+using NetDevPL.Infrastructure.SharedKernel;
 using Quartz;
 
 namespace NetDevPLBackgoundJobs.Jobs
@@ -23,6 +24,8 @@ namespace NetDevPLBackgoundJobs.Jobs
 
             Repository repository = new Repository();
             repository.Add(snapshot);
+
+            Logger.Info($"Found {snapshot.Groups.Count} groups with {snapshot.Groups.SelectMany(g => g.UpcomingMeetings).Count()} upcoming meetups");
         }
 
         private void AddMeetingsToGroups(List<NetGroup> groups, List<NetGroupMeeting> meetings)
