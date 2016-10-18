@@ -8,16 +8,16 @@ using Newtonsoft.Json.Converters;
 
 namespace NetDevPLWeb.Features.OfflineEvents
 {
-    public class OfflineEventsModule : NancyModule
+    public class EventsModule : NancyModule
     {
         private readonly ConferencesSource _source = new ConferencesSource();
 
-        public OfflineEventsModule()
+        public EventsModule()
         {
-            Get["/offlineEvents"] = parameters =>
+            Get["/Events"] = parameters =>
             {
                 var conferences = _source.GetConferences();
-                return View["offlineEventsList", new ConferencesListViewModel(conferences)];
+                return View["EventsList", new ConferencesListViewModel(conferences)];
             };
         }
     }
@@ -27,7 +27,7 @@ namespace NetDevPLWeb.Features.OfflineEvents
         public List<Conference> GetConferences()
         {
             var tomorrow = DateTime.Today.AddDays(1);
-            string json = File.ReadAllText("Features/OfflineEvents/conferences.json");
+            string json = File.ReadAllText("Features/Events/conferences.json");
             var conferences = JsonConvert.DeserializeObject<List<Conference>>(json, new IsoDateTimeConverter { DateTimeFormat = "d.M.yyyy" });
 
             return conferences.Where(c => c.EndDate > tomorrow).OrderBy(c => c.StartDate).ToList();
