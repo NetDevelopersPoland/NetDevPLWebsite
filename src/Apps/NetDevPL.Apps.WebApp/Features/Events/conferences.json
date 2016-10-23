@@ -19,5 +19,12 @@
         "StartDate": "5.11.2016",
         "EndDate": "5.11.2016",
         "Location": "Internety"
+    },
+    {
+        "Url": "http://2017.boilingfrogs.pl",
+        "Title": "Boiling Frogs",
+        "StartDate": "25.02.2017",
+        "EndDate": "25.02.2017",
+        "Location": "Wrocław"
     }
 ]
