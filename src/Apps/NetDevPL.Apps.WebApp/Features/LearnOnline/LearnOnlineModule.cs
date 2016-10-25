@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using Nancy;
 using NetDevPL.Infrastructure.Helpers;
-using Newtonsoft.Json;
 
 namespace NetDevPLWeb.Features.LearnOnline
 {

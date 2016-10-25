@@ -60,3 +60,13 @@
     display: -ms-flexbox;
     display: flex;
 }
+
+.icon-success {
+    color: green;
+}
+
+.icon-fail {
+    color: red;
+}
+
+
