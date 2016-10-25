@@ -44,8 +44,14 @@ namespace NetDevPL.Features.NetGroups
         public string GroupKey { get; set; }
         public string Description { get; set; }
         public string Title { get; set; }
-        public string Limit { get; set; }
+        public NetGroupMeetingSeat Seat { get; set; }
         public string Link { get; set; }
         public DateTime Date { get; set; }
+    }
+
+    public class NetGroupMeetingSeat
+    {
+        public int CurrentNumber { get; set; }
+        public int TotalNumber { get; set; }
     }
 }

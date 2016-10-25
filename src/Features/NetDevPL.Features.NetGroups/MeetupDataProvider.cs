@@ -23,7 +23,7 @@ namespace NetDevPL.Features.NetGroups
             var meetupData = new List<NetGroupMeeting>();
             var client = new RestClient("https://api.meetup.com");
 
-            foreach (var group in groupsToCheck.Where(g => !String.IsNullOrWhiteSpace(g.MeetupName)))
+            foreach (var group in groupsToCheck.Where(g => !string.IsNullOrWhiteSpace(g.MeetupName)))
             {
                 var request = new RestRequest("/2/events", Method.GET);
                 request.AddQueryParameter("group_urlname", group.MeetupName);
@@ -41,7 +41,11 @@ namespace NetDevPL.Features.NetGroups
                         Title = data.name, Link = data.event_url,
                         Description = data.description,
                         Date = Gmtl.HandyLib.HLDateTime.FromUnixTimestamp((data.utc_offset + data.time)/1000),
-                        Limit = data.yes_rsvp_count + "/" + (data.rsvp_limit > 0 ? data.rsvp_limit : 999)
+                        Seat = new NetGroupMeetingSeat
+                        {
+                            CurrentNumber = data.yes_rsvp_count,
+                            TotalNumber = data.rsvp_limit > 0 ? data.rsvp_limit : 999
+                        } 
                     }));
                 }
             }
