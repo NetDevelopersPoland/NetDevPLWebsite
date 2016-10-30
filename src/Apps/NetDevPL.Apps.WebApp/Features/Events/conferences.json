@@ -21,6 +21,20 @@
         "Location": "Internety"
     },
     {
+        "Url": "http://codeeurope.pl/",
+        "Title": "CodeEurope - Kraków",
+        "StartDate": "5.12.2016",
+        "EndDate": "5.12.2016",
+        "Location": "Kraków"
+    },
+    {
+        "Url": "http://codeeurope.pl/",
+        "Title": "CodeEurope - Warszawa",
+        "StartDate": "7.12.2016",
+        "EndDate": "7.12.2016",
+        "Location": "Warszawa"
+    },
+    {
         "Url": "http://2017.boilingfrogs.pl",
         "Title": "Boiling Frogs",
         "StartDate": "25.02.2017",
