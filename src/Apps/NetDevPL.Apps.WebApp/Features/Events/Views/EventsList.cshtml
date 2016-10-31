@@ -1,17 +1,13 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.OfflineEvents.ConferencesListViewModel>
 
-<div class="jumbotron clearfix">
-    <h2>Lista zbliżających się konferencji, na których warto być:</h2>
-
-    <ul>
-        @foreach (var conference in Model.Conferences)
-        {
-            <li>
-                <a href="@conference.Url" target="_blank">
-                    <h4>@conference.Title</h4>
-                </a>
-                <small>@conference.StartDate.ToString("dd-MM-yyyy") - @conference.EndDate.ToString("dd-MM-yyyy"), <cite>@conference.Location</cite></small>
-            </li>
-        }
-    </ul>
-</div>
+@foreach (var conference in Model.Conferences)
+{
+    <div class="row">
+        <div class="jumbotron clearfix">
+            <a href="@conference.Url" target="_blank">
+                <h2>@conference.Title</h2>
+            </a>
+            <h3>@conference.StartDate.ToString("dd-MM-yyyy") - @conference.EndDate.ToString("dd-MM-yyyy"), <cite>@conference.Location</cite></h3>
+        </div>
+    </div>
+}
