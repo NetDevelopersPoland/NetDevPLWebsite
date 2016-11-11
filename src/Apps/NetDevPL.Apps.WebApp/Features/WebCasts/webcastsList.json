@@ -1,12 +1,27 @@
 ﻿[
-  {
-    "Title": "The Future of C#",
-    "Description": "The early features of C# 7",
-    "Url": "https://www.youtube.com/embed/59uy7nm8QOw"
-  },
-  {
-    "Title": "Introducing ASP.NET Core 1.0",
-    "Description": "A great introduction to ASP.NET Core 1.0",
-    "Url": "https://www.youtube.com/embed/bbQ853tgTrM"
-  }
+    {
+        "Title": "The Future of C#",
+        "Description": "The early features of C# 7",
+        "Url": "https://www.youtube.com/embed/59uy7nm8QOw"
+    },
+    {
+        "Title": "Introducing ASP.NET Core 1.0",
+        "Description": "A great introduction to ASP.NET Core 1.0",
+        "Url": "https://www.youtube.com/embed/bbQ853tgTrM"
+    },
+    {
+        "Title": "Refaktoryzacja programu destkopowego (C#)",
+        "Description": "Refaktoryzacja programu destkopowego (C#)",
+        "Url": "https://www.youtube.com/embed/?list=PLyJoGib9zV-iGIZvk24hXYaEmGirOKvGI"
+    },
+    {
+        "Title": "Sklep Internetowy (ASP.NET MVC)",
+        "Description": "Sklep Internetowy (ASP.NET MVC)",
+        "Url": "https://www.youtube.com/embed/?list=PL9T2pvCNFjSCSNi5gj1Ql6RkVsyeNS14U"
+    },
+    {
+        "Title": "Kurs ASP.NET MVC",
+        "Description": "Kurs ASP.NET MVC",
+        "Url": "https://www.youtube.com/embed/?list=PL9T2pvCNFjSAPh9QrstHwiDmad_1L6ABZ"
+    }
 ]
