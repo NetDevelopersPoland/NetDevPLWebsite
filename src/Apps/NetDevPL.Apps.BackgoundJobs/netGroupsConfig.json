@@ -8,31 +8,31 @@
     {
         "Name": "WG-NET",
         "MeetupName": "WG-NET",
-        "WebSite": "",
+        "WebSite": "http://www.meetup.com/wg-net/",
         "City": "Warszawa"
     },
     {
         "Name": "rg-dev",
         "MeetupName": "rg-dev",
-        "WebSite": "",
+        "WebSite": "http://www.meetup.com/rg-dev/",
         "City": "Rzeszów"
     },
     {
         "Name": "KGD-NET",
         "MeetupName": "KGD-NET",
-        "WebSite": "",
+        "WebSite": "http://www.meetup.com/kgd-net/",
         "City": "Kraków"
     },
     {
         "Name": "Łódzka grupa .NET",
         "MeetupName": "Lodz-NET-IT-Pro-User-Group",
-        "WebSite": "",
+        "WebSite": "http://www.meetup.com/Lodz-NET-IT-Pro-User-Group/",
         "City": "Łódź"
     },
     {
         "Name": "DEV-ZG",
         "MeetupName": "DEV-ZG",
-        "WebSite": "",
+        "WebSite": "http://www.meetup.com/DEV-ZG/",
         "City": "Zielona Góra"
     },
     {
