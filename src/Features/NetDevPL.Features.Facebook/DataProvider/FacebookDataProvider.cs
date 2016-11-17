@@ -17,14 +17,12 @@ namespace NetDevPL.Features.Facebook.DataProvider
 {
     public class FacebookDataProvider
     {
-        public List<FacebookPost> FetchDataFromFacebook()
+        public IList<FacebookPost> FetchPostsFromFacebook()
         {
             string urlPattern = "https://graph.facebook.com/{0}/feed?fields=likes.limit(0).summary(true),type,caption,full_picture,icon,is_published,message,picture,updated_time,link,name,created_time,description,object_id,from,to&limit=50&access_token={1}";
 
             string pageId = "154009054780458";
-            string accessToken = ConfigurationManager.AppSettings["FacebookAccessToken"];
-            string url = string.Format(urlPattern, pageId, accessToken);
-            FacebookNewsContainer data = GetList<FacebookNewsContainer>(url);
+            FacebookNewsContainer data = GetList<FacebookNewsContainer>(CreateAccessUrl(urlPattern, pageId));
 
             return new List<FacebookPost>(
                 data.Data.Where(d => d.Likes.Summary.TotalCount > 10).Select(d => new FacebookPost
@@ -37,6 +35,43 @@ namespace NetDevPL.Features.Facebook.DataProvider
                 }));
         }
 
+        public Tuple<IList<FacebookLike>, IList<FacebookUser>> GetLikesAndUsersForPostFromFacebook(string postId)
+        {
+            List<FacebookLike> likes = new List<FacebookLike>();
+            List<FacebookUser> users = new List<FacebookUser>();
+
+            string urlPattern = "https://graph.facebook.com/{0}/likes?limit=5&access_token={1}";
+
+            do
+            {
+                FacebookLikesContainer likesResponse = GetList<FacebookLikesContainer>(CreateAccessUrl(urlPattern, postId));
+
+                likes.AddRange(likesResponse.Likes.Select(l => new FacebookLike { PostId = postId, UserId = l.Id }));
+                users.AddRange(likesResponse.Likes.Select(l => new FacebookUser { Name = l.Name, Id = l.Id }));
+
+                urlPattern = likesResponse.Paging.Next;
+
+            } while (!String.IsNullOrWhiteSpace(urlPattern));
+
+            return new Tuple<IList<FacebookLike>, IList<FacebookUser>>(likes, users);
+        }
+
+        private static string CreateAccessUrl(string urlPattern, params string[] args)
+        {
+            string accessToken = ConfigurationManager.AppSettings["FacebookAccessToken"];
+
+            string[] arguments = new string[args.Length + 1];
+
+            for (int i = 0; i < args.Length; i++)
+            {
+                arguments[i] = args[i];
+            }
+
+            arguments[args.Length] = accessToken;
+
+            return string.Format(urlPattern, arguments);
+        }
+        
         private T GetList<T>(string url) where T : new()
         {
             T data = new T();

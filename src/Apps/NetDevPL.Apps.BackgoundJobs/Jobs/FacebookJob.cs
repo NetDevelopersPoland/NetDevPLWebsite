@@ -13,7 +13,7 @@ namespace NetDevPLBackgoundJobs.Jobs
             FacebookDataProvider provider = new FacebookDataProvider();
             Repository repo = new Repository();
 
-            foreach (var post in provider.FetchDataFromFacebook())
+            foreach (var post in provider.FetchPostsFromFacebook())
             {
                 Logger.Info(String.Format("Facebook postId added/updated: {0}", post.ExternalKey));
                 repo.AddOrUpdate(post);
