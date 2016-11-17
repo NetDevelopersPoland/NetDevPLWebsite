@@ -31,7 +31,6 @@ namespace NetDevPL.CodeQualityTests
                 .Build();
 
             config.Execute();
-
         }
     }
 }
