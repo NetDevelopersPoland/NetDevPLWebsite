@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.CodeQualityTests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Reporting", "src\Features\NetDevPL.Features.Reporting\NetDevPL.Features.Reporting.csproj", "{A601F1F3-A027-4097-9F1B-93CED6A81501}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Facebook.IntegrationTests", "src\Tests\Integration\NetDevPL.Features.Facebook.IntegrationTests\NetDevPL.Features.Facebook.IntegrationTests.csproj", "{AE1BD045-C141-4EB8-A468-711180BC2651}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,6 +98,10 @@ Global
 		{A601F1F3-A027-4097-9F1B-93CED6A81501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A601F1F3-A027-4097-9F1B-93CED6A81501}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A601F1F3-A027-4097-9F1B-93CED6A81501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1BD045-C141-4EB8-A468-711180BC2651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1BD045-C141-4EB8-A468-711180BC2651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1BD045-C141-4EB8-A468-711180BC2651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1BD045-C141-4EB8-A468-711180BC2651}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,5 +122,6 @@ Global
 		{5ABA53D4-EF59-4D96-9535-7E9FCEDB245C} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
 		{8598D6CF-09D6-434B-B10B-07A427B8C4ED} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
 		{A601F1F3-A027-4097-9F1B-93CED6A81501} = {457EF626-17F8-45DB-8FD7-101265927FEB}
+		{AE1BD045-C141-4EB8-A468-711180BC2651} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
 	EndGlobalSection
 EndGlobal
