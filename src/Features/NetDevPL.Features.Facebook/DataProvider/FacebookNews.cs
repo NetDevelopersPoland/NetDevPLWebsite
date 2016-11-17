@@ -59,9 +59,9 @@ namespace NetDevPL.Features.Facebook.DataProvider
         [JsonProperty(PropertyName = "created_time")]
         public DateTime CreatedDate { get; set; }
 
-        public FacebookFromTo From { get; set; }
+        public FacebookObject From { get; set; }
 
-        public FacebookFromTo To { get; set; }
+        public FacebookObject To { get; set; }
         public FacebookLikes Likes { get; set; }
     }
 }

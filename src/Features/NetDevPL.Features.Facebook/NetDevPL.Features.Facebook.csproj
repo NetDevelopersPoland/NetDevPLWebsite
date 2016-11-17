@@ -62,12 +62,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider\FacebookDataProvider.cs" />
-    <Compile Include="DataProvider\FacebookFromTo.cs" />
+    <Compile Include="DataProvider\FacebookObject.cs" />
     <Compile Include="DataProvider\FacebookLikes.cs" />
     <Compile Include="DataProvider\FacebookNews.cs" />
     <Compile Include="DataProvider\FacebookNewsContainer.cs" />
     <Compile Include="DataProvider\FacebookSummary.cs" />
+    <Compile Include="DataProvider\FacebookLikesContainer.cs" />
+    <Compile Include="DataProvider\FacebookPaging.cs" />
+    <Compile Include="DataProvider\FacebookPagingCursors.cs" />
+    <Compile Include="FacebookLike.cs" />
     <Compile Include="FacebookPost.cs" />
+    <Compile Include="FacebookUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
   </ItemGroup>
