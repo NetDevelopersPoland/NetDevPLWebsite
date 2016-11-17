@@ -12,7 +12,7 @@ namespace NetDevPLWeb.Features.Facebook
         {
             Get["/facebook"] = parameters =>
             {
-                var posts = _facebookDataRepository.GetList();
+                var posts = _facebookDataRepository.PostGetList();
 
                 return View["facebookPosts", new FacebookPostsViewModel(posts)];
             };

@@ -11,12 +11,29 @@ namespace NetDevPLBackgoundJobs.Jobs
         public void Execute(IJobExecutionContext context)
         {
             FacebookDataProvider provider = new FacebookDataProvider();
-            Repository repo = new Repository();
+            Repository repository = new Repository();
 
             foreach (var post in provider.FetchPostsFromFacebook())
             {
                 Logger.Info(String.Format("Facebook postId added/updated: {0}", post.ExternalKey));
-                repo.AddOrUpdate(post);
+                repository.PostAddOrUpdate(post);
+
+                UpdatePostDetails(post, provider, repository);
+            }
+        }
+
+        private void UpdatePostDetails(FacebookPost post, FacebookDataProvider provider, Repository repository)
+        {
+            var likesAndUsers=provider.GetLikesAndUsersForPostFromFacebook(post.ExternalKey);
+
+            foreach (var like in likesAndUsers.Item1)
+            {
+                repository.LikeAdd(like);
+            }
+
+            foreach (var user in likesAndUsers.Item2)
+            {
+                repository.UserAddOrUpdate(user);
             }
         }
     }
