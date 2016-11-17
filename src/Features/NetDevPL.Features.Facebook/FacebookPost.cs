@@ -14,5 +14,10 @@ namespace NetDevPL.Features.Facebook
         public DateTime CreateDate { get; set; }
         public string Content { get; set; }
         public int Likes { get; set; }
+
+        /// <summary>
+        /// FacebookUser Id
+        /// </summary>
+        public string CreatorId { get; set; }
     }
 }

@@ -24,7 +24,22 @@ namespace NetDevPL.Features.Facebook.DataProvider
             string pageId = "154009054780458";
             string accessToken = ConfigurationManager.AppSettings["FacebookAccessToken"];
             string url = string.Format(urlPattern, pageId, accessToken);
-            FacebookNewsContainer data = new FacebookNewsContainer();
+            FacebookNewsContainer data = GetList<FacebookNewsContainer>(url);
+
+            return new List<FacebookPost>(
+                data.Data.Where(d => d.Likes.Summary.TotalCount > 10).Select(d => new FacebookPost
+                {
+                    ExternalKey = d.ObjectId,
+                    CreateDate = d.CreatedDate,
+                    Content = d.Message + "\n\n" + d.Name + "\n\n" + d.Link,
+                    Likes = d.Likes.Summary.TotalCount,
+                    CreatorId = d.From.Id
+                }));
+        }
+
+        private T GetList<T>(string url) where T : new()
+        {
+            T data = new T();
 
             try
             {
@@ -39,7 +54,7 @@ namespace NetDevPL.Features.Facebook.DataProvider
                     StreamReader reader = new StreamReader(inputStream);
                     string html = reader.ReadToEnd();
                     reader.Dispose();
-                    data = JsonConvert.DeserializeObject<FacebookNewsContainer>(html);
+                    data = JsonConvert.DeserializeObject<T>(html);
                 }
 
                 response.Dispose();
@@ -48,17 +63,10 @@ namespace NetDevPL.Features.Facebook.DataProvider
             {
                 Logger.Fatal(ex);
 
-                return new List<FacebookPost>();
+                return new T();
             }
 
-            return new List<FacebookPost>(
-                data.Data.Where(d => d.Likes.Summary.TotalCount > 10).Select(d => new FacebookPost
-                {
-                    ExternalKey = d.ObjectId,
-                    CreateDate = d.CreatedDate,
-                    Content = d.Message + "\n\n" + d.Name + "\n\n" + d.Link,
-                    Likes = d.Likes.Summary.TotalCount
-                }));
+            return data;
         }
     }
 }
