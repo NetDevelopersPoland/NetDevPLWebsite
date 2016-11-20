@@ -14,8 +14,6 @@ namespace NetDevPLWeb.Features.Facebook
         {
             Get["/facebook"] = parameters =>
             {
-                var karma = new NetDevPL.Features.Reporting.FacebookStats().UserKarma();
-
                 var posts = _facebookDataRepository.PostsGetList();
 
                 return View["facebookPosts", new FacebookPostsViewModel(posts)];
