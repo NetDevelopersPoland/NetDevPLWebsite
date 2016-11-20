@@ -16,7 +16,7 @@ namespace NetDevPLBackgoundJobs.Jobs
             foreach (var post in provider.FetchPostsFromFacebook())
             {
                 Logger.Info(String.Format("Facebook postId added/updated: {0}", post.ExternalKey));
-                repository.PostAddOrUpdate(post);
+                repository.PostsAddOrUpdate(post);
 
                 UpdatePostDetails(post, provider, repository);
             }
@@ -28,12 +28,12 @@ namespace NetDevPLBackgoundJobs.Jobs
 
             foreach (var like in likesAndUsers.Item1)
             {
-                repository.LikeAdd(like);
+                repository.LikesAdd(like);
             }
 
             foreach (var user in likesAndUsers.Item2)
             {
-                repository.UserAddOrUpdate(user);
+                repository.UsersAddOrUpdate(user);
             }
         }
     }

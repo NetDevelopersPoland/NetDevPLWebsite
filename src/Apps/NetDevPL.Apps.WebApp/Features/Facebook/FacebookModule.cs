@@ -1,4 +1,6 @@
-﻿using Gmtl.HandyLib;
+﻿using System;
+using System.Linq;
+using Gmtl.HandyLib;
 using Nancy;
 using NetDevPL.Features.Facebook;
 
@@ -12,9 +14,18 @@ namespace NetDevPLWeb.Features.Facebook
         {
             Get["/facebook"] = parameters =>
             {
-                var posts = _facebookDataRepository.PostGetList();
+                var karma = new NetDevPL.Features.Reporting.FacebookStats().UserKarma();
+
+                var posts = _facebookDataRepository.PostsGetList();
 
                 return View["facebookPosts", new FacebookPostsViewModel(posts)];
+            };
+
+            Get["/facebook-karma"] = parameters =>
+            {
+                var karma = new NetDevPL.Features.Reporting.FacebookStats().UserKarma();
+
+                return String.Join("<br/>", karma.Take(100).Select(k => k.Name + " " + k.KarmaPoints));
             };
         }
     }

@@ -165,6 +165,10 @@
       <Project>{d817cf1b-7e0a-419a-aa50-446f8de8accd}</Project>
       <Name>NetDevPL.Features.NetGroups</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Features\NetDevPL.Features.Reporting\NetDevPL.Features.Reporting.csproj">
+      <Project>{a601f1f3-a027-4097-9f1b-93ced6a81501}</Project>
+      <Name>NetDevPL.Features.Reporting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
       <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>
       <Name>NetDevPL.Infrastructure.Helpers</Name>

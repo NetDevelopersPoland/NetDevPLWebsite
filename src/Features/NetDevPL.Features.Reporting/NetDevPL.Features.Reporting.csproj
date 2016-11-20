@@ -41,7 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainModels.cs" />
+    <Compile Include="FacebookStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetDevPL.Features.Facebook\NetDevPL.Features.Facebook.csproj">
+      <Project>{8fb3e6b7-b43e-4e28-988c-6ba87cdba333}</Project>
+      <Name>NetDevPL.Features.Facebook</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
