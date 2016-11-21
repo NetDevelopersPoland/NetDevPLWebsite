@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using Gmtl.HandyLib;
 using MongoDB.Driver;
 using NetDevPL.Infrastructure.MongoDB;
@@ -11,9 +13,37 @@ namespace NetDevPL.Features.Facebook
         readonly MongoDBProvider<FacebookUser> usersProvider = new MongoDBProvider<FacebookUser>("netdevpl", "facebookUsers");
         readonly MongoDBProvider<FacebookLike> likesProvider = new MongoDBProvider<FacebookLike>("netdevpl", "facebookLikes");
 
-        public HLListPage<FacebookPost> PostsGetList()
+        public HLListPage<FacebookPost> PostsGetList(PostFilter filter)
         {
-            var posts = postsProvider.Collection.Find(d => true).Sort(Builders<FacebookPost>.Sort.Descending(p => p.CreateDate)).ToList();
+            var defaultFilter = Builders<FacebookPost>.Filter.Empty;
+            var defaultSorting = Builders<FacebookPost>.Sort.Descending(p => p.CreateDate);
+
+            if (filter.HasFilter)
+            {
+                if (filter.StartDate != null)
+                {
+                    defaultFilter = defaultFilter & Builders<FacebookPost>.Filter.Gte(p => p.CreateDate, filter.StartDate.Value);
+                }
+
+                if (filter.EndDate != null)
+                {
+                    defaultFilter = defaultFilter & Builders<FacebookPost>.Filter.Lte(p => p.CreateDate, filter.EndDate.Value);
+                }
+            }
+
+            if (filter.HasSorting)
+            {
+                if (filter.SortingDirection == SortDirection.Ascending)
+                {
+                    defaultSorting = Builders<FacebookPost>.Sort.Ascending(filter.SortingExpression);
+                }
+                else
+                {
+                    defaultSorting = Builders<FacebookPost>.Sort.Descending(filter.SortingExpression);
+                }
+            }
+
+            var posts = postsProvider.Collection.Find(defaultFilter).Sort(defaultSorting).ToList();
 
             return new HLListPage<FacebookPost>(posts, posts.Count, 1, posts.Count);
         }
@@ -65,5 +95,19 @@ namespace NetDevPL.Features.Facebook
                 likesProvider.Collection.InsertOne(like);
             }
         }
+    }
+
+    public class PostFilter
+    {
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+
+        public bool HasFilter { get { return StartDate != null || EndDate != null; } }
+
+        public bool HasSorting { get { return SortingExpression != null; } }
+        public Expression<Func<FacebookPost, object>> SortingExpression { get; set; }
+        public SortDirection SortingDirection { get; set; }
+
+        public static PostFilter Empty { get { return new PostFilter(); } }
     }
 }
