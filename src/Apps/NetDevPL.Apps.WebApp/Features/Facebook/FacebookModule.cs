@@ -31,18 +31,32 @@ namespace NetDevPLWeb.Features.Facebook
             {
                 var lastMonth = DateTime.Now.AddMonths(-1);
                 var firstDay = new DateTime(lastMonth.Year, lastMonth.Month, 1);
+                var lastDay = firstDay.AddMonths(1).AddMilliseconds(-1);
 
-                var filter = new PostFilter
-                {
-                    StartDate = firstDay,
-                    EndDate = firstDay.AddMonths(1).AddMilliseconds(-1),
-                    SortingExpression = post => post.Likes,
-                    SortingDirection = SortDirection.Descending
-                };
-                var posts = _facebookDataRepository.PostsGetList(filter);
-
-                return View["facebookPosts", new FacebookPostsViewModel(posts)];
+                return GetPostsForPeriod(firstDay, lastDay);
             };
+
+            Get["/facebook/top-current-year"] = parameters =>
+            {
+                var firstDay = new DateTime(DateTime.Now.Year, 1, 1);
+                var lastDay = firstDay.AddYears(1).AddMilliseconds(-1);
+                
+                return GetPostsForPeriod(firstDay, lastDay);
+            };
+        }
+
+        private dynamic GetPostsForPeriod(DateTime startDate, DateTime endDate)
+        {
+            var filter = new PostFilter
+            {
+                StartDate = startDate,
+                EndDate = endDate,
+                SortingExpression = post => post.Likes,
+                SortingDirection = SortDirection.Descending
+            };
+            var posts = _facebookDataRepository.PostsGetList(filter);
+
+            return View["facebookPosts", new FacebookPostsViewModel(posts)];
         }
     }
 
@@ -52,7 +66,7 @@ namespace NetDevPLWeb.Features.Facebook
         {
             Posts = posts;
         }
-        
+
         public HLListPage<FacebookPost> Posts { get; set; }
     }
 }
