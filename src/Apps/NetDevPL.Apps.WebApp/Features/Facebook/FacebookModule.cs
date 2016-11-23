@@ -17,10 +17,10 @@ namespace NetDevPLWeb.Features.Facebook
             {
                 var posts = _facebookDataRepository.PostsGetList(PostFilter.Empty);
 
-                return View["facebookPosts", new FacebookPostsViewModel(posts)];
+                return View["facebookPosts", new FacebookPostsViewModel("Posty z Facebooka", posts)];
             };
 
-            Get["/facebook-karma"] = parameters =>
+            Get["/facebook/karma"] = parameters =>
             {
                 var karma = new NetDevPL.Features.Reporting.FacebookStats().UserKarma();
 
@@ -33,19 +33,19 @@ namespace NetDevPLWeb.Features.Facebook
                 var firstDay = new DateTime(lastMonth.Year, lastMonth.Month, 1);
                 var lastDay = firstDay.AddMonths(1).AddMilliseconds(-1);
 
-                return GetPostsForPeriod(firstDay, lastDay);
+                return GetPostsForPeriod("Top posty z Facebooka z ostatniego miesiąca", firstDay, lastDay);
             };
 
             Get["/facebook/top-current-year"] = parameters =>
             {
                 var firstDay = new DateTime(DateTime.Now.Year, 1, 1);
                 var lastDay = firstDay.AddYears(1).AddMilliseconds(-1);
-                
-                return GetPostsForPeriod(firstDay, lastDay);
+
+                return GetPostsForPeriod("Top posty z Facebooka z ostatniego roku", firstDay, lastDay);
             };
         }
 
-        private dynamic GetPostsForPeriod(DateTime startDate, DateTime endDate)
+        private dynamic GetPostsForPeriod(string pageName, DateTime startDate, DateTime endDate)
         {
             var filter = new PostFilter
             {
@@ -56,17 +56,20 @@ namespace NetDevPLWeb.Features.Facebook
             };
             var posts = _facebookDataRepository.PostsGetList(filter);
 
-            return View["facebookPosts", new FacebookPostsViewModel(posts)];
+            return View["facebookPosts", new FacebookPostsViewModel(pageName, posts)];
         }
     }
 
     public class FacebookPostsViewModel
     {
-        public FacebookPostsViewModel(HLListPage<FacebookPost> posts)
+        public FacebookPostsViewModel(string pageName, HLListPage<FacebookPost> posts)
         {
             Posts = posts;
+            PageTitle = pageName;
         }
 
         public HLListPage<FacebookPost> Posts { get; set; }
+
+        public string PageTitle { get; set; }
     }
 }
