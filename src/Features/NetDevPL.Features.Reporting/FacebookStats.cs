@@ -20,7 +20,6 @@ namespace NetDevPL.Features.Reporting
             })
                 .OrderByDescending(k => k.KarmaPoints)
                 .ToList();
-
         }
     }
 }

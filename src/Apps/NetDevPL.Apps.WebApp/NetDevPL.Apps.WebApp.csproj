@@ -77,14 +77,18 @@
   <ItemGroup>
     <Compile Include="CustomConventionsBootstrapper.cs" />
     <Compile Include="Features\Contributors\ContributorsModule.cs" />
+    <Compile Include="Features\Facebook\FacebookPostsViewModel.cs" />
     <Compile Include="Features\Groups\GroupsModule.cs" />
     <Compile Include="Features\Events\EventsModule.cs" />
     <Compile Include="Features\Blogs\BlogsModule.cs" />
     <Compile Include="Features\Facebook\FacebookModule.cs" />
+    <Compile Include="Features\Groups\GroupsViewModel.cs" />
     <Compile Include="Features\Home\HomeModule.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineModule.cs" />
+    <Compile Include="Features\LearnOnline\LearOnlineListViewModel.cs" />
     <Compile Include="Features\Resources\ResourcesModule.cs" />
     <Compile Include="Features\Webcasts\WebcastsModule.cs" />
+    <Compile Include="Features\Webcasts\WebcastsViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RazorConfiguration.cs" />
