@@ -16,7 +16,7 @@
     },
     {
         "Url": "https://plotzwi.com",
-        "Rss": "https://plotzwi.com/feed",
+        "Rss": "https://plotzwi.com/feed/",
         "Title": "Patryk Lotzwi - Blog programistyczny"
     },
     {
@@ -26,12 +26,12 @@
     },
     {
         "Url": "http://tymoteuszkestowicz.com/",
-        "Rss": "http://tymoteuszkestowicz.com//feed/",
+        "Rss": "http://tymoteuszkestowicz.com/feed/",
         "Title": "Tymoteusz Kęstowicz - .NET developer blog"
     },
     {
         "Url": "https://blog.soltysiak.it/",
-        "Rss": "https://blog.soltysiak.it/feed/",
+        "Rss": "https://blog.soltysiak.it/pl/feed/",
         "Title": "Paweł Sołtysiak - Programowanie i inne tematy"
     },
     {

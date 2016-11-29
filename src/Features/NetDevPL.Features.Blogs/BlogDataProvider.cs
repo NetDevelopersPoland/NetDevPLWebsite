@@ -6,7 +6,7 @@ namespace NetDevPL.Features.Blogs
 {
     public class BlogDataProvider
     {
-        public IEnumerable<Blog> GetDataFromRss(IEnumerable<Blog> blogs)
+        public IList<Blog> GetDataFromRss(IList<Blog> blogs)
         {
             foreach (var blog in blogs)
             {
