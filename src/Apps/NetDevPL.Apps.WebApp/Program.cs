@@ -14,7 +14,7 @@ namespace NetDevPLWeb
 
             // initialize an instance of NancyHost
             var host = new NancyHost(new Uri(uri));
-            host.Start();  // start hosting
+            host.Start();
 
             // check if we're running on mono
             if (Type.GetType("Mono.Runtime") != null)
@@ -34,7 +34,7 @@ namespace NetDevPLWeb
             }
 
             Console.WriteLine("Stopping Nancy");
-            host.Stop();  // stop hosting
+            host.Stop();
         }
     }
 }

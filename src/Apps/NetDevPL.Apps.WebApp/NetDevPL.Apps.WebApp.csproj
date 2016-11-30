@@ -85,9 +85,13 @@
     <Compile Include="Features\Groups\GroupsViewModel.cs" />
     <Compile Include="Features\Home\HomeModule.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineModule.cs" />
+    <Compile Include="Features\LearnOnline\LearnOnlineSource.cs" />
     <Compile Include="Features\LearnOnline\LearOnlineListViewModel.cs" />
     <Compile Include="Features\Resources\ResourcesModule.cs" />
+    <Compile Include="Features\Resources\ResourcesSource.cs" />
+    <Compile Include="Features\Resources\ResourcesViewModel.cs" />
     <Compile Include="Features\Webcasts\WebcastsModule.cs" />
+    <Compile Include="Features\Webcasts\WebcastsSource.cs" />
     <Compile Include="Features\Webcasts\WebcastsViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
