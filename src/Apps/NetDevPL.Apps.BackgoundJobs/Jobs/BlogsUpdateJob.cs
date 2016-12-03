@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using NetDevPL.Features.Blogs;
 using NetDevPL.Infrastructure.Helpers;
@@ -21,10 +22,26 @@ namespace NetDevPLBackgoundJobs.Jobs
             BlogDataSnapshot snapshot = BlogDataSnapshot.Create();
             snapshot.Blogs = blogs;
 
+            OrderBlogsByNewestPostsPosts(snapshot);
+
             Repository repository = new Repository();
             repository.Add(snapshot);
 
             Logger.Info(String.Format("Added/updated: {0} blog posts", blogs.SelectMany(b => b.BlogPosts).Count()));
+        }
+
+        private void OrderBlogsByNewestPostsPosts(BlogDataSnapshot snapshot)
+        {
+            snapshot.Blogs = snapshot.Blogs.OrderByDescending(b =>
+            {
+                var newestPost = b.BlogPosts.OrderByDescending(p => p.PublishDate).FirstOrDefault();
+                if (newestPost != null)
+                {
+                    return newestPost.PublishDate;
+                }
+                else
+                    return DateTime.MinValue;
+            });
         }
     }
 }

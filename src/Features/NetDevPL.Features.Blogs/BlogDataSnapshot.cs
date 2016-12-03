@@ -33,5 +33,6 @@ namespace NetDevPL.Features.Blogs
     {
         public string Url { get; set; }
         public string Title { get; set; }
+        public DateTime PublishDate { get; set; }
     }
 }
