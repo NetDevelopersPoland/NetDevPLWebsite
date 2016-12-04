@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Globalization;
 using System.Linq;
-using Gmtl.HandyLib;
 using Nancy;
 using NetDevPL.Features.Facebook;
 
@@ -9,14 +7,14 @@ namespace NetDevPLWeb.Features.Facebook
 {
     public class FacebookModule : NancyModule
     {
-        readonly Repository _facebookDataRepository = new Repository();
+        readonly Repository facebookDataRepository = new Repository();
 
         public FacebookModule()
         {
             Get["/facebook"] = parameters =>
             {
-                var posts = _facebookDataRepository.PostsGetList(PostFilter.Empty);
-
+                var posts = facebookDataRepository.PostsGetList(PostFilter.Empty);
+                
                 return View["facebookPosts", new FacebookPostsViewModel("Posty z Facebooka", posts)];
             };
 
@@ -24,7 +22,7 @@ namespace NetDevPLWeb.Features.Facebook
             {
                 var karma = new NetDevPL.Features.Reporting.FacebookStats().UserKarma();
 
-                return String.Join("<br/>", karma.Take(100).Select(k => k.Name + " " + k.KarmaPoints));
+                return string.Join("<br/>", karma.Take(100).Select(k => k.Name + " " + k.KarmaPoints));
             };
 
             Get["/facebook/top-last-month"] = parameters =>
@@ -54,10 +52,9 @@ namespace NetDevPLWeb.Features.Facebook
                 SortingExpression = post => post.Likes,
                 SortingDirection = SortDirection.Descending
             };
-            var posts = _facebookDataRepository.PostsGetList(filter);
+            var posts = facebookDataRepository.PostsGetList(filter);
 
             return View["facebookPosts", new FacebookPostsViewModel(pageName, posts)];
         }
     }
-
 }

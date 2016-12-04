@@ -10,23 +10,23 @@ using System.Collections.Generic;
 namespace NetDevPL.Features.NetGroups
 {
     /// <summary>
-    /// State of .net groups data in Poland at certain date
+    ///     State of .net groups data in Poland at certain date
     /// </summary>
     public class NetGroupDataSnapshot
     {
         /// <summary>
-        /// Actual .net groups
+        ///     Actual .net groups
         /// </summary>
         public List<NetGroup> Groups { get; set; }
 
         /// <summary>
-        /// Date when snapshot was taken
+        ///     Date when snapshot was taken
         /// </summary>
         public DateTime SnapshotDate { get; set; }
 
         public static NetGroupDataSnapshot Create()
         {
-            return new NetGroupDataSnapshot { SnapshotDate = DateTime.Now };
+            return new NetGroupDataSnapshot {SnapshotDate = DateTime.Now};
         }
     }
 
@@ -36,7 +36,7 @@ namespace NetDevPL.Features.NetGroups
         public string MeetupName { get; set; }
         public string City { get; set; }
         public string WebSite { get; set; }
-        public List<NetGroupMeeting> UpcomingMeetings{ get; set; }
+        public List<NetGroupMeeting> UpcomingMeetings { get; set; }
     }
 
     public class NetGroupMeeting

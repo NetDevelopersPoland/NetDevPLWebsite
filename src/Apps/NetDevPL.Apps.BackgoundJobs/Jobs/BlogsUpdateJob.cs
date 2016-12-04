@@ -1,11 +1,9 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using NetDevPL.Features.Blogs;
 using NetDevPL.Infrastructure.Helpers;
 using NetDevPL.Infrastructure.SharedKernel;
 using Quartz;
-using Repository = NetDevPL.Features.Blogs.Repository;
 
 namespace NetDevPLBackgoundJobs.Jobs
 {
@@ -27,7 +25,7 @@ namespace NetDevPLBackgoundJobs.Jobs
             Repository repository = new Repository();
             repository.Add(snapshot);
 
-            Logger.Info(String.Format("Added/updated: {0} blog posts", blogs.SelectMany(b => b.BlogPosts).Count()));
+            Logger.Info(string.Format("Added/updated: {0} blog posts", blogs.SelectMany(b => b.BlogPosts).Count()));
         }
 
         private void OrderBlogsByNewestPostsPosts(BlogDataSnapshot snapshot)
@@ -39,8 +37,7 @@ namespace NetDevPLBackgoundJobs.Jobs
                 {
                     return newestPost.PublishDate;
                 }
-                else
-                    return DateTime.MinValue;
+                return DateTime.MinValue;
             });
         }
     }

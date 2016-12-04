@@ -11,11 +11,11 @@ namespace NetDevPL.Features.Blogs
             foreach (var blog in blogs)
             {
                 var rssData = RssProvider.GetItemsFromRss(blog.Rss);
-                var blogPosts = rssData.Select(item => new BlogPost { Title = item.Title.Text, Url = item.Id, PublishDate = item.PublishDate.UtcDateTime });
+                var blogPosts = rssData.Select(item => new BlogPost {Title = item.Title.Text, Url = item.Id, PublishDate = item.PublishDate.UtcDateTime});
 
                 blog.BlogPosts = blogPosts;
             }
-        
+
             return blogs;
         }
     }

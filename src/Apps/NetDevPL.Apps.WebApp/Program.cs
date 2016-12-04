@@ -1,7 +1,7 @@
-﻿using Mono.Unix;
+﻿using System;
+using Mono.Unix;
 using Mono.Unix.Native;
 using Nancy.Hosting.Self;
-using System;
 
 namespace NetDevPLWeb
 {
@@ -21,7 +21,8 @@ namespace NetDevPLWeb
             {
                 // on mono, processes will usually run as daemons - this allows you to listen
                 // for termination signals (ctrl+c, shutdown, etc) and finalize correctly
-                UnixSignal.WaitAny(new[] {
+                UnixSignal.WaitAny(new[]
+                {
                     new UnixSignal(Signum.SIGINT),
                     new UnixSignal(Signum.SIGTERM),
                     new UnixSignal(Signum.SIGQUIT),

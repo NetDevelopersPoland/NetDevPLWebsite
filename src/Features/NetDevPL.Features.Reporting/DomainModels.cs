@@ -10,7 +10,7 @@ namespace NetDevPL.Features.Reporting
         public DateTime EndDate { get; set; }
         public IList<UserKarma> TopUsers { get; set; }
     }
-    
+
     public class UserKarma
     {
         public string Name { get; set; }

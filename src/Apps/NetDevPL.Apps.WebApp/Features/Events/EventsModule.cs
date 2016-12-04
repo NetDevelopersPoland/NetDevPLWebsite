@@ -28,7 +28,7 @@ namespace NetDevPLWeb.Features.OfflineEvents
         {
             var tomorrow = DateTime.Today.AddDays(1);
             string json = File.ReadAllText("Features/Events/conferences.json");
-            var conferences = JsonConvert.DeserializeObject<List<Conference>>(json, new IsoDateTimeConverter { DateTimeFormat = "d.M.yyyy" });
+            var conferences = JsonConvert.DeserializeObject<List<Conference>>(json, new IsoDateTimeConverter {DateTimeFormat = "d.M.yyyy"});
 
             return conferences.Where(c => c.EndDate > tomorrow).OrderBy(c => c.StartDate).ToList();
         }

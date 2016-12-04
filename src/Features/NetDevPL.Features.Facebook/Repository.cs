@@ -102,12 +102,22 @@ namespace NetDevPL.Features.Facebook
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
 
-        public bool HasFilter { get { return StartDate != null || EndDate != null; } }
+        public bool HasFilter
+        {
+            get { return StartDate != null || EndDate != null; }
+        }
 
-        public bool HasSorting { get { return SortingExpression != null; } }
+        public bool HasSorting
+        {
+            get { return SortingExpression != null; }
+        }
+
         public Expression<Func<FacebookPost, object>> SortingExpression { get; set; }
         public SortDirection SortingDirection { get; set; }
 
-        public static PostFilter Empty { get { return new PostFilter(); } }
+        public static PostFilter Empty
+        {
+            get { return new PostFilter(); }
+        }
     }
 }

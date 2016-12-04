@@ -23,7 +23,7 @@ namespace NetDevPLBackgoundJobs
 
                 while (true)
                 {
-                    Thread.Sleep(1000 * 31337);
+                    Thread.Sleep(1000*31337);
                 }
 
                 //scheduler.Shutdown();
@@ -42,7 +42,7 @@ namespace NetDevPLBackgoundJobs
             scheduler.ScheduleJob(jobDetail, trigger);
             DateTimeOffset? nextFireTime = trigger.GetNextFireTimeUtc();
 
-            Logger.Info(String.Format("{0} - next run time: {1}", jobName, nextFireTime.Value));
+            Logger.Info(string.Format("{0} - next run time: {1}", jobName, nextFireTime.Value));
         }
     }
 }

@@ -4,8 +4,8 @@ namespace NetDevPL.Infrastructure.SharedKernel
 {
     public static class Logger
     {
-        static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-        
+        static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
         public static void Fatal(string message)
         {
             logger.Fatal(message);

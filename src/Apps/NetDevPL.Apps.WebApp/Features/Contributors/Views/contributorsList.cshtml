@@ -1,13 +1,17 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Contributors.ContributorsListViewModel>
 
-<div class="row equalize-row">   
+<div class="row equalize-row">
     @foreach (var contributor in Model.Contributors)
     {
         <div class="col-xs-6 col-md-3 equalize">
             <div class="thumbnail">
                 <img src="@contributor.AvatarUrl" alt="@contributor.Name avatar">
                 <div class="caption">
-                    <p><h3><a href="@contributor.GithubUrl" target="_blank">@contributor.Name</a></h3></p>
+                    <p>
+                        <h3>
+                            <a href="@contributor.GithubUrl" target="_blank">@contributor.Name</a>
+                        </h3>
+                    </p>
                     <p>Liczba commitów: <span class="badge">@contributor.Contributions</span></p>
                 </div>
             </div>

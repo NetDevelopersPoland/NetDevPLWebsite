@@ -1,4 +1,8 @@
 namespace NetDevPL.Features.Facebook
 {
-    public enum SortDirection { Ascending, Descending }
+    public enum SortDirection
+    {
+        Ascending,
+        Descending
+    }
 }

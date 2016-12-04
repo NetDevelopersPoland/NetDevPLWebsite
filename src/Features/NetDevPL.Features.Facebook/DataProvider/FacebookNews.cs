@@ -9,18 +9,15 @@ namespace NetDevPL.Features.Facebook.DataProvider
 
         public FacebookNews()
         {
-            Message = String.Empty;
+            Message = string.Empty;
         }
 
         public string Message
         {
-            get
-            {
-                return message;
-            }
+            get { return message; }
             set
             {
-                if (!String.IsNullOrWhiteSpace(value))
+                if (!string.IsNullOrWhiteSpace(value))
                 {
                     value = value.Replace("\r\n", " ").Replace("  ", " ");
                 }
@@ -47,10 +44,7 @@ namespace NetDevPL.Features.Facebook.DataProvider
 
         public string PictureLink
         {
-            get
-            {
-                return String.Format("https://graph.facebook.com/{0}/picture?type=normal", ObjectId);
-            }
+            get { return string.Format("https://graph.facebook.com/{0}/picture?type=normal", ObjectId); }
         }
 
         [JsonProperty(PropertyName = "id")]

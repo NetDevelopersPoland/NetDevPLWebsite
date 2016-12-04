@@ -2,10 +2,6 @@
 {
     public class FacebookLikes
     {
-        public FacebookSummary Summary
-        {
-            get;
-            set;
-        }
+        public FacebookSummary Summary { get; set; }
     }
 }

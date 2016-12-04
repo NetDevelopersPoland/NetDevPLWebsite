@@ -47,7 +47,7 @@ namespace NetDevPLWeb.Features.Contributors
                         AvatarUrl = (string) contributor.avatar_url,
                         Name = (string) contributor.login,
                         GithubUrl = (string) contributor.html_url,
-                        Contributions = (int) contributor.contributions,
+                        Contributions = (int) contributor.contributions
                     });
                 }
             }
@@ -68,7 +68,7 @@ namespace NetDevPLWeb.Features.Contributors
     {
         public ContributorsListViewModel(List<Contributor> contributors)
         {
-            Contributors =  contributors;
+            Contributors = contributors;
         }
 
         public List<Contributor> Contributors { get; set; }

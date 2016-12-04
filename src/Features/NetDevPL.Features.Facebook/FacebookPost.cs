@@ -16,7 +16,7 @@ namespace NetDevPL.Features.Facebook
         public int Likes { get; set; }
 
         /// <summary>
-        /// FacebookUser Id
+        ///     FacebookUser Id
         /// </summary>
         public string CreatorId { get; set; }
     }

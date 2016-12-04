@@ -46,12 +46,11 @@ namespace NetDevPL.Features.Facebook.DataProvider
             {
                 FacebookLikesContainer likesResponse = GetList<FacebookLikesContainer>(CreateAccessUrl(urlPattern, postId));
 
-                likes.AddRange(likesResponse.Likes.Select(l => new FacebookLike { PostId = postId, UserId = l.Id }));
-                users.AddRange(likesResponse.Likes.Select(l => new FacebookUser { Name = l.Name, Id = l.Id }));
+                likes.AddRange(likesResponse.Likes.Select(l => new FacebookLike {PostId = postId, UserId = l.Id}));
+                users.AddRange(likesResponse.Likes.Select(l => new FacebookUser {Name = l.Name, Id = l.Id}));
 
                 urlPattern = likesResponse.Paging.Next;
-
-            } while (!String.IsNullOrWhiteSpace(urlPattern));
+            } while (!string.IsNullOrWhiteSpace(urlPattern));
 
             return new Tuple<IList<FacebookLike>, IList<FacebookUser>>(likes, users);
         }
@@ -71,18 +70,18 @@ namespace NetDevPL.Features.Facebook.DataProvider
 
             return string.Format(urlPattern, arguments);
         }
-        
+
         private T GetList<T>(string url) where T : new()
         {
             T data = new T();
 
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
 
                 request.UserAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0";
 
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                HttpWebResponse response = (HttpWebResponse) request.GetResponse();
 
                 using (Stream inputStream = response.GetResponseStream())
                 {

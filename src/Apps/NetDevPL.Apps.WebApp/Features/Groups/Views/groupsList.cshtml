@@ -16,12 +16,12 @@
             @if (group.UpcomingMeetings.Count > 0)
             {
                 <h3>Lista nadchodzących spotkań</h3>
-                <hr />
+                <hr/>
                 foreach (var meeting in group.UpcomingMeetings)
                 {
                     <div id="informationTab_@index">
                         <h4>
-                            <a data-toggle="collapse" href="@Html.Raw("#collapse" + @index)">@meeting.Date.ToString("yyyy-MM-dd HH:mm") @meeting.Title</a>
+                            <a data-toggle="collapse" href="@Html.Raw("#collapse" + index)">@meeting.Date.ToString("yyyy-MM-dd HH:mm") @meeting.Title</a>
                             Limit miejsc: @meeting.Seat.CurrentNumber/@meeting.Seat.TotalNumber
                             @if (meeting.Seat.CurrentNumber >= meeting.Seat.TotalNumber)
                             {
@@ -32,13 +32,18 @@
                                 <span class="glyphicon glyphicon-ok-sign icon-success"></span>
                             }
                         </h4>
-                        <div class="collapse" id="@Html.Raw("collapse" + @index)">
-                            <h5><a href="@meeting.Link" target="_blank">Link do spotkania</a></h5>
+                        <div class="collapse" id="@Html.Raw("collapse" + index)">
+                            <h5>
+                                <a href="@meeting.Link" target="_blank">Link do spotkania</a>
+                            </h5>
                             @Html.Raw(meeting.Description)
                         </div>
                     </div>
-                    <hr />
-                    @{index++;}
+                    <hr/>
+                    @
+                    {
+                        index++;
+                    }
                 }
             }
             else
@@ -47,4 +52,4 @@
             }
         </div>
     </div>
-                        }
+}

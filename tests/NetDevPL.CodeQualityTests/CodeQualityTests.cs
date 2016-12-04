@@ -1,5 +1,4 @@
-﻿using System;
-using Gmtl.CodeWatch;
+﻿using Gmtl.CodeWatch;
 using Gmtl.CodeWatch.Watchers;
 using Xunit;
 

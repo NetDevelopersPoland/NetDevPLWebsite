@@ -4,7 +4,6 @@
 // </copyright>
 // -------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -15,7 +14,7 @@ namespace NetDevPL.Features.NetGroups
 {
     public class MeetupDataProvider
     {
-        private static int MaxUpcomingEventsToShow = 3;
+        private static readonly int MaxUpcomingEventsToShow = 3;
 
         public List<NetGroupMeeting> GetDataFromMeetupPage(List<NetGroup> groupsToCheck)
         {
@@ -45,7 +44,7 @@ namespace NetDevPL.Features.NetGroups
                         {
                             CurrentNumber = data.yes_rsvp_count,
                             TotalNumber = data.rsvp_limit > 0 ? data.rsvp_limit : 999
-                        } 
+                        }
                     }));
                 }
             }
@@ -55,6 +54,7 @@ namespace NetDevPL.Features.NetGroups
     }
 
     #region meetup ison objects
+
     public class Venue
     {
         public string country { get; set; }
@@ -125,5 +125,6 @@ namespace NetDevPL.Features.NetGroups
         public List<Result> results { get; set; }
         public Meta meta { get; set; }
     }
+
     #endregion
 }

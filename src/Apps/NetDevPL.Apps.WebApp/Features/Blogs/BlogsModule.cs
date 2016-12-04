@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Nancy;
 using NetDevPL.Features.Blogs;
-using Repository = NetDevPL.Features.Blogs.Repository;
 
 namespace NetDevPLWeb.Features.Blogs
 {
@@ -14,14 +13,14 @@ namespace NetDevPLWeb.Features.Blogs
         public BlogsModule(Repository repository)
         {
             _repository = repository;
-            
+
             Get["/blogs"] = parameters =>
             {
                 var blogs = _repository.GetBlogs();
 
                 return View["blogList", new BlogsViewModel(blogs)];
             };
-        }      
+        }
     }
 
     public class BlogsViewModel

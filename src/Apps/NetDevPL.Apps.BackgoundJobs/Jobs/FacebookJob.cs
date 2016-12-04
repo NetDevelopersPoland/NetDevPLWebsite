@@ -1,4 +1,3 @@
-using System;
 using NetDevPL.Features.Facebook;
 using NetDevPL.Features.Facebook.DataProvider;
 using NetDevPL.Infrastructure.SharedKernel;
@@ -15,7 +14,7 @@ namespace NetDevPLBackgoundJobs.Jobs
 
             foreach (var post in provider.FetchPostsFromFacebook())
             {
-                Logger.Info(String.Format("Facebook postId added/updated: {0}", post.ExternalKey));
+                Logger.Info(string.Format("Facebook postId added/updated: {0}", post.ExternalKey));
                 repository.PostsAddOrUpdate(post);
 
                 UpdatePostDetails(post, provider, repository);
@@ -24,7 +23,7 @@ namespace NetDevPLBackgoundJobs.Jobs
 
         private void UpdatePostDetails(FacebookPost post, FacebookDataProvider provider, Repository repository)
         {
-            var likesAndUsers=provider.GetLikesAndUsersForPostFromFacebook(post.ExternalKey);
+            var likesAndUsers = provider.GetLikesAndUsersForPostFromFacebook(post.ExternalKey);
 
             foreach (var like in likesAndUsers.Item1)
             {

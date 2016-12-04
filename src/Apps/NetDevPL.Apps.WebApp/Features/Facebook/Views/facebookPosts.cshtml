@@ -1,17 +1,16 @@
-﻿@using System
-@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Facebook.FacebookPostsViewModel>
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Facebook.FacebookPostsViewModel>
 
 <div class="jumbotron clearfix">
     <h2>@Model.PageTitle</h2>
-<h4><a href="/facebook">Wszystkie</a>&nbsp;<a href="/facebook/top-last-month">Top ostatni miesiąc</a>&nbsp;<a href="/facebook/top-current-year">Top rok</a></h4>
+    <h4><a href="/facebook">Wszystkie</a>&nbsp;<a href="/facebook/top-last-month">Top ostatni miesiąc</a>&nbsp;<a href="/facebook/top-current-year">Top rok</a></h4>
     @foreach (var post in Model.Posts)
     {
         <div class="panel panel-default">
             <div class="panel-body">
-                @foreach (var line in post.Content.Split(new[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries))
+                @foreach (var line in post.Content.Split(new[] {"\n\n"}, StringSplitOptions.RemoveEmptyEntries))
                 {
                     @line
-                    <br />
+                    <br/>
                 }
             </div>
             <div class="panel-footer clearfix">
@@ -19,5 +18,5 @@
                 <span class="pull-right">Liczba polubień: <span class="label label-default">@post.Likes</span></span>
             </div>
         </div>
-    } 
+    }
 </div>

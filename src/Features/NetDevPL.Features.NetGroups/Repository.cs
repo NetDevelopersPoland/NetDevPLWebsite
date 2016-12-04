@@ -1,5 +1,4 @@
-﻿using System;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using NetDevPL.Infrastructure.MongoDB;
 
 namespace NetDevPL.Features.NetGroups

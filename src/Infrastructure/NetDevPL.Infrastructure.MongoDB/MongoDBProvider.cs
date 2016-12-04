@@ -33,21 +33,20 @@ namespace NetDevPL.Infrastructure.MongoDB
 
         private void InitDB()
         {
-
             client = new MongoClient();
 
             database = client.GetDatabase(databaseName);
 
             if (CollectionExists(database, collectionName)) return;
 
-            CreateCollectionOptions options = new CreateCollectionOptions { AutoIndexId = true };
+            CreateCollectionOptions options = new CreateCollectionOptions {AutoIndexId = true};
             database.CreateCollection(collectionName, options);
         }
 
         private bool CollectionExists(IMongoDatabase db, string collName)
         {
             var filter = new BsonDocument("name", collName);
-            var collections = db.ListCollections(new ListCollectionsOptions { Filter = filter });
+            var collections = db.ListCollections(new ListCollectionsOptions {Filter = filter});
 
             return collections.Any();
         }
