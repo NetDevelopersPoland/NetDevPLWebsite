@@ -62,6 +62,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Features\NetDevPL.Features.Facebook\NetDevPL.Features.Facebook.csproj">
+      <Project>{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}</Project>
+      <Name>NetDevPL.Features.Facebook</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
