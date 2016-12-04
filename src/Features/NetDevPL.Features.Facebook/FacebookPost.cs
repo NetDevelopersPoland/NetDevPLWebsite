@@ -19,5 +19,12 @@ namespace NetDevPL.Features.Facebook
         ///     FacebookUser Id
         /// </summary>
         public string CreatorId { get; set; }
+
+        /// <summary>
+        /// Convert http://example.com into <a href="http://example.com" target="_new">http://example.com</a>
+        /// </summary>
+        public void MakeTyperLinksInContent()
+        {
+        }
     }
 }

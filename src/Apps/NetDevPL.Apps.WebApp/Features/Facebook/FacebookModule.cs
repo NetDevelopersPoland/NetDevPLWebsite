@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Gmtl.HandyLib;
 using Nancy;
 using NetDevPL.Features.Facebook;
 
@@ -14,7 +15,9 @@ namespace NetDevPLWeb.Features.Facebook
             Get["/facebook"] = parameters =>
             {
                 var posts = facebookDataRepository.PostsGetList(PostFilter.Empty);
-                
+
+                MakeHyperLinksInPosts(posts);
+
                 return View["facebookPosts", new FacebookPostsViewModel("Posty z Facebooka", posts)];
             };
 
@@ -41,6 +44,14 @@ namespace NetDevPLWeb.Features.Facebook
 
                 return GetPostsForPeriod("Top posty z Facebooka z ostatniego roku", firstDay, lastDay);
             };
+        }
+
+        private void MakeHyperLinksInPosts(HLListPage<FacebookPost> posts)
+        {
+            foreach (var post in posts)
+            {
+                post.MakeTyperLinksInContent();
+            }
         }
 
         private dynamic GetPostsForPeriod(string pageName, DateTime startDate, DateTime endDate)
