@@ -1,33 +1,5 @@
 ﻿[
     {
-        "Url": "http://net.developerdays.pl",
-        "Title": ".NET DEVELOPERDAYS - Premium conference for all developers using Microsoft development stack.",
-        "StartDate": "20.10.2016",
-        "EndDate": "21.10.2016",
-        "Location": "Warszawa"
-    },
-    {
-        "Url": "http://www.buildstuff.lt/",
-        "Title": "BUILD STUFF is a Software Development Conference for people who actually build stuff.",
-        "StartDate": "16.11.2016",
-        "EndDate": "18.11.2016",
-        "Location": "Wilno"
-    },
-    {
-        "Url": "http://dotnetconf.pl",
-        "Title": "Wirtualna konferencja dla programistów i programistek!",
-        "StartDate": "5.11.2016",
-        "EndDate": "5.11.2016",
-        "Location": "Internety"
-    },
-    {
-        "Url": "http://codeeurope.pl/",
-        "Title": "CodeEurope - Kraków",
-        "StartDate": "5.12.2016",
-        "EndDate": "5.12.2016",
-        "Location": "Kraków"
-    },
-    {
         "Url": "http://codeeurope.pl/",
         "Title": "CodeEurope - Warszawa",
         "StartDate": "7.12.2016",
@@ -40,5 +12,19 @@
         "StartDate": "25.02.2017",
         "EndDate": "25.02.2017",
         "Location": "Wrocław"
+    },
+    {
+        "Url": "http://www.lambdadays.org/lambdadays2017",
+        "Title": "Lambda Days",
+        "StartDate": "9.02.2017",
+        "EndDate": "10.02.2017",
+        "Location": "Kraków"
+    },
+    {
+        "Url": "http://2017.4developers.org.pl/",
+        "Title": "4Developers",
+        "StartDate": "3.04.2017",
+        "EndDate": "3.04.2017",
+        "Location": "Warszawa"
     }
 ]
