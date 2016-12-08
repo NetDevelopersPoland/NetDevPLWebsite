@@ -18,5 +18,10 @@
         "Title": "Enterprise Integration Patterns",
         "Description": "Patterns and Best Practices for Enterprise Integration",
         "Url": "http://www.enterpriseintegrationpatterns.com/"
+    },
+    {
+        "Title": "Aggregated knowledge about DDD",
+        "Description": "A curated list of Domain-Driven Design (DDD), Command Query Responsibility Segregation (CQRS), Event Sourcing, and Event Storming resources",
+        "Url": "http://github.com/heynickc/awesome-ddd/"
     }
 ]
