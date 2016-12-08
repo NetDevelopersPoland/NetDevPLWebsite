@@ -17,6 +17,7 @@
             {
                 <h3>Lista nadchodzących spotkań</h3>
                 <hr/>
+
                 foreach (var meeting in group.UpcomingMeetings)
                 {
                     <div id="informationTab_@index">
@@ -40,7 +41,9 @@
                         </div>
                     </div>
                     <hr/>
-                    @(index++)
+                    @{
+                        index++;
+                    }
                 }
             }
             else
