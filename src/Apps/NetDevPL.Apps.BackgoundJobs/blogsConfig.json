@@ -43,5 +43,10 @@
         "Url": "http://blog.softio.pl/",
         "Rss": "http://blog.softio.pl/rss.xml",
         "Title": "Dariusz Lenartowicz - blog prywatno-zawodowy"
+    },
+    {
+        "Url": "http://www.michalkomorowski.com/",
+        "Rss": "http://feeds.feedburner.com/BlogMichalaKomorowskiego",
+        "Title": "Michał Komorowski -  The blog about programming, working in IT and not only"
     }
 ]
