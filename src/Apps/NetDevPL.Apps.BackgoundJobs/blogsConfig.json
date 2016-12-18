@@ -49,5 +49,10 @@
         "Rss": "http://www.michalkomorowski.com/feeds/posts/default?alt=rss&redirect=false",
         "Title": "Michał Komorowski -  The blog about programming, working in IT and not only",
         "IndexOfLinkToPost":  "0"
+    },
+    {
+        "Url": "http://www.mpustelak.com/",
+        "Rss": "http://www.mpustelak.com/feed/",
+        "Title": "mpustelak.com - real life programming and examples"
     }
 ]
