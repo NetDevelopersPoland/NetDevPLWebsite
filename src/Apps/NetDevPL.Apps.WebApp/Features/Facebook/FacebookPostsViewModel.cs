@@ -1,17 +1,17 @@
-﻿using Gmtl.HandyLib;
+﻿using System.Collections.Generic;
 using NetDevPL.Features.Facebook;
 
 namespace NetDevPLWeb.Features.Facebook
 {
     public class FacebookPostsViewModel
     {
-        public FacebookPostsViewModel(string pageName, HLListPage<FacebookPost> posts)
+        public FacebookPostsViewModel(string pageName, List<FacebookPost> posts)
         {
             Posts = posts;
             PageTitle = pageName;
         }
 
-        public HLListPage<FacebookPost> Posts { get; set; }
+        public List<FacebookPost> Posts { get; set; }
 
         public string PageTitle { get; set; }
     }
