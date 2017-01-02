@@ -70,6 +70,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomConventionsBootstrapper.cs" />
+    <Compile Include="Features\ConferenceVideos\ConferenceVideosModule.cs" />
+    <Compile Include="Features\ConferenceVideos\ConferenceVideosSource.cs" />
+    <Compile Include="Features\ConferenceVideos\ConferenceVideosViewModel.cs" />
     <Compile Include="Features\Contributors\ContributorsModule.cs" />
     <Compile Include="Features\Facebook\FacebookPostsViewModel.cs" />
     <Compile Include="Features\Groups\GroupsModule.cs" />
@@ -111,6 +114,12 @@
     <Content Include="Features\Groups\Views\groupsList.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Features\ConferenceVideos\Views\conferenceVideosList.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Features\ConferenceVideos\conferenceVideosList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Features\Events\conferences.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

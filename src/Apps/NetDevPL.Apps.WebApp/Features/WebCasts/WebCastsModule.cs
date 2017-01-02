@@ -10,9 +10,9 @@ namespace NetDevPLWeb.Features.WebCasts
         {
             Get["/webcasts"] = parameters =>
             {
-                var toolsMastering = _source.GetWebcastList();
+                var webcasts = _source.GetWebcastList();
 
-                return View["webcastsList", new WebcastsViewModel(toolsMastering)];
+                return View["webcastsList", new WebcastsViewModel(webcasts)];
             };
         }
     }
