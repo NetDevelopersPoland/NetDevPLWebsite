@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using Gmtl.HandyLib;
 using MongoDB.Driver;
 using NetDevPL.Infrastructure.MongoDB;
 
@@ -13,7 +12,7 @@ namespace NetDevPL.Features.Facebook
         readonly MongoDBProvider<FacebookUser> usersProvider = new MongoDBProvider<FacebookUser>("netdevpl", "facebookUsers");
         readonly MongoDBProvider<FacebookLike> likesProvider = new MongoDBProvider<FacebookLike>("netdevpl", "facebookLikes");
 
-        public HLListPage<FacebookPost> PostsGetList(PostFilter filter)
+        public List<FacebookPost> PostsGetList(PostFilter filter)
         {
             var defaultFilter = Builders<FacebookPost>.Filter.Empty;
             var defaultSorting = Builders<FacebookPost>.Sort.Descending(p => p.CreateDate);
@@ -43,9 +42,7 @@ namespace NetDevPL.Features.Facebook
                 }
             }
 
-            var posts = postsProvider.Collection.Find(defaultFilter).Sort(defaultSorting).ToList();
-
-            return new HLListPage<FacebookPost>(posts, posts.Count, 1, posts.Count);
+            return postsProvider.Collection.Find(defaultFilter).Sort(defaultSorting).ToList();
         }
 
         public List<FacebookUser> UsersGetList()

@@ -1,4 +1,5 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Facebook.FacebookPostsViewModel>
+﻿@using System.Linq
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Facebook.FacebookPostsViewModel>
 
 <div class="jumbotron clearfix">
     <h2>@Model.PageTitle</h2>
@@ -17,6 +18,12 @@
                 <span class="pull-left">@post.CreateDate.ToString("yyyy-MM-dd HH:mm")</span>
                 <span class="pull-right">Liczba polubień: <span class="label label-default">@post.Likes</span></span>
             </div>
+        </div>
+    }
+    @if (!Model.Posts.Any())
+    {
+        <div class="panel panel-info">
+            <div class="panel-body">Nie znaleziono żadnych postów w wybranym zakresie daty</div> 
         </div>
     }
 </div>
