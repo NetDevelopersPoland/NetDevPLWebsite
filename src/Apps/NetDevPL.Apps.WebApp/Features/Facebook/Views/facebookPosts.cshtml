@@ -3,20 +3,30 @@
 <div class="jumbotron clearfix">
     <h2>@Model.PageTitle</h2>
     <h4><a href="/facebook">Wszystkie</a>&nbsp;<a href="/facebook/top-last-month">Top ostatni miesiąc</a>&nbsp;<a href="/facebook/top-current-year">Top rok</a></h4>
-    @foreach (var post in Model.Posts)
+
+    @if (@Model.Posts.IsEmpty)
     {
-        <div class="panel panel-default">
-            <div class="panel-body">
-                @foreach (var line in post.ContentWithHyperLinks.Split(new[] {"\n\n"}, StringSplitOptions.RemoveEmptyEntries))
-                {
-                   @Html.Raw(@line)
-                    <br/>
-                }
-            </div>
-            <div class="panel-footer clearfix">
-                <span class="pull-left">@post.CreateDate.ToString("yyyy-MM-dd HH:mm")</span>
-                <span class="pull-right">Liczba polubień: <span class="label label-default">@post.Likes</span></span>
-            </div>
+        <div class="panel panel-info">
+            <div class="panel-body">Nie znaleziono żadnych postów w wybranym zakresie daty</div>
         </div>
+    }
+    else
+    {
+        foreach (var post in Model.Posts)
+        {
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    @foreach (var line in post.ContentWithHyperLinks.Split(new[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        @Html.Raw(@line)
+                        <br />
+                    }
+                </div>
+                <div class="panel-footer clearfix">
+                    <span class="pull-left">@post.CreateDate.ToString("yyyy-MM-dd HH:mm")</span>
+                    <span class="pull-right">Liczba polubień: <span class="label label-default">@post.Likes</span></span>
+                </div>
+            </div>
+        }
     }
 </div>

@@ -45,7 +45,7 @@ namespace NetDevPL.Features.Facebook
 
             var posts = postsProvider.Collection.Find(defaultFilter).Sort(defaultSorting).ToList();
 
-            return new HLListPage<FacebookPost>(posts, posts.Count, 1, posts.Count);
+            return new HLListPage<FacebookPost>(posts, posts.Count, 1, posts.Count > 1 ? posts.Count : 1);
         }
 
         public List<FacebookUser> UsersGetList()
