@@ -3,5 +3,15 @@
         "Title": "BuildStuff 2016",
         "Description": "Videos from BuildStuff 2016",
         "Url": "https://www.youtube.com/embed/?list=PLJwLLHYvH0VAqxAB2BsPMtlsVG0AJEBPk"
+    },
+    {
+        "Title": "BuildStuff 2015",
+        "Description": "Videos from BuildStuff 2015",
+        "Url": "https://www.youtube.com/embed/?list=PLJwLLHYvH0VAyI5k90a3B-wfiPRPF5uOA"
+    },
+    {
+        "Title": "GOTO Stockholm 2016",
+        "Description": "Videos from GOTO Stockholm 2016",
+        "Url": "https://www.youtube.com/embed/?list=PLEx5khR4g7PIPT7o5LKMIAcWyIRUX2p3j"
     }
 ]
