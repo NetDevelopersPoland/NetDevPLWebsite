@@ -13,5 +13,20 @@
         "Title": "GOTO Stockholm 2016",
         "Description": "Videos from GOTO Stockholm 2016",
         "Url": "https://www.youtube.com/embed/?list=PLEx5khR4g7PIPT7o5LKMIAcWyIRUX2p3j"
+    },
+    {
+        "Title": "Devoxx UK 2015",
+        "Description": "Videos from Devoxx UK 2015",
+        "Url": "https://www.youtube.com/embed/?list=PLklQqdqnBkPjP1fyt0Y-OF90Bnx_PFo-V"
+    },
+    {
+        "Title": "Devoxx Poland 2015",
+        "Description": "Videos from Devoxx Poland 2015",
+        "Url": "https://www.youtube.com/embed/?list=PLklQqdqnBkPh4vfnOjYyOtOrmtNr2eb2j"
+    },
+    {
+        "Title": "Boiling Frogs 2016",
+        "Description": "Videos from Boiling Frogs 2016",
+        "Url": "https://www.youtube.com/embed/?list=PLVT0blg4rCWAACyuDZKEn1cy1CR4zhz4R"
     }
 ]
