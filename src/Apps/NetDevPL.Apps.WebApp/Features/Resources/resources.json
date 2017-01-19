@@ -23,5 +23,20 @@
         "Title": "Aggregated knowledge about DDD",
         "Description": "A curated list of Domain-Driven Design (DDD), Command Query Responsibility Segregation (CQRS), Event Sourcing, and Event Storming resources",
         "Url": "http://github.com/heynickc/awesome-ddd/"
+    },
+    {
+        "Title": "Channel9",
+        "Description": "Source of news about Microsoft technologies. Interviews, webcasts, etc.",
+        "Url": "https://channel9.msdn.com//"
+    },
+    {
+        "Title": "Aggregated knowledge about Functional Programming ",
+        "Description": "Yet another resource for collecting articles, videos etc. regarding functional programming",
+        "Url": "https://github.com/xgrommx/awesome-functional-programming/"
+    },
+    {
+        "Title": "Aggregated knowledge about Functional Programming - in JS context",
+        "Description": "This is a curated list of awesome functional programming code and learning resources for JavaScript",
+        "Url": "https://github.com/stoeffel/awesome-fp-js/"
     }
 ]
