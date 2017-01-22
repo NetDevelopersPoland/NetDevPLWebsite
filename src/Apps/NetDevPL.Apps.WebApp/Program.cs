@@ -2,6 +2,7 @@
 using Mono.Unix;
 using Mono.Unix.Native;
 using Nancy.Hosting.Self;
+using NetDevPL.Infrastructure.SharedKernel;
 
 namespace NetDevPLWeb
 {
@@ -10,7 +11,7 @@ namespace NetDevPLWeb
         static void Main(string[] args)
         {
             var uri = "http://localhost:8888";
-            Console.WriteLine("Starting Nancy on " + uri);
+            Logger.Info("Starting Nancy on " + uri);
 
             // initialize an instance of NancyHost
             var host = new NancyHost(new Uri(uri));
@@ -34,7 +35,7 @@ namespace NetDevPLWeb
                 Console.ReadLine();
             }
 
-            Console.WriteLine("Stopping Nancy");
+            Logger.Info("Stopping Nancy");
             host.Stop();
         }
     }
