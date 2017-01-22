@@ -1,6 +1,8 @@
-﻿using MongoDB.Bson;
+﻿using System;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
+using NetDevPL.Infrastructure.SharedKernel;
 
 namespace NetDevPL.Infrastructure.MongoDB
 {
@@ -35,6 +37,8 @@ namespace NetDevPL.Infrastructure.MongoDB
         {
             client = new MongoClient();
 
+            Logger.Info("Connecting to Mongo DB.");
+
             database = client.GetDatabase(databaseName);
 
             if (CollectionExists(database, collectionName)) return;
@@ -45,10 +49,17 @@ namespace NetDevPL.Infrastructure.MongoDB
 
         private bool CollectionExists(IMongoDatabase db, string collName)
         {
-            var filter = new BsonDocument("name", collName);
-            var collections = db.ListCollections(new ListCollectionsOptions {Filter = filter});
-
-            return collections.Any();
+            try
+            {
+                var filter = new BsonDocument("name", collName);
+                var collections = db.ListCollections(new ListCollectionsOptions {Filter = filter});
+                return collections.Any();
+            }
+            catch (System.TimeoutException)
+            {
+                Logger.Fatal("Mongo Server is not responding. Make sure that MongoDB is properly installed.");
+                throw;
+            }
         }
     }
 }
