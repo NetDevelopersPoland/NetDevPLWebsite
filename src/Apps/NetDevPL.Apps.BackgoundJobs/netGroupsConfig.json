@@ -46,5 +46,11 @@
         "MeetupName": "TG-NET",
         "WebSite": "https://www.meetup.com/TG-NET/",
         "City": "Gdańsk"
+    },
+    {
+        "Name": "Warsaw Official .NET UG",
+        "MeetupName": "Warsaw-Official-NET-User-Group-Meetup",
+        "WebSite": "https://www.meetup.com/Warsaw-Official-NET-User-Group-Meetup/",
+        "City": "Warszawa"
     }
 ]
