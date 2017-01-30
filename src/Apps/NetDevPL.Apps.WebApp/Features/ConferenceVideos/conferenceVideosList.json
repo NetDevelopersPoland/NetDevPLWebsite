@@ -28,5 +28,10 @@
         "Title": "Boiling Frogs 2016",
         "Description": "Videos from Boiling Frogs 2016",
         "Url": "https://www.youtube.com/embed/?list=PLVT0blg4rCWAACyuDZKEn1cy1CR4zhz4R"
-    }
+    },
+    {
+        "Title": ".NET Developer Days 2016",
+        "Description": "Videos from .NET Developer Days 2016",
+        "Url": "https://www.youtube.com/embed/?list=UU_oRRPZrYP4gZQOJOcuTyUw"
+    }     
 ]
