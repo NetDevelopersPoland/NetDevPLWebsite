@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Gmtl.HandyLib;
 using Nancy;
 using NetDevPL.Features.Facebook;
 

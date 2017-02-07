@@ -63,14 +63,4 @@ namespace NetDevPLWeb.Features.Contributors
         public string GithubUrl { get; set; }
         public int Contributions { get; set; }
     }
-
-    public class ContributorsListViewModel
-    {
-        public ContributorsListViewModel(List<Contributor> contributors)
-        {
-            Contributors = contributors;
-        }
-
-        public List<Contributor> Contributors { get; set; }
-    }
 }

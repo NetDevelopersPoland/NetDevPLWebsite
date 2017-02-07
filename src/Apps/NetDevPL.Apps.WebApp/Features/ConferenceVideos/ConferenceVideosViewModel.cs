@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using NetDevPLWeb.Features.Shared;
 
 namespace NetDevPLWeb.Features.ConferenceVideos
 {
@@ -9,7 +10,7 @@ namespace NetDevPLWeb.Features.ConferenceVideos
         public string Title { get; set; }
     }
 
-    public class ConferenceVideosViewModel
+    public class ConferenceVideosViewModel: BaseViewModel
     {
         public ConferenceVideosViewModel(List<ConferenceVideo> conferenceVideos)
         {

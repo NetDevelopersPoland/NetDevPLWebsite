@@ -1,15 +1,23 @@
-﻿<!DOCTYPE html>
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>.NET Developers Poland</title>
+    <meta property="og:title" content="@Model.Title" />
+    <meta property="og:description" content="@Model.Description"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="@Model.Url" />
+    @*<meta property="og:image" content="" />*@
+
+    <title>@Model.Title</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    
+
     <!-- Latest compiled and minified jQuery - this is just for simple purposes like working bootstrap dropdown - bootstrap.js requires jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
@@ -23,10 +31,12 @@
     <link rel="stylesheet" type="text/css" href="~/Content/css/custom.css">
 
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-84537469-1', 'auto');
         ga('send', 'pageview');
@@ -49,9 +59,9 @@
                         <li class="divider"></li>
                         <li><a href="/webcasts">Webcasts</a></li>
                         <li class="divider"></li>
-                        <li><a href="/conferenceVideos">Conference Videos</a></li>  
+                        <li><a href="/conferenceVideos">Conference Videos</a></li>
                         <li class="divider"></li>
-                        <li><a href="/resources">Resources</a></li>                
+                        <li><a href="/resources">Resources</a></li>
                     </ul>
                 </li>
                 <li><a href="/contributors">Twórcy strony</a></li>
@@ -60,13 +70,13 @@
             </ul>
         </div>
     </nav>
-<div class="alert alert-info" role="alert">
-    <strong>Chcesz ulepszyć tę stronę?</strong> Cały kod dostępny jest <a href="https://github.com/NetDevelopersPoland/NetDevPLWebsite" target="_blank">tutaj</a>.
-    Wystarczy, że sklonujesz sobie repozytorium i później zrobisz pull-requesta (how to: <a href="https://www.youtube.com/watch?v=YTbRzhQju4c" target="_blank">https://www.youtube.com/watch?v=YTbRzhQju4c</a>).
-</div>
-<div class="container">
-    @(this.RenderBody())
-</div>
-<footer></footer>
+    <div class="alert alert-info" role="alert">
+        <strong>Chcesz ulepszyć tę stronę?</strong> Cały kod dostępny jest <a href="https://github.com/NetDevelopersPoland/NetDevPLWebsite" target="_blank">tutaj</a>.
+        Wystarczy, że sklonujesz sobie repozytorium i później zrobisz pull-requesta (how to: <a href="https://www.youtube.com/watch?v=YTbRzhQju4c" target="_blank">https://www.youtube.com/watch?v=YTbRzhQju4c</a>).
+    </div>
+    <div class="container">
+        @(this.RenderBody())
+    </div>
+    <footer></footer>
 </body>
 </html>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Nancy;
+﻿using Nancy;
 using NetDevPL.Features.Blogs;
 
 namespace NetDevPLWeb.Features.Blogs
@@ -21,17 +18,5 @@ namespace NetDevPLWeb.Features.Blogs
                 return View["blogList", new BlogsViewModel(blogs)];
             };
         }
-    }
-
-    public class BlogsViewModel
-    {
-        public BlogsViewModel(BlogDataSnapshot snapshot)
-        {
-            BlogsList = snapshot.Blogs ?? Enumerable.Empty<Blog>();
-            LastUpdate = snapshot.SnapshotDate;
-        }
-
-        public IEnumerable<Blog> BlogsList { get; private set; }
-        public DateTime LastUpdate { get; set; }
     }
 }

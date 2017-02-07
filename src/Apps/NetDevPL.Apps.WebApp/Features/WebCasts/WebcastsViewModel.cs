@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using NetDevPLWeb.Features.Shared;
 
 namespace NetDevPLWeb.Features.WebCasts
 {
@@ -9,7 +10,7 @@ namespace NetDevPLWeb.Features.WebCasts
         public string Title { get; set; }
     }
 
-    public class WebcastsViewModel
+    public class WebcastsViewModel: BaseViewModel
     {
         public WebcastsViewModel(List<Webcast> webcasts)
         {

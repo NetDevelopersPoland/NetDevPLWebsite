@@ -70,10 +70,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomConventionsBootstrapper.cs" />
+    <Compile Include="Features\Blogs\BlogsViewModel.cs" />
     <Compile Include="Features\ConferenceVideos\ConferenceVideosModule.cs" />
     <Compile Include="Features\ConferenceVideos\ConferenceVideosSource.cs" />
     <Compile Include="Features\ConferenceVideos\ConferenceVideosViewModel.cs" />
+    <Compile Include="Features\Contributors\ContributorsListViewModel.cs" />
     <Compile Include="Features\Contributors\ContributorsModule.cs" />
+    <Compile Include="Features\Events\ConferencesListViewModel.cs" />
     <Compile Include="Features\Facebook\FacebookPostsViewModel.cs" />
     <Compile Include="Features\Groups\GroupsModule.cs" />
     <Compile Include="Features\Events\EventsModule.cs" />
@@ -87,6 +90,7 @@
     <Compile Include="Features\Resources\ResourcesModule.cs" />
     <Compile Include="Features\Resources\ResourcesSource.cs" />
     <Compile Include="Features\Resources\ResourcesViewModel.cs" />
+    <Compile Include="Features\Shared\BaseViewModel.cs" />
     <Compile Include="Features\Webcasts\WebcastsModule.cs" />
     <Compile Include="Features\Webcasts\WebcastsSource.cs" />
     <Compile Include="Features\Webcasts\WebcastsViewModel.cs" />

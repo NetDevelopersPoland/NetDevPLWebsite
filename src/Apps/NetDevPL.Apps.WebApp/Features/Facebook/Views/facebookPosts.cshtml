@@ -1,7 +1,8 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Facebook.FacebookPostsViewModel>
 
 <div class="jumbotron clearfix">
-    <h2>@Model.PageTitle</h2>
+    <h2>@Model.Title</h2>
+
     <h4><a href="/facebook">Wszystkie</a>&nbsp;<a href="/facebook/top-last-month">Top ostatni miesiąc</a>&nbsp;<a href="/facebook/top-current-year">Top rok</a></h4>
 
     @if (@Model.Posts.IsEmpty)

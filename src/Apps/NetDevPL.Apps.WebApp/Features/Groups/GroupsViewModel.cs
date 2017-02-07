@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using NetDevPL.Features.NetGroups;
+using NetDevPLWeb.Features.Shared;
 
 namespace NetDevPLWeb.Features.Groups
 {
-    public class GroupsViewModel
+    public class GroupsViewModel: BaseViewModel
     {
         public GroupsViewModel(NetGroupDataSnapshot snapshot)
         {

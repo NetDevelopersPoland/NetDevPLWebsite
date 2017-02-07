@@ -1,4 +1,5 @@
 ﻿using Nancy;
+using NetDevPLWeb.Features.Shared;
 
 namespace NetDevPLWeb.Features.Home
 {
@@ -6,7 +7,7 @@ namespace NetDevPLWeb.Features.Home
     {
         public HomeModule()
         {
-            Get["/"] = parameters => View["index"];
+            Get["/"] = parameters => View["index", new BaseViewModel()];
         }
     }
 }

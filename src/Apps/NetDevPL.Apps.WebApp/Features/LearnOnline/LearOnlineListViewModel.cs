@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using NetDevPLWeb.Features.Shared;
 
 namespace NetDevPLWeb.Features.LearnOnline
 {
-    public class LearOnlineListViewModel
+    public class LearOnlineListViewModel: BaseViewModel
     {
         public LearOnlineListViewModel(List<WebsiteRecordWithTitleAndDesc> toolMastering, List<WebsiteRecordWithTitleAndDesc> programmingChallenges
             )

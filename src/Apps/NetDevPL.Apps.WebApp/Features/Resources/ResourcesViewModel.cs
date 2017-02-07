@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using NetDevPLWeb.Features.Shared;
 
 namespace NetDevPLWeb.Features.Resources
 {
-    public class ResourcesViewModel
+    public class ResourcesViewModel : BaseViewModel
     {
         public ResourcesViewModel(List<Resource> resources)
         {
