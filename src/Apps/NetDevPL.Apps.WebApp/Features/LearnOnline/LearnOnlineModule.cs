@@ -13,7 +13,7 @@ namespace NetDevPLWeb.Features.LearnOnline
                 var toolsMastering = _source.GetMasteringTools();
                 var programmingChallenges = _source.GetProgrammingChallenges();
 
-                return View["learnOnlineList", new LearOnlineListViewModel(toolsMastering, programmingChallenges)];
+                return View["learnOnlineList", new LearOnlineListViewModel(toolsMastering, programmingChallenges, Request.Url)];
             };
         }
     }

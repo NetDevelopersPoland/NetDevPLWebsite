@@ -16,7 +16,7 @@ namespace NetDevPLWeb.Features.Contributors
             Get["/contributors"] = parameters =>
             {
                 var contributors = _source.GetContributors();
-                return View["contributorsList", new ContributorsListViewModel(contributors)];
+                return View["contributorsList", new ContributorsListViewModel(contributors, Request.Url)];
             };
         }
     }
@@ -44,10 +44,10 @@ namespace NetDevPLWeb.Features.Contributors
                 {
                     contributors.Add(new Contributor
                     {
-                        AvatarUrl = (string) contributor.avatar_url,
-                        Name = (string) contributor.login,
-                        GithubUrl = (string) contributor.html_url,
-                        Contributions = (int) contributor.contributions
+                        AvatarUrl = (string)contributor.avatar_url,
+                        Name = (string)contributor.login,
+                        GithubUrl = (string)contributor.html_url,
+                        Contributions = (int)contributor.contributions
                     });
                 }
             }

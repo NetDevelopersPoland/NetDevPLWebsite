@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Nancy;
 using NetDevPL.Features.NetGroups;
 using NetDevPLWeb.Features.Shared;
 
@@ -7,7 +8,7 @@ namespace NetDevPLWeb.Features.Groups
 {
     public class GroupsViewModel: BaseViewModel
     {
-        public GroupsViewModel(NetGroupDataSnapshot snapshot)
+        public GroupsViewModel(NetGroupDataSnapshot snapshot, Url url) : base(url)
         {
             GroupsList = snapshot.Groups ?? new List<NetGroup>();
 

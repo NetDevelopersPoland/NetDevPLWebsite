@@ -12,7 +12,7 @@ namespace NetDevPLWeb.Features.WebCasts
             {
                 var webcasts = _source.GetWebcastList();
 
-                return View["webcastsList", new WebcastsViewModel(webcasts)];
+                return View["webcastsList", new WebcastsViewModel(webcasts, Request.Url)];
             };
         }
     }

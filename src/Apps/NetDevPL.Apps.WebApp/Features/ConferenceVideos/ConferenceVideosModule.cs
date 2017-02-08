@@ -12,7 +12,7 @@ namespace NetDevPLWeb.Features.ConferenceVideos
             {
                 var conferenceVideos = _source.GetConferenceVideosList();
 
-                return View["conferenceVideosList", new ConferenceVideosViewModel(conferenceVideos)];
+                return View["conferenceVideosList", new ConferenceVideosViewModel(conferenceVideos, Request.Url)];
             };
         }
     }

@@ -14,8 +14,8 @@ namespace NetDevPLWeb.Features.Facebook
             Get["/facebook"] = parameters =>
             {
                 var posts = facebookDataRepository.PostsGetList(PostFilter.Empty);
-                
-                return View["facebookPosts", new FacebookPostsViewModel("Posty z Facebooka", posts)];
+
+                return View["facebookPosts", new FacebookPostsViewModel("Posty z Facebooka", posts, Request.Url)];
             };
 
             Get["/facebook/karma"] = parameters =>
@@ -54,7 +54,7 @@ namespace NetDevPLWeb.Features.Facebook
             };
             var posts = facebookDataRepository.PostsGetList(filter);
 
-            return View["facebookPosts", new FacebookPostsViewModel(pageName, posts)];
+            return View["facebookPosts", new FacebookPostsViewModel(pageName, posts, Request.Url)];
         }
     }
 }

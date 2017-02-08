@@ -17,7 +17,7 @@ namespace NetDevPLWeb.Features.OfflineEvents
             Get["/Events"] = parameters =>
             {
                 var conferences = _source.GetConferences();
-                return View["EventsList", new ConferencesListViewModel(conferences)];
+                return View["EventsList", new ConferencesListViewModel(conferences, Request.Url)];
             };
         }
     }

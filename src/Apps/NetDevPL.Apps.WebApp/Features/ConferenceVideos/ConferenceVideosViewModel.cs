@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Nancy;
 using NetDevPLWeb.Features.Shared;
 
 namespace NetDevPLWeb.Features.ConferenceVideos
@@ -12,7 +13,7 @@ namespace NetDevPLWeb.Features.ConferenceVideos
 
     public class ConferenceVideosViewModel: BaseViewModel
     {
-        public ConferenceVideosViewModel(List<ConferenceVideo> conferenceVideos)
+        public ConferenceVideosViewModel(List<ConferenceVideo> conferenceVideos, Url url) : base(url)
         {
             ConferenceVideosList = conferenceVideos;
         }

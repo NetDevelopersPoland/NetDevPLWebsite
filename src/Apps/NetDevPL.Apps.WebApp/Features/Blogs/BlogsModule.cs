@@ -15,7 +15,7 @@ namespace NetDevPLWeb.Features.Blogs
             {
                 var blogs = _repository.GetBlogs();
 
-                return View["blogList", new BlogsViewModel(blogs)];
+                return View["blogList", new BlogsViewModel(blogs, Request.Url)];
             };
         }
     }

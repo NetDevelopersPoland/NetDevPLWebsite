@@ -13,7 +13,7 @@ namespace NetDevPLWeb.Features.Groups
 
                 var groupsData = repository.GetGroups();
 
-                return View["groupsList", new GroupsViewModel(groupsData)];
+                return View["groupsList", new GroupsViewModel(groupsData, Request.Url)];
             };
         }
     }

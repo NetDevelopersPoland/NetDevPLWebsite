@@ -12,7 +12,7 @@ namespace NetDevPLWeb.Features.Resources
             {
                 var toolsMastering = _source.GetResources();
 
-                return View["resourcesList", new ResourcesViewModel(toolsMastering)];
+                return View["resourcesList", new ResourcesViewModel(toolsMastering, Request.Url)];
             };
         }
     }

@@ -1,12 +1,19 @@
-﻿namespace NetDevPLWeb.Features.Shared
+﻿using Nancy;
+
+namespace NetDevPLWeb.Features.Shared
 {
     public class BaseViewModel
     {
-        public BaseViewModel()
+        public BaseViewModel(Url url)
         {
-            Title = ".NET DevPL";
+            Title = "Strona główna";
             Description = ".NET Developers Poland website";
-            Url = "http://netdevelopers.pl";
+            Url = CreateCanonicUrl(url);
+        }
+
+        private string CreateCanonicUrl(Url url)
+        {
+            return url.ToString();
         }
 
         private string title = ".NET DevPL";

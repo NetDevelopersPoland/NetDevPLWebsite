@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
+using Nancy;
 using NetDevPLWeb.Features.Shared;
 
 namespace NetDevPLWeb.Features.LearnOnline
 {
-    public class LearOnlineListViewModel: BaseViewModel
+    public class LearOnlineListViewModel : BaseViewModel
     {
-        public LearOnlineListViewModel(List<WebsiteRecordWithTitleAndDesc> toolMastering, List<WebsiteRecordWithTitleAndDesc> programmingChallenges
-            )
+        public LearOnlineListViewModel(List<WebsiteRecordWithTitleAndDesc> toolMastering, List<WebsiteRecordWithTitleAndDesc> programmingChallenges, Url url) : base(url)
         {
             ToolMastering = toolMastering;
             ProgrammingChallenges = programmingChallenges;

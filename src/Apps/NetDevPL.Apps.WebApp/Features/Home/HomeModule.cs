@@ -7,7 +7,7 @@ namespace NetDevPLWeb.Features.Home
     {
         public HomeModule()
         {
-            Get["/"] = parameters => View["index", new BaseViewModel()];
+            Get["/"] = parameters => View["index", new BaseViewModel(Request.Url)];
         }
     }
 }
