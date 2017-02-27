@@ -54,5 +54,10 @@
         "Url": "http://www.mpustelak.com/",
         "Rss": "http://www.mpustelak.com/feed/",
         "Title": "mpustelak.com - real life programming and examples"
+    },
+    {
+        "Url": "https://blog.scooletz.com/",
+        "Rss": "https://blog.scooletz.com/feed/",
+        "Title": "Szymon Kulec 'Scooletz' - A guided path through modern software"
     }
 ]
