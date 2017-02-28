@@ -59,5 +59,10 @@
         "Url": "https://blog.scooletz.com/",
         "Rss": "https://blog.scooletz.com/feed/",
         "Title": "Szymon Kulec 'Scooletz' - A guided path through modern software"
+    },
+    {
+        "Url": "https://blog.gutek.pl",
+        "Rss": "https://blog.gutek.pl/feed",
+        "Title": "Jakub Gutkowski - Line By Line Changing the World"
     }
 ]
