@@ -48,9 +48,15 @@
         "City": "Gdańsk"
     },
     {
-        "Name": "Warsaw Official .NET UG",
+        "Name": "Warsaw Official .NET User Group",
         "MeetupName": "Warsaw-Official-NET-User-Group-Meetup",
         "WebSite": "https://www.meetup.com/Warsaw-Official-NET-User-Group-Meetup/",
         "City": "Warszawa"
+    },
+    {
+        "Name": "Śląska Grupa Microsoft",
+        "MeetupName": "Śląska-Grupa-Microsoft-Meetup",
+        "WebSite": "https://www.meetup.com/Śląska-Grupa-Microsoft-Meetup/",
+        "City": "Katowice"
     }
 ]
