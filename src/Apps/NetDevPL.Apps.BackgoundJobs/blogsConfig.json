@@ -65,9 +65,14 @@
         "Rss": "https://blog.gutek.pl/feed",
         "Title": "Jakub Gutkowski - Line By Line Changing the World"
     },
-	{
+	  {
         "Url": "http://blog.codenova.pl/",
         "Rss": "http://blog.codenova.pl/syndication.axd",
         "Title": "Automate The World - Kamil Mrzygłód's personal blog"
+    },
+    {
+        "Url": "https://www.make-sense.it/",
+        "Rss": "https://www.make-sense.it/feed.xml",
+        "Title": "Make Sense in IT"
     }
 ]
