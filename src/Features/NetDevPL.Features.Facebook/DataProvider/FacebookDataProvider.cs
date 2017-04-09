@@ -1,10 +1,4 @@
-﻿// -------------------------------------------------------------------------------------------------------------------
-// <copyright company="Gemotial" file="FacebookDataProvider.cs" project="NetDevPL.Features.Facebook" date="2016-06-03 17:39">
-// 
-// </copyright>
-// -------------------------------------------------------------------------------------------------------------------
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -46,8 +40,8 @@ namespace NetDevPL.Features.Facebook.DataProvider
             {
                 FacebookLikesContainer likesResponse = GetList<FacebookLikesContainer>(CreateAccessUrl(urlPattern, postId));
 
-                likes.AddRange(likesResponse.Likes.Select(l => new FacebookLike {PostId = postId, UserId = l.Id}));
-                users.AddRange(likesResponse.Likes.Select(l => new FacebookUser {Name = l.Name, Id = l.Id}));
+                likes.AddRange(likesResponse.Likes.Select(l => new FacebookLike { PostId = postId, UserId = l.Id }));
+                users.AddRange(likesResponse.Likes.Select(l => new FacebookUser { Name = l.Name, Id = l.Id }));
 
                 urlPattern = likesResponse.Paging.Next;
             } while (!string.IsNullOrWhiteSpace(urlPattern));
@@ -77,11 +71,11 @@ namespace NetDevPL.Features.Facebook.DataProvider
 
             try
             {
-                HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 
                 request.UserAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0";
 
-                HttpWebResponse response = (HttpWebResponse) request.GetResponse();
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
                 using (Stream inputStream = response.GetResponseStream())
                 {

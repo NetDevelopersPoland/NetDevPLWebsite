@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System;
+using Xunit;
 
 namespace NetDevPL.Features.Facebook.Tests
 {
@@ -33,6 +34,25 @@ namespace NetDevPL.Features.Facebook.Tests
             sut.Content = content;
 
             Assert.Equal(content, sut.ContentWithHyperLinks);
+        }
+
+        [Theory]
+        [InlineData("Sample post content", "")]
+        [InlineData("Sample #post #content", "post,content")]
+        [InlineData("Sample post #content", "content")]
+        [InlineData("Sample post#content", "")]
+        [InlineData("Sample post##content", "")]
+        [InlineData("Sample post ##content", "")]
+        [InlineData("Sample post # content", "")]
+        [InlineData("Sample post #content#", "")]
+        [InlineData("Sample post #con#tent", "")]
+        [InlineData("#Sample #post #con#tent", "sample,post")]
+        [InlineData("Sample #post ##content", "post")]
+        public void ProvidedContentShouldExtractTags(string content, string expectedTagsCommaSeparated)
+        {
+            var actaulTags = String.Join(",", FacebookPost.ExtractTags(content));
+
+            Assert.Equal(expectedTagsCommaSeparated, actaulTags);
         }
     }
 }

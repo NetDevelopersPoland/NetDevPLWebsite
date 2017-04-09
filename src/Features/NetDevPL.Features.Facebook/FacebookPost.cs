@@ -1,10 +1,6 @@
-﻿// -------------------------------------------------------------------------------------------------------------------
-// <copyright company="Gemotial" file="FacebookPost.cs" project="NetDevPLWeb.Features.Facebook" date="2016-06-03 17:27">
-// 
-// </copyright>
-// -------------------------------------------------------------------------------------------------------------------
-
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace NetDevPL.Features.Facebook
@@ -12,7 +8,7 @@ namespace NetDevPL.Features.Facebook
     public class FacebookPost
     {
         private static Regex httpRegex = new Regex(@"http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-
+        private static Regex hashtagRegex = new Regex(@"^#[A-Za-z0-9-]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public string ExternalKey { get; set; }
         public DateTime CreateDate { get; set; }
         public string Content { get; set; }
@@ -32,8 +28,17 @@ namespace NetDevPL.Features.Facebook
         public int Likes { get; set; }
 
         /// <summary>
-        ///     FacebookUser Id
+        /// FacebookUser Id
         /// </summary>
         public string CreatorId { get; set; }
+
+        public static List<string> ExtractTags(string content)
+        {
+            return content
+                .Split()
+                .Where(s => hashtagRegex.IsMatch(s))
+                .Select(s => s.Substring(1).ToLowerInvariant())
+                .ToList();
+        }
     }
 }
