@@ -57,7 +57,7 @@
   <ItemGroup>
     <Compile Include="DataProvider\FacebookDataProvider.cs" />
     <Compile Include="DataProvider\FacebookObject.cs" />
-    <Compile Include="DataProvider\FacebookLikes.cs" />
+    <Compile Include="DataProvider\FacebookReactions.cs" />
     <Compile Include="DataProvider\FacebookNews.cs" />
     <Compile Include="DataProvider\FacebookNewsContainer.cs" />
     <Compile Include="DataProvider\FacebookSummary.cs" />

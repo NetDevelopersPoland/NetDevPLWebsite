@@ -56,6 +56,6 @@ namespace NetDevPL.Features.Facebook.DataProvider
         public FacebookObject From { get; set; }
 
         public FacebookObject To { get; set; }
-        public FacebookLikes Likes { get; set; }
+        public FacebookReactions Reactions { get; set; }
     }
 }

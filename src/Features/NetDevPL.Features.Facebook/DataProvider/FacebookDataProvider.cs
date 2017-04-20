@@ -13,13 +13,13 @@ namespace NetDevPL.Features.Facebook.DataProvider
     {
         public IList<FacebookPost> FetchPostsFromFacebook()
         {
-            string urlPattern = "https://graph.facebook.com/{0}/feed?fields=likes.limit(0).summary(true),type,caption,full_picture,icon,is_published,message,picture,updated_time,link,name,created_time,description,object_id,from,to&limit=50&access_token={1}";
+            string urlPattern = "https://graph.facebook.com/v2.9/{0}/feed?fields=reactions.limit(0).summary(true),type,caption,full_picture,icon,is_published,message,picture,updated_time,link,name,created_time,description,object_id,from,to&limit=50&access_token={1}";
 
             string pageId = "154009054780458";
             FacebookNewsContainer data = GetList<FacebookNewsContainer>(CreateAccessUrl(urlPattern, pageId));
 
             return new List<FacebookPost>(
-                data.Data.Where(d => d.Likes.Summary.TotalCount > 10).Select(d =>
+                data.Data.Where(d => d.Reactions.Summary.TotalCount > 10).Select(d =>
                 {
                     string content = d.Message + "\n\n" + d.Name + "\n\n" + d.Link;
 
@@ -28,7 +28,7 @@ namespace NetDevPL.Features.Facebook.DataProvider
                         ExternalKey = d.ObjectId,
                         CreateDate = d.CreatedDate,
                         Content = content,
-                        Likes = d.Likes.Summary.TotalCount,
+                        Likes = d.Reactions.Summary.TotalCount,
                         CreatorId = d.From.Id,
                         Tags = FacebookPost.ExtractTags(content)
                     };
