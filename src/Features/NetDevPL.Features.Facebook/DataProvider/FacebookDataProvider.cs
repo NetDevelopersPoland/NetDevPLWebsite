@@ -19,13 +19,19 @@ namespace NetDevPL.Features.Facebook.DataProvider
             FacebookNewsContainer data = GetList<FacebookNewsContainer>(CreateAccessUrl(urlPattern, pageId));
 
             return new List<FacebookPost>(
-                data.Data.Where(d => d.Likes.Summary.TotalCount > 10).Select(d => new FacebookPost
+                data.Data.Where(d => d.Likes.Summary.TotalCount > 10).Select(d =>
                 {
-                    ExternalKey = d.ObjectId,
-                    CreateDate = d.CreatedDate,
-                    Content = d.Message + "\n\n" + d.Name + "\n\n" + d.Link,
-                    Likes = d.Likes.Summary.TotalCount,
-                    CreatorId = d.From.Id
+                    string content = d.Message + "\n\n" + d.Name + "\n\n" + d.Link;
+
+                    return new FacebookPost
+                    {
+                        ExternalKey = d.ObjectId,
+                        CreateDate = d.CreatedDate,
+                        Content = content,
+                        Likes = d.Likes.Summary.TotalCount,
+                        CreatorId = d.From.Id,
+                        Tags = FacebookPost.ExtractTags(content)
+                    };
                 }));
         }
 

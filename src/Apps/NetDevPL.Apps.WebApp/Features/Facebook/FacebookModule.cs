@@ -41,6 +41,28 @@ namespace NetDevPLWeb.Features.Facebook
 
                 return GetPostsForPeriod("Top posty z Facebooka z ostatniego roku", firstDay, lastDay);
             };
+
+            Get["/facebook/tag/{tag}"] = parameters =>
+            {
+                var firstDay = new DateTime(DateTime.Now.Year, 1, 1);
+                var lastDay = firstDay.AddYears(1).AddMilliseconds(-1);
+
+                return GetPostsWithTag("Posty z tagiem '" + parameters.tag + "'", parameters.tag);
+            };
+        }
+
+        private dynamic GetPostsWithTag(string pageName, string tag)
+        {
+            var filter = new PostFilter
+            {
+                Tag = tag,
+                SortingExpression = post => post.CreateDate,
+                SortingDirection = SortDirection.Descending
+            };
+
+            var posts = facebookDataRepository.PostsGetList(filter);
+
+            return View["facebookPosts", new FacebookPostsViewModel(pageName, posts, Request.Url)];
         }
 
         private dynamic GetPostsForPeriod(string pageName, DateTime startDate, DateTime endDate)

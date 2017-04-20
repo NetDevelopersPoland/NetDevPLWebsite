@@ -12,6 +12,7 @@ namespace NetDevPL.Features.Facebook
         public string ExternalKey { get; set; }
         public DateTime CreateDate { get; set; }
         public string Content { get; set; }
+        public List<string> Tags { get; set; }
 
         /// <summary>
         /// All http addresses are converted into http links

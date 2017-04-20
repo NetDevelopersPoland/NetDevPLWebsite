@@ -29,6 +29,11 @@ namespace NetDevPL.Features.Facebook
                 {
                     defaultFilter = defaultFilter & Builders<FacebookPost>.Filter.Lte(p => p.CreateDate, filter.EndDate.Value);
                 }
+
+                if (!String.IsNullOrWhiteSpace(filter.Tag))
+                {
+                    defaultFilter = defaultFilter & Builders<FacebookPost>.Filter.AnyEq(p => p.Tags, filter.Tag);
+                }
             }
 
             if (filter.HasSorting)
@@ -102,9 +107,12 @@ namespace NetDevPL.Features.Facebook
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
 
+        private string tag;
+        public string Tag { get { return tag; } set { tag = value != null ? value.ToLower() : ""; } }
+
         public bool HasFilter
         {
-            get { return StartDate != null || EndDate != null; }
+            get { return StartDate != null || EndDate != null || !String.IsNullOrWhiteSpace(Tag); }
         }
 
         public bool HasSorting
