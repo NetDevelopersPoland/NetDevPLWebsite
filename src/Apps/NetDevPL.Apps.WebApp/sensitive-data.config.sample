@@ -4,5 +4,9 @@ This file contains app sensitive configuration.
 Keys, passwords etc.
 -->
 <appSettings>
-    <add key="FacebookAccessToken" value="HERE PASTE YOUR ACCESS TOKEN" />
+  <add key="FacebookAccessToken" value="HERE PASTE YOUR ACCESS TOKEN" />
+  <add key="GoogleApiId" value="" />
+  <add key="GoogleApiSecret" value="" />
+  <add key="TwitterApiId" value="" />
+  <add key="TwitterApiSecret" value="" />
 </appSettings>

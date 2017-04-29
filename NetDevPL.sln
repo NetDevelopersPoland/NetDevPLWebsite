@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Facebook.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Facebook.Tests", "tests\Unit\NetDevPL.Features.Facebook.Tests\NetDevPL.Features.Facebook.Tests.csproj", "{8C2FFEC0-8CAF-4E8D-951C-131656C43326}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.UserManagement", "src\Features\NetDevPL.Features.UserManagement\NetDevPL.Features.UserManagement.csproj", "{0D737739-AF64-4990-8C6C-F022D9C8553C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,6 +110,10 @@ Global
 		{8C2FFEC0-8CAF-4E8D-951C-131656C43326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C2FFEC0-8CAF-4E8D-951C-131656C43326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C2FFEC0-8CAF-4E8D-951C-131656C43326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D737739-AF64-4990-8C6C-F022D9C8553C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D737739-AF64-4990-8C6C-F022D9C8553C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D737739-AF64-4990-8C6C-F022D9C8553C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D737739-AF64-4990-8C6C-F022D9C8553C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,5 +136,6 @@ Global
 		{A601F1F3-A027-4097-9F1B-93CED6A81501} = {457EF626-17F8-45DB-8FD7-101265927FEB}
 		{AE1BD045-C141-4EB8-A468-711180BC2651} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
 		{8C2FFEC0-8CAF-4E8D-951C-131656C43326} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
+		{0D737739-AF64-4990-8C6C-F022D9C8553C} = {457EF626-17F8-45DB-8FD7-101265927FEB}
 	EndGlobalSection
 EndGlobal

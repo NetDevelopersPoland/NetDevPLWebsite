@@ -1,4 +1,5 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+﻿@using Nancy.Security
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -68,6 +69,22 @@
                 <li><a href="/contributors">Twórcy strony</a></li>
                 <li><a href="/facebook"><span class="fa fa-facebook-official text-info fa-2x"></span></a></li>
                 <li><a href="https://github.com/NetDevelopersPoland/NetDevPLWebsite" target="_blank"><span class="fa fa-github fa-2x"></span></a></li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @{
+                    if (Context.CurrentUser.IsAuthenticated())
+                    {
+                        <li><p>Zalogowany @Context.CurrentUser.UserName </p></li>
+                        <li><a href="/logout">(wyloguj)</a></li>
+                    }
+                    else
+                    {
+                        @*<a href="/authentication/redirect/twitter">Login with Twitter</a>*@
+                        <li><a href="/authentication/redirect/facebook">Zaloguj przez Facebook</a></li>
+                        @*<a href="/authentication/redirect/google">Login with Google</a>*@
+                    }
+                }
             </ul>
         </div>
     </nav>

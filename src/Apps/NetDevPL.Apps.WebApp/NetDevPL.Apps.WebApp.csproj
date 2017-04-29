@@ -47,8 +47,16 @@
       <HintPath>..\..\..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Nancy.Authentication.Forms, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Nancy.Authentication.Forms.1.4.1\lib\net40\Nancy.Authentication.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Nancy.Hosting.Self, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Nancy.Hosting.Self.1.4.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.SimpleAuthentication, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Nancy.SimpleAuthentication.0.7.0\lib\net40\Nancy.SimpleAuthentication.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nancy.ViewEngines.Razor, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -59,7 +67,16 @@
       <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleAuthentication.Core, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SimpleAuthentication.Core.0.7.0\lib\net40\SimpleAuthentication.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
@@ -94,9 +111,12 @@
     <Compile Include="Features\Webcasts\WebcastsModule.cs" />
     <Compile Include="Features\Webcasts\WebcastsSource.cs" />
     <Compile Include="Features\Webcasts\WebcastsViewModel.cs" />
+    <Compile Include="Infrastructure\AuthUserIdentity.cs" />
+    <Compile Include="Infrastructure\FormsUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RazorConfiguration.cs" />
+    <Compile Include="SampleAuthenticationCallbackProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -134,6 +154,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Features\LearnOnline\Views\learnOnlineList.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Features\Home\Views\Login.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Features\LearnOnline\programmingChallenges.json">
@@ -186,6 +209,10 @@
     <ProjectReference Include="..\..\Features\NetDevPL.Features.Reporting\NetDevPL.Features.Reporting.csproj">
       <Project>{a601f1f3-a027-4097-9f1b-93ced6a81501}</Project>
       <Name>NetDevPL.Features.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Features\NetDevPL.Features.UserManagement\NetDevPL.Features.UserManagement.csproj">
+      <Project>{0d737739-af64-4990-8c6c-f022d9c8553c}</Project>
+      <Name>NetDevPL.Features.UserManagement</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
       <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>

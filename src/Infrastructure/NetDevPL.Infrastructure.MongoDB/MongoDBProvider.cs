@@ -37,7 +37,7 @@ namespace NetDevPL.Infrastructure.MongoDB
         {
             client = new MongoClient();
 
-            Logger.Info("Connecting to Mongo DB.");
+            Logger.Info(String.Format("Connecting to Mongo DB:{0} Collection:{1}",databaseName, collectionName));
 
             database = client.GetDatabase(databaseName);
 

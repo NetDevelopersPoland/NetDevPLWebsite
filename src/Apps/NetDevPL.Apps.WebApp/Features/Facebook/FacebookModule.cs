@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Nancy;
+using Nancy.Security;
 using NetDevPL.Features.Facebook;
 
 namespace NetDevPLWeb.Features.Facebook
@@ -20,6 +21,7 @@ namespace NetDevPLWeb.Features.Facebook
 
             Get["/facebook/karma"] = parameters =>
             {
+                this.RequiresAuthentication();
                 var karma = new NetDevPL.Features.Reporting.FacebookStats().UserKarma();
 
                 return string.Join("<br/>", karma.Take(100).Select(k => k.Name + " " + k.KarmaPoints));

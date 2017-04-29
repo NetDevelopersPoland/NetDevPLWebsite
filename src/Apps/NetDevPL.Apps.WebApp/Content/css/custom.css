@@ -1,11 +1,11 @@
-﻿body {  
+﻿body {
     /* Background area */
     background-image: url('../images/cup-of-coffee-1280537_1920.jpg');
     background-color: white;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
     width: 100%;
     height: 100%;
 }
@@ -14,20 +14,20 @@
     border-radius: 0;
 }
 
-.jumbotron {    
+.jumbotron {
     opacity: 0.9;
 }
 
-.jumbotron.logo {
-    padding: 10em;
-    background-image: url('../images/netdevspoland.jpg');
-    background-color: white;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: auto;
-    height: auto;
-}
+    .jumbotron.logo {
+        padding: 10em;
+        background-image: url('../images/netdevspoland.jpg');
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: auto;
+        height: auto;
+    }
 
 .navbar {
     border-radius: 0;
@@ -38,8 +38,8 @@
 }
 
 .row .thumbnail {
-    border:0;
-    border-radius:0;
+    border: 0;
+    border-radius: 0;
     opacity: 0.9;
     overflow-y: hidden;
     width: 100%;
@@ -49,7 +49,6 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
- 
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -69,4 +68,10 @@
     color: red;
 }
 
-
+.navbar-nav > li > p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    position: relative;
+    color: white;
+}
