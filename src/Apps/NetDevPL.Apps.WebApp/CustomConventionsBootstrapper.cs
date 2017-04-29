@@ -1,3 +1,4 @@
+using System;
 using System.Configuration;
 using Nancy;
 using Nancy.Authentication.Forms;
@@ -17,6 +18,11 @@ namespace NetDevPLWeb
         {
             base.ConfigureRequestContainer(container, context);
             container.Register<IUserMapper, FormsUser>();
+            var options = new ConfigurationOptions
+            {
+                BasePath = new Uri("http://netdevelopers.pl")
+            };
+            container.Register<IConfigurationOptions>(options);
         }
 
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
@@ -56,7 +62,7 @@ namespace NetDevPLWeb
             //var googleProvider = new GoogleProvider(new ProviderParams { PublicApiKey = ConfigurationManager.AppSettings["GoogleApiId"], SecretApiKey = ConfigurationManager.AppSettings["GoogleApiSecret"] });
 
             AuthenticationProviderFactory providerFactory = new AuthenticationProviderFactory();
-
+            
             // providerFactory.AddProvider(twitterProvider);
             providerFactory.AddProvider(facebookProvider);
             // providerFactory.AddProvider(googleProvider);
