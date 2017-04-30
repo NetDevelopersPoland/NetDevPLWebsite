@@ -30,7 +30,8 @@ namespace NetDevPL.Features.Facebook.DataProvider
                         Content = content,
                         Likes = d.Reactions.Summary.TotalCount,
                         CreatorId = d.From.Id,
-                        Tags = FacebookPost.ExtractTags(content)
+                        Tags = FacebookPost.ExtractTags(content),
+                        LastUpdated = DateTime.Now
                     };
                 }));
         }
