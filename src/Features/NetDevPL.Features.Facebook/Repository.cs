@@ -66,8 +66,10 @@ namespace NetDevPL.Features.Facebook
         public void PostsAddOrUpdate(FacebookPost post)
         {
             var filter = Builders<FacebookPost>.Filter.Eq(fp => fp.ExternalKey, post.ExternalKey);
-            var update = Builders<FacebookPost>.Update.Set(fp => fp.Likes, post.Likes);
-
+            var update = Builders<FacebookPost>.Update
+                .Set(fp => fp.Likes, post.Likes)
+                .Set(fp => fp.LastUpdated, post.LastUpdated);
+            
             var updResult = postsProvider.Collection.UpdateOne(filter, update);
 
             if (updResult.MatchedCount == 0)

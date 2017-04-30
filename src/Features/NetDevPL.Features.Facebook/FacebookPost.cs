@@ -33,6 +33,8 @@ namespace NetDevPL.Features.Facebook
         /// </summary>
         public string CreatorId { get; set; }
 
+        public DateTime LastUpdated { get; set; }
+
         public static List<string> ExtractTags(string content)
         {
             return content
