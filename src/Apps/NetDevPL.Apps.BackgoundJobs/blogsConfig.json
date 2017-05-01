@@ -74,5 +74,10 @@
         "Url": "https://www.make-sense.it/",
         "Rss": "https://www.make-sense.it/feed.xml",
         "Title": "Make Sense in IT"
+    },
+    {
+        "Url": "http://www.benedykt.net/",
+        "Rss": "http://www.benedykt.net/feed",
+        "Title": "Be passionate and bold. Always keep learning"
     }
 ]
