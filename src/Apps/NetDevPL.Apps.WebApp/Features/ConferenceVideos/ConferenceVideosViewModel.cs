@@ -11,13 +11,13 @@ namespace NetDevPLWeb.Features.ConferenceVideos
         public string Title { get; set; }
     }
 
-    public class ConferenceVideosViewModel: BaseViewModel
+    public class ConferenceVideosViewModel : BaseViewModel
     {
-        public ConferenceVideosViewModel(List<ConferenceVideo> conferenceVideos, Url url) : base(url)
+        public ConferenceVideosViewModel(ICollection<ConferenceVideo> videos, Url url) : base(url)
         {
-            ConferenceVideosList = conferenceVideos;
+            Videos = videos;
         }
 
-        public List<ConferenceVideo> ConferenceVideosList { get; private set; }
+        public ICollection<ConferenceVideo> Videos { get; }
     }
 }

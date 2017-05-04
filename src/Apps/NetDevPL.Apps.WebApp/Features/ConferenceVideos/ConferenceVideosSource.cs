@@ -1,10 +1,16 @@
 ﻿using System.Collections.Generic;
-using NetDevPL.Infrastructure.Helpers;
 
 namespace NetDevPLWeb.Features.ConferenceVideos
 {
     public class ConferenceVideosSource
     {
-        public List<ConferenceVideo> GetConferenceVideosList() => JsonReaderHelper.ReadObjectListFromJson<ConferenceVideo>("Features/ConferenceVideos/conferenceVideosList.json");
+        private readonly IJsonReader _repository;
+
+        public ConferenceVideosSource(IJsonReader repository)
+        {
+            _repository = repository;
+        }
+
+        public ICollection<ConferenceVideo> GetVideos() => _repository.ReadAll<ConferenceVideo>("Features/ConferenceVideos/conferenceVideosList.json");
     }
 }

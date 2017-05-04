@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\ConferenceVideos\ConferenceVideoViewModelTests.cs" />
+    <Compile Include="Features\ConferenceVideos\ConferenceVideoSourceTests.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineListViewModelTests.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineSourceTests.cs" />
     <Compile Include="Features\Resources\ResourcesViewModelTests.cs" />
