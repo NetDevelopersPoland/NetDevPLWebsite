@@ -103,7 +103,7 @@
     <Compile Include="Features\Home\HomeModule.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineModule.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineSource.cs" />
-    <Compile Include="Features\LearnOnline\LearOnlineListViewModel.cs" />
+    <Compile Include="Features\LearnOnline\WebsiteViewModel.cs" />
     <Compile Include="Features\Resources\ResourcesModule.cs" />
     <Compile Include="Features\Resources\ResourcesSource.cs" />
     <Compile Include="Features\Resources\ResourcesViewModel.cs" />

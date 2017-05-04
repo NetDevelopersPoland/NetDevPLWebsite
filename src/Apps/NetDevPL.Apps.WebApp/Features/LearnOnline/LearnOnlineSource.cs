@@ -1,12 +1,24 @@
 ﻿using System.Collections.Generic;
-using NetDevPL.Infrastructure.Helpers;
 
 namespace NetDevPLWeb.Features.LearnOnline
 {
     public class LearnOnlineSource
     {
-        public List<WebsiteRecordWithTitleAndDesc> GetMasteringTools() => JsonReaderHelper.ReadObjectListFromJson<WebsiteRecordWithTitleAndDesc>("Features/LearnOnline/toolsMastering.json");
+        private readonly IJsonReader _repository;
 
-        public List<WebsiteRecordWithTitleAndDesc> GetProgrammingChallenges() => JsonReaderHelper.ReadObjectListFromJson<WebsiteRecordWithTitleAndDesc>("Features/LearnOnline/programmingChallenges.json");
+        public LearnOnlineSource(IJsonReader repository)
+        {
+            _repository = repository;
+        }
+
+        public ICollection<Website> GetMasteringTools()
+        {
+            return _repository.ReadAll<Website>("Features/LearnOnline/toolsMastering.json");
+        }
+
+        public ICollection<Website> GetProgrammingChallenges()
+        {
+            return _repository.ReadAll<Website>("Features/LearnOnline/programmingChallenges.json");
+        }
     }
 }

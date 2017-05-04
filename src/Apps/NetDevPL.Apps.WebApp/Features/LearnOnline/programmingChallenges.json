@@ -1,36 +1,37 @@
-﻿[     {
-        "Title": "Codingame",
-        "Description": "Play with Programming",
-        "Url": "https://www.codingame.com/home"
-    },
-    {
-        "Title": "Codewars",
-        "Description": "Train with Programming Challenges/Kata",
-        "Url": "https://www.codewars.com"
-    },
-    {
-        "Title": "Stockfighter",
-        "Description": "Stockfighter is a series of puzzles which you'll solve by programming. Each builds on the last, teaching you more about the problem domain and letting you strut your stuff a bit. Stockfighter is organized into tech trees, which are a series of levels which build on each other in terms of both the technology you'll use and the concepts you'll learn. You can play either of our tech trees at the left.",
-        "Url": "https://www.stockfighter.io"
-    },
-    {
-        "Title": "Hackerrank",
-        "Description": "Sharpen your programming skills with challenges in 15+ domains and 35+ languages.",
-        "Url": "https://www.hackerrank.com/"
-    },
-    {
-        "Title": "Enki (Android)",
-        "Description": "Enki helps professional developers level up their programming skills every day through a fun, daily workout on their mobile.",
-        "Url": "https://play.google.com/store/apps/details?id=com.enki.insights"
-    },
-	{
-		"Title": "return true to win",
-		"Description": "javascript challenges - return true to advance to the next level",
-		"Url": "https://alf.nu/ReturnTrue"
-	},
-	{
-		"Title": "Regex crossword",
-		"Description": "regular expressions crosswords to solve",
-		"Url": "https://regexcrossword.com"
-	}
+﻿[
+  {
+    "Title": "Codingame",
+    "Description": "Play with Programming",
+    "Url": "https://www.codingame.com/home"
+  },
+  {
+    "Title": "Codewars",
+    "Description": "Train with Programming Challenges/Kata",
+    "Url": "https://www.codewars.com"
+  },
+  {
+    "Title": "Stockfighter",
+    "Description": "Stockfighter is a series of puzzles which you'll solve by programming. Each builds on the last, teaching you more about the problem domain and letting you strut your stuff a bit. Stockfighter is organized into tech trees, which are a series of levels which build on each other in terms of both the technology you'll use and the concepts you'll learn. You can play either of our tech trees at the left.",
+    "Url": "https://www.stockfighter.io"
+  },
+  {
+    "Title": "Hackerrank",
+    "Description": "Sharpen your programming skills with challenges in 15+ domains and 35+ languages.",
+    "Url": "https://www.hackerrank.com/"
+  },
+  {
+    "Title": "Enki (Android)",
+    "Description": "Enki helps professional developers level up their programming skills every day through a fun, daily workout on their mobile.",
+    "Url": "https://play.google.com/store/apps/details?id=com.enki.insights"
+  },
+  {
+    "Title": "return true to win",
+    "Description": "javascript challenges - return true to advance to the next level",
+    "Url": "https://alf.nu/ReturnTrue"
+  },
+  {
+    "Title": "Regex crossword",
+    "Description": "regular expressions crosswords to solve",
+    "Url": "https://regexcrossword.com"
+  }
 ]
