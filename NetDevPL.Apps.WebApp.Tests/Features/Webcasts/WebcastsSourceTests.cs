@@ -4,7 +4,7 @@ using NSubstitute;
 using Ploeh.AutoFixture;
 using Xunit;
 
-namespace NetDevPL.Apps.WebApp.Tests.Features
+namespace NetDevPL.Apps.WebApp.Tests.Features.Webcasts
 {
     public class WebcastsSourceTests
     {
