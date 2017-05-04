@@ -42,3 +42,13 @@ deploy:
     secure: tqQOg1HU9dToPwytSMBvbg==
   folder: '\deployment'
   artifact: website
+  on:
+    APPVEYOR_PULL_REQUEST_NUMBER: ''
+- provider: FTP
+  host: netdevelopers.pl:20202
+  protocol: sftp
+  username: appveyor
+  password:
+    secure: tqQOg1HU9dToPwytSMBvbg==
+  folder: '\deployment-test'
+  artifact: website

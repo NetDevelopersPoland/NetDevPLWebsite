@@ -3,7 +3,7 @@
 
 $openCover = "packages\OpenCover.4.6.519\tools\OpenCover.Console.exe"
 $openCoverProfiler = "packages\OpenCover.4.6.519\tools\x86\OpenCover.Profiler.dll"
-$xUnit = "packages\xunit.runner.console.2.1.0\tools\xunit.console.exe"
+$xUnit = "packages\xunit.runner.console.2.2.0\tools\xunit.console.exe"
 
 # entry folder
 $root = "artifacts\"
