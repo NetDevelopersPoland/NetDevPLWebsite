@@ -48,7 +48,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Facebook.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.UserManagement", "src\Features\NetDevPL.Features.UserManagement\NetDevPL.Features.UserManagement.csproj", "{0D737739-AF64-4990-8C6C-F022D9C8553C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Apps.WebApp.Tests", "NetDevPL.Apps.WebApp.Tests\NetDevPL.Apps.WebApp.Tests.csproj", "{E9C0944A-1E75-47D6-9234-956D019447CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Apps.WebApp.Tests", "tests\Unit\NetDevPL.Apps.WebApp.Tests\NetDevPL.Apps.WebApp.Tests.csproj", "{E9C0944A-1E75-47D6-9234-956D019447CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
