@@ -8,17 +8,17 @@ namespace NetDevPL.Infrastructure.Services
     {
         public T Read<T>(string filePath)
         {
-            string json = ReadJson<T>(filePath);
+            string json = ReadJson(filePath);
             return JsonConvert.DeserializeObject<T>(json);
         }
 
         public ICollection<T> ReadAll<T>(string filePath)
         {
-            string json = ReadJson<T>(filePath);
+            string json = ReadJson(filePath);
             return JsonConvert.DeserializeObject<T[]>(json);
         }
 
-        private static string ReadJson<T>(string filePath)
+        private static string ReadJson(string filePath)
         {
             return File.ReadAllText(filePath);
         }
