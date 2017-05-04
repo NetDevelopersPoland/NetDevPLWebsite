@@ -6,7 +6,7 @@ using NetDevPLWeb.Features.Shared;
 
 namespace NetDevPLWeb.Features.Groups
 {
-    public class GroupsViewModel: BaseViewModel
+    public class GroupsViewModel : BaseViewModel
     {
         public GroupsViewModel(NetGroupDataSnapshot snapshot, Url url) : base(url)
         {
@@ -24,7 +24,7 @@ namespace NetDevPLWeb.Features.Groups
             LastUpdate = snapshot.SnapshotDate;
         }
 
-        public List<NetGroup> GroupsList { get; private set; }
+        public ICollection<NetGroup> GroupsList { get; }
         public DateTime LastUpdate { get; set; }
     }
 }

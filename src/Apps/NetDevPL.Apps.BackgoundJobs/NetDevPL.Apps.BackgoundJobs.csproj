@@ -83,9 +83,9 @@
       <Project>{D817CF1B-7E0A-419A-AA50-446F8DE8ACCD}</Project>
       <Name>NetDevPL.Features.NetGroups</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
+    <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Services.csproj">
       <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>
-      <Name>NetDevPL.Infrastructure.Helpers</Name>
+      <Name>NetDevPL.Infrastructure.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.SharedKernel\NetDevPL.Infrastructure.SharedKernel.csproj">
       <Project>{513D6AF3-3CEF-45F7-A246-F111CDC40B76}</Project>

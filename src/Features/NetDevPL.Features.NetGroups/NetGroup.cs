@@ -17,7 +17,7 @@ namespace NetDevPL.Features.NetGroups
         /// <summary>
         ///     Actual .net groups
         /// </summary>
-        public List<NetGroup> Groups { get; set; }
+        public ICollection<NetGroup> Groups { get; set; }
 
         /// <summary>
         ///     Date when snapshot was taken

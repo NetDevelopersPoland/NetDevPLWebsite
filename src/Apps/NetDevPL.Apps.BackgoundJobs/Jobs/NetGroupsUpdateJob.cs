@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using NetDevPL.Features.NetGroups;
-using NetDevPL.Infrastructure.Helpers;
+using NetDevPL.Infrastructure.Services;
 using NetDevPL.Infrastructure.SharedKernel;
 using Quartz;
 
@@ -9,9 +9,18 @@ namespace NetDevPLBackgoundJobs.Jobs
 {
     internal class NetGroupsUpdateJob : IJob
     {
+        private readonly IJsonReader _jsonReader;
+
+        public NetGroupsUpdateJob() : this(new JsonReader()) { }
+
+        internal NetGroupsUpdateJob(IJsonReader jsonReader)
+        {
+            _jsonReader = jsonReader;
+        }
+
         public void Execute(IJobExecutionContext context)
         {
-            var groupsConfig = JsonReaderHelper.ReadObjectListFromJson<NetGroup>("netGroupsConfig.json");
+            var groupsConfig = _jsonReader.ReadAll<NetGroup>("netGroupsConfig.json");
 
             MeetupDataProvider provider = new MeetupDataProvider();
 
@@ -28,7 +37,7 @@ namespace NetDevPLBackgoundJobs.Jobs
             Logger.Info(string.Format("Found {0} groups with {1} upcoming meetups", snapshot.Groups.Count, snapshot.Groups.SelectMany(g => g.UpcomingMeetings).Count()));
         }
 
-        private void AddMeetingsToGroups(List<NetGroup> groups, List<NetGroupMeeting> meetings)
+        private void AddMeetingsToGroups(ICollection<NetGroup> groups, ICollection<NetGroupMeeting> meetings)
         {
             foreach (var netGroup in groups)
             {

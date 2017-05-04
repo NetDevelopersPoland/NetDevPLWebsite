@@ -1,5 +1,6 @@
 ﻿using Gmtl.CodeWatch;
 using Gmtl.CodeWatch.Watchers;
+using NetDevPL.Infrastructure.Services;
 using Xunit;
 
 namespace NetDevPL.CodeQualityTests
@@ -16,7 +17,7 @@ namespace NetDevPL.CodeQualityTests
                 .WatchAssembly(typeof(Features.Blogs.Blog).Assembly)
                 .WatchAssembly(typeof(Features.Facebook.FacebookPost).Assembly)
                 .WatchAssembly(typeof(Features.NetGroups.Group).Assembly)
-                .WatchAssembly(typeof(Infrastructure.Helpers.RssProvider).Assembly)
+                .WatchAssembly(typeof(RssProvider).Assembly)
                 .WatchAssembly(typeof(Infrastructure.MongoDB.MongoDBProvider<object>).Assembly)
                 .WatchAssembly(typeof(Infrastructure.SharedKernel.Logger).Assembly)
                 .WatchAssembly(typeof(Features.NetGroups.IntegrationTests.MeetupDataProviderTests).Assembly)

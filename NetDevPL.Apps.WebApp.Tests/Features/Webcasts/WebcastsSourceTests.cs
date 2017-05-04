@@ -1,10 +1,10 @@
-﻿using NetDevPLWeb;
+﻿using NetDevPL.Infrastructure.Services;
 using NetDevPLWeb.Features.WebCasts;
 using NSubstitute;
 using Ploeh.AutoFixture;
 using Xunit;
 
-namespace NetDevPL.Apps.WebApp.Tests.Features
+namespace NetDevPL.Apps.WebApp.Tests.Features.Webcasts
 {
     public class WebcastsSourceTests
     {

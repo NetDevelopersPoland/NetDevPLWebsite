@@ -1,19 +1,20 @@
 ﻿using Nancy;
+using NetDevPL.Infrastructure.Services;
 
 namespace NetDevPLWeb.Features.LearnOnline
 {
     public class LearnOnlineModule : NancyModule
     {
-        readonly LearnOnlineSource _source = new LearnOnlineSource();
-
-        public LearnOnlineModule()
+        public LearnOnlineModule(IJsonReader repository)
         {
+            var source = new LearnOnlineSource(repository);
+
             Get["/learnOnline"] = parameters =>
             {
-                var toolsMastering = _source.GetMasteringTools();
-                var programmingChallenges = _source.GetProgrammingChallenges();
+                var toolsMastering = source.GetMasteringTools();
+                var programmingChallenges = source.GetProgrammingChallenges();
 
-                return View["learnOnlineList", new LearOnlineListViewModel(toolsMastering, programmingChallenges, Request.Url)];
+                return View["learnOnlineList", new WebsiteViewModel(toolsMastering, programmingChallenges, Request.Url)];
             };
         }
     }

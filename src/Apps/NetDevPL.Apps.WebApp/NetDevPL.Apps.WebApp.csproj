@@ -103,7 +103,7 @@
     <Compile Include="Features\Home\HomeModule.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineModule.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineSource.cs" />
-    <Compile Include="Features\LearnOnline\LearOnlineListViewModel.cs" />
+    <Compile Include="Features\LearnOnline\WebsiteViewModel.cs" />
     <Compile Include="Features\Resources\ResourcesModule.cs" />
     <Compile Include="Features\Resources\ResourcesSource.cs" />
     <Compile Include="Features\Resources\ResourcesViewModel.cs" />
@@ -111,10 +111,8 @@
     <Compile Include="Features\Webcasts\WebcastsModule.cs" />
     <Compile Include="Features\Webcasts\WebcastsSource.cs" />
     <Compile Include="Features\Webcasts\WebcastsViewModel.cs" />
-    <Compile Include="IJsonReader.cs" />
     <Compile Include="Infrastructure\AuthUserIdentity.cs" />
     <Compile Include="Infrastructure\FormsUser.cs" />
-    <Compile Include="JsonReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RazorConfiguration.cs" />
@@ -216,9 +214,9 @@
       <Project>{0d737739-af64-4990-8c6c-f022d9c8553c}</Project>
       <Name>NetDevPL.Features.UserManagement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
+    <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Services.csproj">
       <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>
-      <Name>NetDevPL.Infrastructure.Helpers</Name>
+      <Name>NetDevPL.Infrastructure.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.SharedKernel\NetDevPL.Infrastructure.SharedKernel.csproj">
       <Project>{513D6AF3-3CEF-45F7-A246-F111CDC40B76}</Project>

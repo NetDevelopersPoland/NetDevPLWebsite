@@ -7,8 +7,8 @@
     <ProjectGuid>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetDevPL.Infrastructure.Helpers</RootNamespace>
-    <AssemblyName>NetDevPL.Infrastructure.Helpers</AssemblyName>
+    <RootNamespace>NetDevPL.Infrastructure.Services</RootNamespace>
+    <AssemblyName>NetDevPL.Infrastructure.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JsonReaderHelper.cs" />
+    <Compile Include="IJsonReader.cs" />
+    <Compile Include="JsonReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RssProvider.cs" />
   </ItemGroup>

@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace NetDevPLWeb
+namespace NetDevPL.Infrastructure.Services
 {
     public class JsonReader : IJsonReader
     {
