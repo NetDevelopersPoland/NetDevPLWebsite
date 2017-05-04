@@ -6,11 +6,11 @@ namespace NetDevPLWeb.Features.Resources
 {
     public class ResourcesViewModel : BaseViewModel
     {
-        public ResourcesViewModel(List<Resource> resources, Url url) : base(url)
+        public ResourcesViewModel(ICollection<Resource> resources, Url url) : base(url)
         {
             ResourcesList = resources;
         }
 
-        public List<Resource> ResourcesList { get; private set; }
+        public ICollection<Resource> ResourcesList { get; }
     }
 }

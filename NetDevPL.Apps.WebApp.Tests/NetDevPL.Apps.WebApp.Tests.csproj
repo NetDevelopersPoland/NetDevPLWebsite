@@ -63,6 +63,8 @@
   <ItemGroup>
     <Compile Include="Features\LearnOnline\LearnOnlineListViewModelTests.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineSourceTests.cs" />
+    <Compile Include="Features\Resources\ResourcesViewModelTests.cs" />
+    <Compile Include="Features\Resources\ResourcesSourceTests.cs" />
     <Compile Include="Features\Webcasts\WebcastsSourceTests.cs" />
     <Compile Include="Features\Webcasts\WebcastsViewModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
