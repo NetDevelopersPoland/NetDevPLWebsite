@@ -6,6 +6,7 @@ using Nancy.Bootstrapper;
 using Nancy.Conventions;
 using Nancy.SimpleAuthentication;
 using Nancy.TinyIoc;
+using NetDevPL.Infrastructure.Services;
 using NetDevPLWeb.Infrastructure;
 using SimpleAuthentication.Core;
 using SimpleAuthentication.Core.Providers;

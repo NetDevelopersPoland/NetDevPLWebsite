@@ -53,9 +53,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
+    <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Services.csproj">
       <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>
-      <Name>NetDevPL.Infrastructure.Helpers</Name>
+      <Name>NetDevPL.Infrastructure.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\NetDevPL.Infrastructure.MongoDB\NetDevPL.Infrastructure.MongoDB.csproj">
       <Project>{441595F1-ECF3-4C73-984C-59EEF42A3E88}</Project>

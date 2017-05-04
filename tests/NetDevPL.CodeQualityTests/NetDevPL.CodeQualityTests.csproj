@@ -88,9 +88,9 @@
       <Project>{d817cf1b-7e0a-419a-aa50-446f8de8accd}</Project>
       <Name>NetDevPL.Features.NetGroups</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Helpers.csproj">
+    <ProjectReference Include="..\..\src\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Services.csproj">
       <Project>{94fb1895-3f7e-4049-ad5e-49618aa12ff2}</Project>
-      <Name>NetDevPL.Infrastructure.Helpers</Name>
+      <Name>NetDevPL.Infrastructure.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\Infrastructure\NetDevPL.Infrastructure.MongoDB\NetDevPL.Infrastructure.MongoDB.csproj">
       <Project>{441595f1-ecf3-4c73-984c-59eef42a3e88}</Project>

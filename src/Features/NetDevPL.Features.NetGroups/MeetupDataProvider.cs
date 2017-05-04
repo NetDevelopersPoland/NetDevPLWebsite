@@ -16,7 +16,7 @@ namespace NetDevPL.Features.NetGroups
     {
         private static readonly int MaxUpcomingEventsToShow = 3;
 
-        public List<NetGroupMeeting> GetDataFromMeetupPage(List<NetGroup> groupsToCheck)
+        public List<NetGroupMeeting> GetDataFromMeetupPage(ICollection<NetGroup> groupsToCheck)
         {
             string meetupApiKey = ConfigurationManager.AppSettings["MeetupApiKey"];
             var meetupData = new List<NetGroupMeeting>();

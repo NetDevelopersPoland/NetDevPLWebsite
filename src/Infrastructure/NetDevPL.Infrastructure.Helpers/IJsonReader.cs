@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NetDevPLWeb
+namespace NetDevPL.Infrastructure.Services
 {
     public interface IJsonReader
     {

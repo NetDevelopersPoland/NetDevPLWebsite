@@ -1,4 +1,4 @@
-﻿using NetDevPLWeb;
+﻿using NetDevPL.Infrastructure.Services;
 using NetDevPLWeb.Features.Resources;
 using NSubstitute;
 using Ploeh.AutoFixture;

@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
-
-using NetDevPL.Infrastructure.Helpers;
+using NetDevPL.Infrastructure.Services;
 
 
 namespace NetDevPL.Features.Blogs
 {
     public class BlogDataProvider
     {
-        public IList<Blog> GetDataFromRss(IList<Blog> blogs)
+        public ICollection<Blog> GetDataFromRss(ICollection<Blog> blogs)
         {
             foreach (var blog in blogs)
             {

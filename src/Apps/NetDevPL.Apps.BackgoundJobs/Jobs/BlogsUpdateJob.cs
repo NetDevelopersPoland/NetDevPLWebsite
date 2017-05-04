@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using NetDevPL.Features.Blogs;
-using NetDevPL.Infrastructure.Helpers;
+using NetDevPL.Infrastructure.Services;
 using NetDevPL.Infrastructure.SharedKernel;
 using Quartz;
 
@@ -9,9 +9,18 @@ namespace NetDevPLBackgoundJobs.Jobs
 {
     internal class BlogsUpdateJob : IJob
     {
+        private readonly IJsonReader _jsonReader;
+        
+        public BlogsUpdateJob() : this(new JsonReader()) { }
+
+        internal BlogsUpdateJob(IJsonReader jsonReader)
+        {
+            _jsonReader = jsonReader;
+        }
+
         public void Execute(IJobExecutionContext context)
         {
-            var blogsConfig = JsonReaderHelper.ReadObjectListFromJson<Blog>("blogsConfig.json");
+            var blogsConfig = _jsonReader.ReadAll<Blog>("blogsConfig.json");
 
             BlogDataProvider blogDataProvider = new BlogDataProvider();
 

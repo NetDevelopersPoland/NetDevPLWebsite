@@ -80,6 +80,10 @@
       <Project>{D5046E5A-35D1-46B4-8DF4-44764ACDA3EE}</Project>
       <Name>NetDevPL.Apps.WebApp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\src\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Services.csproj">
+      <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>
+      <Name>NetDevPL.Infrastructure.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

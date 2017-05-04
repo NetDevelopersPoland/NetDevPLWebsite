@@ -3,7 +3,7 @@ using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Xml;
 
-namespace NetDevPL.Infrastructure.Helpers
+namespace NetDevPL.Infrastructure.Services
 {
     public static class RssProvider
     {
