@@ -4,14 +4,13 @@ namespace NetDevPLWeb.Features.WebCasts
 {
     public class WebcastsModule : NancyModule
     {
-        private readonly WebcastsSource _source = new WebcastsSource();
-
-        public WebcastsModule()
+        public WebcastsModule(IJsonReader repository)
         {
+            var source = new WebcastsSource(repository);
+
             Get["/webcasts"] = parameters =>
             {
-                var webcasts = _source.GetWebcastList();
-
+                var webcasts = source.GetWebcast();
                 return View["webcastsList", new WebcastsViewModel(webcasts, Request.Url)];
             };
         }
