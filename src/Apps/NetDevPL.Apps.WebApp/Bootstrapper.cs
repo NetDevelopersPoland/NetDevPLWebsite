@@ -12,7 +12,7 @@ using SimpleAuthentication.Core.Providers;
 
 namespace NetDevPLWeb
 {
-    public class CustomConventionsBootstrapper : DefaultNancyBootstrapper
+    public class Bootstrapper : DefaultNancyBootstrapper
     {
         protected override void ConfigureRequestContainer(TinyIoCContainer container, NancyContext context)
         {
@@ -62,11 +62,12 @@ namespace NetDevPLWeb
             //var googleProvider = new GoogleProvider(new ProviderParams { PublicApiKey = ConfigurationManager.AppSettings["GoogleApiId"], SecretApiKey = ConfigurationManager.AppSettings["GoogleApiSecret"] });
 
             AuthenticationProviderFactory providerFactory = new AuthenticationProviderFactory();
-            
+
             // providerFactory.AddProvider(twitterProvider);
             providerFactory.AddProvider(facebookProvider);
             // providerFactory.AddProvider(googleProvider);
             container.Register<IAuthenticationCallbackProvider>(new SampleAuthenticationCallbackProvider());
+            container.Register<IJsonReader, JsonReader>();
         }
     }
 }

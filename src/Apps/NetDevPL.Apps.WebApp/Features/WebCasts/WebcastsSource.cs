@@ -1,10 +1,19 @@
 ﻿using System.Collections.Generic;
-using NetDevPL.Infrastructure.Helpers;
 
 namespace NetDevPLWeb.Features.WebCasts
 {
     public class WebcastsSource
     {
-        public List<Webcast> GetWebcastList() => JsonReaderHelper.ReadObjectListFromJson<Webcast>("Features/Webcasts/webcastsList.json");
+        private readonly IJsonReader _jsonReader;
+
+        public WebcastsSource(IJsonReader jsonReader)
+        {
+            _jsonReader = jsonReader;
+        }
+
+        public ICollection<Webcast> GetWebcast()
+        {
+            return _jsonReader.ReadAll<Webcast>("Features/Webcasts/webcastsList.json");
+        }
     }
 }

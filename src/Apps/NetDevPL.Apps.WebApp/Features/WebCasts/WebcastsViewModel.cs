@@ -11,13 +11,13 @@ namespace NetDevPLWeb.Features.WebCasts
         public string Title { get; set; }
     }
 
-    public class WebcastsViewModel: BaseViewModel
+    public class WebcastsViewModel : BaseViewModel
     {
-        public WebcastsViewModel(List<Webcast> webcasts, Url url) : base(url)
+        public WebcastsViewModel(ICollection<Webcast> webcasts, Url url) : base(url)
         {
-            WebcastsList = webcasts;
+            Webcasts = webcasts;
         }
 
-        public List<Webcast> WebcastsList { get; private set; }
+        public ICollection<Webcast> Webcasts { get; }
     }
 }
