@@ -79,5 +79,10 @@
         "Url": "http://www.benedykt.net/",
         "Rss": "http://www.benedykt.net/feed",
         "Title": "Be passionate and bold. Always keep learning"
+    },
+    {
+        "Url": "http://www.codinghappiness.com/",
+        "Rss": "http://www.codinghappiness.com/feed",
+        "Title": "Wojciech Mioduszewski - programming blog"
     }
 ]
