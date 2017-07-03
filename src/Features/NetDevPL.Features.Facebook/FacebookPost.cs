@@ -22,7 +22,7 @@ namespace NetDevPL.Features.Facebook
         {
             get
             {
-                return httpRegex.Replace(Content, m => String.Format("<a href=\"{0}\" target=\"_new\">{0}</a>", m.Value));
+                return String.IsNullOrEmpty(Content) ? String.Empty : httpRegex.Replace(Content, m => String.Format("<a href=\"{0}\" target=\"_new\">{0}</a>", m.Value));
             }
         }
 
