@@ -12,6 +12,7 @@ namespace NetDevPL.Features.Facebook
         readonly MongoDBProvider<FacebookPost> postsProvider = new MongoDBProvider<FacebookPost>("netdevpl", "facebookPosts");
         readonly MongoDBProvider<FacebookUser> usersProvider = new MongoDBProvider<FacebookUser>("netdevpl", "facebookUsers");
         readonly MongoDBProvider<FacebookLike> likesProvider = new MongoDBProvider<FacebookLike>("netdevpl", "facebookLikes");
+        readonly MongoDBProvider<FacebookComment> commentsProvider = new MongoDBProvider<FacebookComment>("netdevpl", "facebookComments");
 
         public HLListPage<FacebookPost> PostsGetList(PostFilter filter)
         {
@@ -100,6 +101,18 @@ namespace NetDevPL.Features.Facebook
             if (result.Count() == 0)
             {
                 likesProvider.Collection.InsertOne(like);
+            }
+        }
+
+        public void CommentsAdd(FacebookComment comment)
+        {
+            var fBuilder = Builders<FacebookComment>.Filter;
+            var filter = fBuilder.Eq(fp => fp.PostId, comment.PostId) & fBuilder.Eq(fp => fp.UserId, comment.UserId) & fBuilder.Eq(fp => fp.Message, comment.Message);
+            var result = commentsProvider.Collection.Find(filter);
+
+            if (result.Count() == 0)
+            {
+                commentsProvider.Collection.InsertOne(comment);
             }
         }
     }

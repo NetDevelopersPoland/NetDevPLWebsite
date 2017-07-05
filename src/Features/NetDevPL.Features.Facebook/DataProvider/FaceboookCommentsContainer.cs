@@ -3,13 +3,12 @@ using Newtonsoft.Json;
 
 namespace NetDevPL.Features.Facebook.DataProvider
 {
-    public class FacebookLikesContainer
+    public class FaceboookCommentsContainer
     {
         [JsonProperty(PropertyName = "data")]
-        public IList<FacebookObject> Likes { get; set; }
+        public IList<FacebookComment> Comments { get; set; }
 
         [JsonProperty(PropertyName = "paging")]
         public FacebookPaging Paging { get; set; }
     }
-
 }

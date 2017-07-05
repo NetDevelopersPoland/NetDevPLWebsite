@@ -33,22 +33,24 @@ namespace NetDevPL.Features.Facebook.IntegrationTests
         public void ShouldFetchDataForSingleFacebookPost()
         {
             var data = sut.FetchPostsFromFacebook();
-            var testPost = data[0];
 
-            var result = sut.GetLikesAndUsersForPostFromFacebook(testPost.ExternalKey);
+            bool hasAtLeastOneLike = false;
+            bool hasAtLeastOneComment = false;
+            bool hasAtLeastOneUser = false;
 
-            Assert.NotNull(result);
-            Assert.True(result.Item1.Count > 0);
-            Assert.True(result.Item2.Count > 0);
-            Assert.True(result.Item1.Count == result.Item2.Count);
+            foreach (var post in data)
+            {
+                var result = sut.GetLikesAndUsersForPostFromFacebook(post.ExternalKey);
 
-            var firstLike = result.Item1[0];
-            Assert.NotEmpty(firstLike.PostId);
-            Assert.NotEmpty(firstLike.UserId);
+                Assert.NotNull(result);
+                hasAtLeastOneLike |= (result.Item1.Count > 0);
+                hasAtLeastOneComment |= (result.Item2.Count > 0);
+                hasAtLeastOneUser |= (result.Item3.Count > 0);
+            }
 
-            var firstUser = result.Item2[0];
-            Assert.NotEmpty(firstUser.Id);
-            Assert.NotEmpty(firstUser.Name);
+            Assert.True(hasAtLeastOneComment);
+            Assert.True(hasAtLeastOneLike);
+            Assert.True(hasAtLeastOneUser);
         }
     }
 }

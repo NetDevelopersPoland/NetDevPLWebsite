@@ -30,7 +30,12 @@ namespace NetDevPLBackgoundJobs.Jobs
                 repository.LikesAdd(like);
             }
 
-            foreach (var user in likesAndUsers.Item2)
+            foreach (var like in likesAndUsers.Item2)
+            {
+                repository.CommentsAdd(like);
+            }
+
+            foreach (var user in likesAndUsers.Item3)
             {
                 repository.UsersAddOrUpdate(user);
             }

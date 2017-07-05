@@ -55,6 +55,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProvider\FacebookComment.cs" />
     <Compile Include="DataProvider\FacebookDataProvider.cs" />
     <Compile Include="DataProvider\FacebookObject.cs" />
     <Compile Include="DataProvider\FacebookReactions.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="DataProvider\FacebookLikesContainer.cs" />
     <Compile Include="DataProvider\FacebookPaging.cs" />
     <Compile Include="DataProvider\FacebookPagingCursors.cs" />
+    <Compile Include="DataProvider\FaceboookCommentsContainer.cs" />
     <Compile Include="FacebookLike.cs" />
     <Compile Include="FacebookPost.cs" />
     <Compile Include="FacebookUser.cs" />

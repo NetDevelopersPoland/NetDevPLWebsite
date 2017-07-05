@@ -36,10 +36,11 @@ namespace NetDevPL.Features.Facebook.DataProvider
                 }));
         }
 
-        public Tuple<IList<FacebookLike>, IList<FacebookUser>> GetLikesAndUsersForPostFromFacebook(string postId)
+        public Tuple<IList<FacebookLike>, List<Facebook.FacebookComment>, IList<FacebookUser>> GetLikesAndUsersForPostFromFacebook(string postId)
         {
             List<FacebookLike> likes = new List<FacebookLike>();
             List<FacebookUser> users = new List<FacebookUser>();
+            List<Facebook.FacebookComment> comments = new List<Facebook.FacebookComment>();
 
             string urlPattern = "https://graph.facebook.com/{0}/likes?limit=5&access_token={1}";
 
@@ -50,10 +51,21 @@ namespace NetDevPL.Features.Facebook.DataProvider
                 likes.AddRange(likesResponse.Likes.Select(l => new FacebookLike { PostId = postId, UserId = l.Id }));
                 users.AddRange(likesResponse.Likes.Select(l => new FacebookUser { Name = l.Name, Id = l.Id }));
 
-                urlPattern = likesResponse.Paging.Next;
+                urlPattern = likesResponse.Paging?.Next;
             } while (!string.IsNullOrWhiteSpace(urlPattern));
 
-            return new Tuple<IList<FacebookLike>, IList<FacebookUser>>(likes, users);
+            urlPattern = "https://graph.facebook.com/{0}/comments?limit=5&access_token={1}";
+            do
+            {
+                FaceboookCommentsContainer likesResponse = GetList<FaceboookCommentsContainer>(CreateAccessUrl(urlPattern, postId));
+
+                comments.AddRange(likesResponse.Comments.Select(l => new Facebook.FacebookComment { PostId = postId, UserId = l.Id, Message = l.Message }));
+                users.AddRange(likesResponse.Comments.Select(l => new FacebookUser { Name = l.From.Name, Id = l.From.Id }));
+
+                urlPattern = likesResponse.Paging?.Next;
+            } while (!string.IsNullOrWhiteSpace(urlPattern));
+
+            return new Tuple<IList<FacebookLike>, List<Facebook.FacebookComment>, IList<FacebookUser>>(likes, comments, users);
         }
 
         private static string CreateAccessUrl(string urlPattern, params string[] args)
