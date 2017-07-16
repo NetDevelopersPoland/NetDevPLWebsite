@@ -3,7 +3,7 @@ using NetDevPL.Features.NetGroups;
 
 namespace NetDevPLWeb.Features.Groups
 {
-    public class GroupsModule : NancyModule
+    public sealed class GroupsModule : NancyModule
     {
         public GroupsModule()
         {

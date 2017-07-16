@@ -3,7 +3,7 @@ using NetDevPL.Features.Blogs;
 
 namespace NetDevPLWeb.Features.Blogs
 {
-    public class BlogsModule : NancyModule
+    public sealed class BlogsModule : NancyModule
     {
         private readonly Repository _repository;
 

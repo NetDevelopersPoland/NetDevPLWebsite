@@ -3,7 +3,7 @@ using NetDevPL.Infrastructure.Services;
 
 namespace NetDevPLWeb.Features.ConferenceVideos
 {
-    public class ConferenceVideosModule : NancyModule
+    public sealed class ConferenceVideosModule : NancyModule
     {
         public ConferenceVideosModule(IJsonReader repository)
         {

@@ -3,7 +3,7 @@ using NetDevPL.Infrastructure.Services;
 
 namespace NetDevPLWeb.Features.WebCasts
 {
-    public class WebcastsModule : NancyModule
+    public sealed class WebcastsModule : NancyModule
     {
         public WebcastsModule(IJsonReader repository)
         {

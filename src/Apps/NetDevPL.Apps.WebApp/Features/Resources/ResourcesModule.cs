@@ -3,7 +3,7 @@ using NetDevPL.Infrastructure.Services;
 
 namespace NetDevPLWeb.Features.Resources
 {
-    public class ResourcesModule : NancyModule
+    public sealed class ResourcesModule : NancyModule
     {
         public ResourcesModule(IJsonReader repository)
         {

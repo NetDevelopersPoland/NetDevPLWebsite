@@ -3,7 +3,7 @@ using NetDevPL.Infrastructure.Services;
 
 namespace NetDevPLWeb.Features.LearnOnline
 {
-    public class LearnOnlineModule : NancyModule
+    public sealed class LearnOnlineModule : NancyModule
     {
         public LearnOnlineModule(IJsonReader repository)
         {

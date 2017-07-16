@@ -8,7 +8,7 @@ using Newtonsoft.Json.Converters;
 
 namespace NetDevPLWeb.Features.OfflineEvents
 {
-    public class EventsModule : NancyModule
+    public sealed class EventsModule : NancyModule
     {
         private readonly ConferencesSource _source = new ConferencesSource();
 

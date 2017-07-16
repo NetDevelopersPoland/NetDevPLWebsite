@@ -7,7 +7,7 @@ using NetDevPL.Features.Facebook;
 
 namespace NetDevPLWeb.Features.Facebook
 {
-    public class FacebookModule : NancyModule
+    public sealed class FacebookModule : NancyModule
     {
         readonly Repository facebookDataRepository = new Repository();
 

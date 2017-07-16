@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace NetDevPLWeb.Features.Contributors
 {
-    public class ContributorsModule : NancyModule
+    public sealed class ContributorsModule : NancyModule
     {
         private readonly ContributorsModuleDataSource _source = new ContributorsModuleDataSource();
 
