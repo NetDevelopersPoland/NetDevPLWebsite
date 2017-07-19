@@ -28,53 +28,34 @@ namespace NetDevPLWeb.Features.Facebook
                 return string.Join("<br/>", karma.Take(100).Select(k => k.Name + " " + k.KarmaPoints));
             };
 
-            Get["/facebook/top/{year}/{month?}"] = parameters =>
+            Get["/facebook/top/{year:year}"] = parameters =>
             {
-                var now = DateTime.Now;
-
-                int year = GetValueFromDynamicOrDefault(parameters, "year", now.Year);
-                year = (year < 2015 || year > now.Year) ? now.Year : year;
-                int month = GetValueFromDynamicOrDefault(parameters, "month", -1);
-                month = ((month < 1 || month > 12) && month != -1) ? -1 : month;
-
+                int year = parameters.year;
                 //whole year
-                if (month == -1)
-                {
-                    var firstDay = new DateTime(year, 1, 1);
-                    var lastDay = firstDay.AddMonths(12).AddMilliseconds(-1);
 
-                    return GetPostsForPeriod($"Top posty z Facebooka z roku {year}", firstDay, lastDay);
-                }
-                else
-                {
-                    var firstDay = new DateTime(year, month, 1);
-                    var lastDay = firstDay.AddMonths(1).AddMilliseconds(-1);
+                var firstDay = new DateTime(year, 1, 1);
+                var lastDay = firstDay.AddMonths(12).AddMilliseconds(-1);
 
-                    return GetPostsForPeriod($"Top posty z Facebooka z okresu {firstDay:yyyy-MM-dd} - {lastDay:yyyy-MM-dd}", firstDay, lastDay);
-                }
+                return GetPostsForPeriod($"Top posty z Facebooka z roku {year}", firstDay, lastDay);
+            };
+
+            Get["/facebook/top/{year:year}/{month:month}"] = parameters =>
+            {
+                int month = parameters.month;
+                int year = parameters.year;
+
+                var firstDay = new DateTime(year, month, 1);
+                var lastDay = firstDay.AddMonths(1).AddMilliseconds(-1);
+
+                return GetPostsForPeriod($"Top posty z Facebooka z okresu {firstDay:yyyy-MM-dd} - {lastDay:yyyy-MM-dd}", firstDay, lastDay);
+
             };
 
             Get["/facebook/tag/{tag}"] = parameters =>
             {
-                return GetPostsWithTag("Posty z tagiem '" + parameters.tag + "'", parameters.tag);
+                string tag = parameters.tag;
+                return GetPostsWithTag("Posty z tagiem '" + tag + "'", tag);
             };
-        }
-
-        private int GetValueFromDynamicOrDefault(dynamic dynamidObj, string propertyName, int defaultValue)
-        {
-            try
-            {
-                var dict = (IDictionary<String, object>)dynamidObj;
-                if (dict.ContainsKey(propertyName))
-                {
-                    return Int32.Parse(dict[propertyName].ToString());
-                }
-                return defaultValue;
-            }
-            catch
-            {
-                return defaultValue;
-            }
         }
 
         private dynamic GetPostsWithTag(string pageName, string tag)

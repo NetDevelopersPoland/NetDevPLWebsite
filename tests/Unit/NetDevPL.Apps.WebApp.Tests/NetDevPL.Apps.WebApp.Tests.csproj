@@ -69,6 +69,8 @@
     <Compile Include="Features\Resources\ResourcesSourceTests.cs" />
     <Compile Include="Features\Webcasts\WebcastsSourceTests.cs" />
     <Compile Include="Features\Webcasts\WebcastsViewModelTests.cs" />
+    <Compile Include="Infrastructure\MonthRouteSegmentConstraintTests.cs" />
+    <Compile Include="Infrastructure\YearRouteSegmentConstraintTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
