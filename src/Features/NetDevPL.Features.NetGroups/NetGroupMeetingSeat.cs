@@ -4,17 +4,12 @@
 // </copyright>
 // -------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
 
 namespace NetDevPL.Features.NetGroups
 {
-
-    public class NetGroup
+    public class NetGroupMeetingSeat
     {
-        public string Name { get; set; }
-        public string MeetupName { get; set; }
-        public string City { get; set; }
-        public string WebSite { get; set; }
-        public List<NetGroupMeeting> UpcomingMeetings { get; set; }
+        public int CurrentNumber { get; set; }
+        public int TotalNumber { get; set; }
     }
 }
