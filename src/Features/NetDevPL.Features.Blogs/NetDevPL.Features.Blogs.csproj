@@ -47,8 +47,10 @@
     <Reference Include="System.ServiceModel" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blog.cs" />
     <Compile Include="BlogDataProvider.cs" />
     <Compile Include="BlogDataSnapshot.cs" />
+    <Compile Include="BlogPost.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
