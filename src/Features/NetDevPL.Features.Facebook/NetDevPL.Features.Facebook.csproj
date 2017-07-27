@@ -66,6 +66,7 @@
     <Compile Include="DataProvider\FacebookPaging.cs" />
     <Compile Include="DataProvider\FacebookPagingCursors.cs" />
     <Compile Include="DataProvider\FaceboookCommentsContainer.cs" />
+    <Compile Include="FacebookComment.cs" />
     <Compile Include="FacebookLike.cs" />
     <Compile Include="FacebookPost.cs" />
     <Compile Include="FacebookUser.cs" />
