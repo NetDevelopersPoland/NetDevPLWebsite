@@ -14,6 +14,8 @@ namespace NetDevPL.Features.Reporting
     public class UserKarma
     {
         public string Name { get; set; }
-        public int KarmaPoints { get; set; }
+        public int LinesCount { get; set; }
+        public int CommentsCount { get; set; }
+        public int Karma { get { return LinesCount + CommentsCount; } }
     }
 }

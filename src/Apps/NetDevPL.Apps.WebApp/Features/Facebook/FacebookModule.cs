@@ -25,7 +25,7 @@ namespace NetDevPLWeb.Features.Facebook
                 this.RequiresAuthentication();
                 var karma = new NetDevPL.Features.Reporting.FacebookStats().UserKarma();
 
-                return string.Join("<br/>", karma.Take(100).Select(k => k.Name + " " + k.KarmaPoints));
+                return string.Join("<br/>", karma.Take(100).Select(k => k.Name + " " + k.Karma + " (" + k.LinesCount + "+" + k.CommentsCount + ")"));
             };
 
             Get["/facebook/top/{year:year}"] = parameters =>

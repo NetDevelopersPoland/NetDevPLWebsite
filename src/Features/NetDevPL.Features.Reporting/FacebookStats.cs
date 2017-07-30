@@ -12,13 +12,15 @@ namespace NetDevPL.Features.Reporting
 
             var users = repository.UsersGetList();
             var likesGrouped = repository.LikesGetList().GroupBy(l => l.UserId).ToList();
+            var commentsGrouped = repository.CommentsGetList().GroupBy(l => l.UserId).ToList();
 
             return users.Select(u => new UserKarma
             {
                 Name = u.Name,
-                KarmaPoints = likesGrouped.Any(lg => lg.Key == u.Id) ? likesGrouped.FirstOrDefault(lg => lg.Key == u.Id).ToList().Count : 0
+                LinesCount = likesGrouped.Any(lg => lg.Key == u.Id) ? likesGrouped.FirstOrDefault(lg => lg.Key == u.Id).ToList().Count : 0,
+                CommentsCount = commentsGrouped.Any(lg => lg.Key == u.Id) ? commentsGrouped.FirstOrDefault(lg => lg.Key == u.Id).ToList().Count : 0
             })
-                .OrderByDescending(k => k.KarmaPoints)
+                .OrderByDescending(k => k.LinesCount)
                 .ToList();
         }
     }

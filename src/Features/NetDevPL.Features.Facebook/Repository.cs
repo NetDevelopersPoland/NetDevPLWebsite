@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using Gmtl.HandyLib;
 using MongoDB.Driver;
 using NetDevPL.Infrastructure.MongoDB;
@@ -115,32 +114,9 @@ namespace NetDevPL.Features.Facebook
                 commentsProvider.Collection.InsertOne(comment);
             }
         }
-    }
-
-    public class PostFilter
-    {
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-
-        private string tag;
-        public string Tag { get { return tag; } set { tag = value != null ? value.ToLower() : ""; } }
-
-        public bool HasFilter
+        public List<FacebookComment> CommentsGetList()
         {
-            get { return StartDate != null || EndDate != null || !String.IsNullOrWhiteSpace(Tag); }
-        }
-
-        public bool HasSorting
-        {
-            get { return SortingExpression != null; }
-        }
-
-        public Expression<Func<FacebookPost, object>> SortingExpression { get; set; }
-        public SortDirection SortingDirection { get; set; }
-
-        public static PostFilter Empty
-        {
-            get { return new PostFilter(); }
+            return commentsProvider.Collection.Find(d => true).ToList();
         }
     }
 }
