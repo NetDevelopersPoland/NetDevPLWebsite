@@ -114,6 +114,7 @@ namespace NetDevPL.Features.Facebook
                 commentsProvider.Collection.InsertOne(comment);
             }
         }
+
         public List<FacebookComment> CommentsGetList()
         {
             return commentsProvider.Collection.Find(d => true).ToList();

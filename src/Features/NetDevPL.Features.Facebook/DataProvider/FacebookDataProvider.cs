@@ -59,7 +59,7 @@ namespace NetDevPL.Features.Facebook.DataProvider
             {
                 FaceboookCommentsContainer likesResponse = GetList<FaceboookCommentsContainer>(CreateAccessUrl(urlPattern, postId));
 
-                comments.AddRange(likesResponse.Comments.Select(l => new Facebook.FacebookComment { PostId = postId, UserId = l.Id, Message = l.Message }));
+                comments.AddRange(likesResponse.Comments.Select(l => new Facebook.FacebookComment { PostId = postId, UserId = l.From.Id, Message = l.Message }));
                 users.AddRange(likesResponse.Comments.Select(l => new FacebookUser { Name = l.From.Name, Id = l.From.Id }));
 
                 urlPattern = likesResponse.Paging?.Next;
