@@ -23,5 +23,15 @@
         "Title": "Kurs ASP.NET MVC",
         "Description": "Kurs ASP.NET MVC",
         "Url": "https://www.youtube.com/embed/?list=PL9T2pvCNFjSAPh9QrstHwiDmad_1L6ABZ"
+    },
+    {
+        "Title": "Debugging Tips & Tricks",
+        "Description": "Trochę stuczek związanych z debugowaniem w Visual Studio",
+        "Url": "https://www.youtube.com/embed/?list=PL8bwawVZNV0ynJOf-1XjhpnVYnSpx4H9y"
+    },
+    {
+        "Title": "NDepend",
+        "Description": "Użycie NDepend do usuwania długu technologicznego z kodu",
+        "Url": "https://www.youtube.com/embed/?list=PL8bwawVZNV0zOcZ0Pm24cnHWxw7815pIr"
     }
 ]
