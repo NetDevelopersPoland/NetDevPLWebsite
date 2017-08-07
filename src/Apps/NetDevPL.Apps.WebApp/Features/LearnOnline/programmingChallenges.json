@@ -33,5 +33,10 @@
     "Title": "Regex crossword",
     "Description": "regular expressions crosswords to solve",
     "Url": "https://regexcrossword.com"
+  },
+  {
+    "Title": "Project Euler",
+    "Description": "series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve",
+    "Url": "http://projecteuler.net"
   }
 ]
