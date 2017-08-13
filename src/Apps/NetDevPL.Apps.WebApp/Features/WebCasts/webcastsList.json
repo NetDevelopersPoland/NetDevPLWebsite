@@ -33,5 +33,10 @@
         "Title": "NDepend",
         "Description": "Użycie NDepend do usuwania długu technologicznego z kodu",
         "Url": "https://www.youtube.com/embed/?list=PL8bwawVZNV0zOcZ0Pm24cnHWxw7815pIr"
+    },
+    {
+        "Title": "Visual Studio Debugging Visualizers",
+        "Description": "Omówienie możliwości wizualizacji obiektów podczas sesji debugowania",
+        "Url": "https://www.youtube.com/embed/?list=PLTBMfiOPHzzRwUTO01yIrzf3_nhTLhkko"
     }
 ]
