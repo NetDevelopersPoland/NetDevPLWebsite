@@ -20,6 +20,7 @@ namespace NetDevPL.Features.Facebook.Tests
         [InlineData("test http://test.com/index.html?count=10", "test <a href=\"http://test.com/index.html?count=10\" target=\"_new\">http://test.com/index.html?count=10</a>")]
         [InlineData("test https://medium.com/@akosma/being-a-developer-after-40-6-months-later-7e8c278c13a#.uqg7q4ilm", "test <a href=\"https://medium.com/@akosma/being-a-developer-after-40-6-months-later-7e8c278c13a#.uqg7q4ilm\" target=\"_new\">https://medium.com/@akosma/being-a-developer-after-40-6-months-later-7e8c278c13a#.uqg7q4ilm</a>")]
         [InlineData("test http://www.empik.com/praca-z-zastanym-kodem-najlepsze-techniki-michael-feathers,p1143740022,ksiazka-p", "test <a href=\"http://www.empik.com/praca-z-zastanym-kodem-najlepsze-techniki-michael-feathers,p1143740022,ksiazka-p\" target=\"_new\">http://www.empik.com/praca-z-zastanym-kodem-najlepsze-techniki-michael-feathers,p1143740022,ksiazka-p</a>")]
+        [InlineData("...wydanie tejże: http://www.empik.com/praca-z-zastanym-kodem-najlepsze-techniki-michael-feathers,p1143740022,ksiazka-p . Przechodząca...", "...wydanie tejże: <a href=\"http://www.empik.com/praca-z-zastanym-kodem-najlepsze-techniki-michael-feathers,p1143740022,ksiazka-p\" target=\"_new\">http://www.empik.com/praca-z-zastanym-kodem-najlepsze-techniki-michael-feathers,p1143740022,ksiazka-p</a> . Przechodząca...")]
         public void ProvidedContentWithHttpAddress_ShouldMakeHtmlTagOfIt(string content, string expectedOutput)
         {
             sut.Content = content;

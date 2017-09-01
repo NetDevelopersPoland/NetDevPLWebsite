@@ -7,7 +7,7 @@ namespace NetDevPL.Features.Facebook
 {
     public class FacebookPost
     {
-        private static Regex httpRegex = new Regex(@"http(s)?://([\w-]+\.)+[\w-]+(/[\w- .,/#?%&=@]*)?", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static Regex httpRegex = new Regex(@"http(s)?://([\w-]+\.)+[\w-]+(/[\w-.,/#?%&=@]*)?", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static Regex hashtagRegex = new Regex(@"^#[A-Za-z0-9-]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public string ExternalKey { get; set; }
         public DateTime CreateDate { get; set; }
