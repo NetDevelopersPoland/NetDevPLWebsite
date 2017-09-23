@@ -26,5 +26,19 @@
         "StartDate": "3.04.2017",
         "EndDate": "3.04.2017",
         "Location": "Warszawa"
+    },
+    {
+        "Url": "http://programistok.org/",
+        "Title": "Programistok",
+        "StartDate": "7.10.2017",
+        "EndDate": "7.10.2017",
+        "Location": "Białystok"
+    },
+    {
+        "Url": "http://net.developerdays.pl/",
+        "Title": ".net developer days",
+        "StartDate": "18.10.2017",
+        "EndDate": "20.10.2017",
+        "Location": "Warszawa"
     }
 ]
