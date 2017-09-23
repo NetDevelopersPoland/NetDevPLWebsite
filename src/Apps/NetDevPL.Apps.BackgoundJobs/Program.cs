@@ -18,8 +18,8 @@ namespace NetDevPLBackgoundJobs
 
                 scheduler.Start();
                 AddJob(scheduler, new FacebookJob(), "10 0 * * * ?");
-                AddJob(scheduler, new NetGroupsUpdateJob(), "20 0 */8 * * ?");
-                AddJob(scheduler, new BlogsUpdateJob(), "20 0 */8 * * ?");
+                AddJob(scheduler, new NetGroupsUpdateJob(), "20 0 */2 * * ?");
+                AddJob(scheduler, new BlogsUpdateJob(), "20 0 */2 * * ?");
 
                 while (true)
                 {
