@@ -9,18 +9,25 @@ namespace NetDevPL.Infrastructure.Services
     {
         public static IEnumerable<SyndicationItem> GetItemsFromRss(string rssUrl)
         {
-            try
+            int counter = 0;
+            do
             {
-                using (var reader = XmlReader.Create(rssUrl))
+                try
                 {
-                    var feed = SyndicationFeed.Load(reader);
-                    return feed?.Items ?? Enumerable.Empty<SyndicationItem>();
+                    using (var reader = XmlReader.Create(rssUrl))
+                    {
+                        var feed = SyndicationFeed.Load(reader);
+                        return feed?.Items ?? Enumerable.Empty<SyndicationItem>();
+                    }
                 }
-            }
-            catch
-            {
-                return Enumerable.Empty<SyndicationItem>();
-            }
+                catch
+                {
+                    //TODO log
+                }
+                counter++;
+            } while (counter < 2);
+
+            return Enumerable.Empty<SyndicationItem>();
         }
     }
 }
