@@ -43,5 +43,10 @@
         "Title": "NDC London 2017",
         "Description": "Videos from NDC London 2017",
         "Url": "https://www.youtube.com/embed/?list=PL03Lrmd9CiGf2iIh4x8HM4iKmi6PhCe96"
+    },
+    {
+        "Title": "DevConf 2017",
+        "Description": "Videos from DevConf 2017",
+        "Url": "https://www.youtube.com/embed/?list=PL8BUDiR2Y8Yu3SFzqhRWqDrF9OdejbeV0"
     }
 ]
