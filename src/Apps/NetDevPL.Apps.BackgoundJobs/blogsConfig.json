@@ -89,5 +89,10 @@
         "Url": "https://www.poznajprogramowanie.pl/",
         "Rss": "https://www.poznajprogramowanie.pl/feed",
         "Title": "Poznaj Programowanie"
+    },
+    {
+        "Url": "https://www.jankowskimichal.pl/",
+        "Rss": "https://www.jankowskimichal.pl/feed/",
+        "Title": "Michał Jankowski - blog"
     }
 ]
