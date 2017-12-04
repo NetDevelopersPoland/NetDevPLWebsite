@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gmtl.HandyLib, Version=1.0.22.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Gmtl.HandyLib.1.0.22\lib\net45\Gmtl.HandyLib.dll</HintPath>
+    <Reference Include="Gmtl.HandyLib, Version=1.0.31.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Gmtl.HandyLib.1.0.31\lib\net45\Gmtl.HandyLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Mono.Posix, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
@@ -71,8 +71,8 @@
       <HintPath>..\..\..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleAuthentication.Core, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\SimpleAuthentication.Core.0.7.0\lib\net40\SimpleAuthentication.Core.dll</HintPath>
+    <Reference Include="SimpleAuthentication.Core, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SimpleAuthentication.Core.0.8.0\lib\net40\SimpleAuthentication.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

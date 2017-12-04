@@ -21,7 +21,11 @@ namespace NetDevPLWeb
             container.Register<IUserMapper, FormsUser>();
             var options = new ConfigurationOptions
             {
+#if DEBUG
+                BasePath = new Uri("http://localhost:8888")
+#elif RELEASE
                 BasePath = new Uri("http://netdevelopers.pl")
+#endif
             };
             container.Register<IConfigurationOptions>(options);
         }

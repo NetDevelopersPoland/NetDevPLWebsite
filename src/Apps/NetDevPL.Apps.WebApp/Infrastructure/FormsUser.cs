@@ -11,6 +11,7 @@ namespace NetDevPLWeb.Infrastructure
         public IUserIdentity GetUserFromIdentifier(Guid identifier, NancyContext context)
         {
             Repository repo = new Repository();
+
             return AuthUserIdentity.Create(repo.GetById(identifier));
         }
     }
