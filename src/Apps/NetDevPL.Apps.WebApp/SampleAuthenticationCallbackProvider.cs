@@ -15,7 +15,7 @@ namespace NetDevPLWeb
             {
                 if (model.Exception != null)
                 {
-                    Logger.Fatal(model.Exception);
+                    Logger.Fatal("3rd party provider returned exception: " + model.Exception);
                     return ReturnLoginErrorResponse();
                 }
                 else

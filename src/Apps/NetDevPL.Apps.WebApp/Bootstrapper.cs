@@ -23,7 +23,7 @@ namespace NetDevPLWeb
             {
 #if DEBUG
                 BasePath = new Uri("http://localhost:8888")
-#elif RELEASE
+#else
                 BasePath = new Uri("http://netdevelopers.pl")
 #endif
             };
