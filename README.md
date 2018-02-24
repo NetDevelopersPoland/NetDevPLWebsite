@@ -27,7 +27,9 @@ Jak każdy ewoluujący system także ten projekt nie ma ściśle określonych ce
 * Framework [NancyFX](https://github.com/NancyFx/Nancy/wiki/Documentation)
 * AppVeyor (auto deployment)
 * Środowisko developerskie: Visual Studio 2015
-* Strona do działania wymaga [MongoDB](https://www.mongodb.com/download-center#community). MongoDB wystarczy uruchomić z domyślną konfiguracją.
-* Aby uruchomić projekt lokalnie na Windowsie należy wykonać następującą komendę w linii poleceń: *netsh http add urlacl url=http://+:8888/  user=Everyone*.
+* Strona do działania wymaga [MongoDB](https://www.mongodb.com/download-center#community). MongoDB wystarczy uruchomić z domyślną konfiguracją. Możesz zrobić to za pomocą Dockera używając polecenia `docker run --name netdeveloperspl -d -p 27017:27017 mongo`
+* Aby uruchomić projekt lokalnie na Windowsie należy wykonać następującą komendę w linii poleceń:
+- - Windows EN: `netsh http add urlacl url="http://+:8888/"  user=Everyone`
+- - Windows PL: `netsh http add urlacl url="http://+:8888/" user="Wszyscy"`
 
 
