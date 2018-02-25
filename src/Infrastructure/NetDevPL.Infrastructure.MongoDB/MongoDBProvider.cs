@@ -29,6 +29,8 @@ namespace NetDevPL.Infrastructure.MongoDB
                 cm.AutoMap();
                 cm.SetIgnoreExtraElements(true);
             });
+
+            BsonDefaults.GuidRepresentation = GuidRepresentation.Standard;
         }
 
         public IMongoCollection<T> Collection => database.GetCollection<T>(collectionName);
