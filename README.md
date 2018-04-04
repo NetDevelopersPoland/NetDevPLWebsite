@@ -14,7 +14,7 @@ Jak każdy ewoluujący system także ten projekt nie ma ściśle określonych ce
 ## Zasady
 1. Nazewnictwo i komentarze w kodzie programu muszą być po angielsku.
 2. Przechodzące testy.
-3. Automatyzacja wszystkiego jest jak najbardziej porządana.
+3. Automatyzacja wszystkiego jest jak najbardziej pożądana.
 4. Programujemy funkcjonalność w duchu quazi-DDD. Np. funkcjonalność "Blogs" nie powinna być rozbita na osobne biblioteki Web/Services/(etc)/Domain a raczej być w jednej, np. NetDevPL.Blogs. Pomijam tutaj Eventy i inne AggregateRooty :)
 
 ## Uczestnictwo w projekcie
