@@ -37,7 +37,7 @@ namespace NetDevPL.Infrastructure.MongoDB
 
         private void InitDB()
         {
-            client = new MongoClient("127.0.0.1", 27017);
+            client = new MongoClient("mongodb://localhost:27017");
 
             Logger.Info(String.Format("Connecting to Mongo DB:{0} Collection:{1}",databaseName, collectionName));
 
