@@ -13,6 +13,8 @@ namespace NetDevPLWeb.Features.Home
             //TODO prepare view for providers logins
             Get["/login"] = parameters => View["login", new BaseViewModel(Request.Url)];
 
+            Get["/tos"] = parameters => View["tos", new BaseViewModel(Request.Url)];
+
             Get["/logout"] = parameters => this.LogoutAndRedirect("/");
         }
     }

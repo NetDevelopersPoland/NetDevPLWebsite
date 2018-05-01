@@ -75,3 +75,10 @@
     position: relative;
     color: white;
 }
+
+#tos {
+    background-color: beige;
+    padding: 25px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}

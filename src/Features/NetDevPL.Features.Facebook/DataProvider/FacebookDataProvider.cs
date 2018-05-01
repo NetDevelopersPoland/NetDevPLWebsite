@@ -19,7 +19,7 @@ namespace NetDevPL.Features.Facebook.DataProvider
             FacebookNewsContainer data = GetList<FacebookNewsContainer>(CreateAccessUrl(urlPattern, pageId));
 
             return new List<FacebookPost>(
-                data.Data.Where(d => d.Reactions.Summary.TotalCount > 10).Select(d =>
+                data.Data.Where(d => d.Reactions.Summary.TotalCount >= 10).Select(d =>
                 {
                     string content = d.Message + "\n\n" + d.Name + "\n\n" + d.Link;
 
